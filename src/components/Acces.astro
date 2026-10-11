@@ -23,6 +23,7 @@ const { titre = 'Accès', id = 'acces' } = Astro.props;
   <p>Itinéraire : <Info valeur={acces.itineraire} /></p>
   <p>Parking gratuit de {club.parking.places.toLocaleString('fr-FR')} places.</p>
 
+  <div class="trajets">
   <h3>Temps de trajet en voiture</h3>
   <table>
     <thead>
@@ -42,5 +43,6 @@ const { titre = 'Accès', id = 'acces' } = Astro.props;
       }
     </tbody>
   </table>
+  </div>
   <slot />
 </section>

@@ -50,7 +50,9 @@ Les touristes sont les bienvenus l'été. Inutile de charger une raquette dans l
 
 ## Comment réserver ?
 
-Le logiciel de réservation arrive avec l'ouverture du club. {{reservationLogiciel}}
+Le logiciel de réservation arrive avec l'ouverture du club.
+
+Logiciel de réservation : {{reservationLogiciel}}
 
 En attendant, écrivez-nous sur WhatsApp ou appelez le {{telephone}}.
 

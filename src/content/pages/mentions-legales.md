@@ -16,7 +16,9 @@ Si des photos de banque d'images libres de droits sont utilisées en attendant l
 
 Ce site ne dépose pas de cookie et n'utilise pas d'outil de mesure d'audience.
 
-Le site ne collecte pas directement de données personnelles. Le paiement de la carte Membre fondateur se fait sur une page externe Stripe, qui recueille votre nom, votre email et votre téléphone pour traiter la commande. Ces données servent à gérer votre carte et à vous contacter au sujet du club. Durée de conservation : {{donneesConservation}}
+Le site ne collecte pas directement de données personnelles. Le paiement de la carte Membre fondateur se fait sur une page externe Stripe, qui recueille votre nom, votre email et votre téléphone pour traiter la commande. Ces données servent à gérer votre carte et à vous contacter au sujet du club.
+
+Durée de conservation et usage des données : {{donneesConservation}}
 
 Les liens WhatsApp ouvrent une conversation dans l'application WhatsApp. Les messages que vous envoyez sont soumis aux conditions de WhatsApp.
 

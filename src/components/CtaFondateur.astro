@@ -14,5 +14,5 @@ const href = estTodo(stripe) ? lienWhatsApp('fondateur') : stripe;
 
 <p class="cta cta-fondateur">
   <a href={href} rel="noopener">{libelle}</a>
-  {estTodo(stripe) && <mark class="todo">{stripe}</mark>}
 </p>
+{estTodo(stripe) && <p><mark class="todo">{stripe}</mark></p>}

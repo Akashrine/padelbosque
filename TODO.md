@@ -1,82 +1,95 @@
-# Infos manquantes : questions pour William
+# Infos manquantes
 
-Chaque réponse se reporte dans `src/config.ts`, à la place de la valeur `TODO: ...`.
-Le site se met à jour partout, y compris le JSON-LD : un champ n'y entre qu'une fois renseigné.
+Chaque réponse se reporte dans `src/config.ts`, à la place de la valeur `TODO: ...`, sous forme de phrase complète quand elle s'affiche dans un texte.
+En production, tout bloc qui dépend d'un TODO est masqué. Liste des blocs masqués : `npm run build && npm run verifier`.
 
-## Priorité : à obtenir avant la mise en ligne
+## Message WhatsApp à envoyer à William
 
-- [ ] **Offre fondateur** : validez-vous l'offre telle que décrite ? 49 €, 64 € de crédit valable jusqu'au 31 mars 2027, 7 € la session jusqu'au 31 août 2027, invitation à l'inauguration, tournoi fondateurs en décembre 2026, nom sur le mur. Une fois validée, passer `fondateur.validee` à `true`.
-- [ ] **Lien Stripe** : quel est le lien Stripe Payment Link de la carte fondateur, limité à 100 paiements ? Tant qu'il manque, le bouton « Je deviens membre fondateur » ouvre WhatsApp.
-- [ ] **Mentions légales** : raison sociale, forme juridique et capital, SIRET, TVA intracommunautaire, adresse du siège, directeur de la publication.
+```
+Salut William, il me manque 8 réponses pour mettre le site en ligne.
+Réponds juste avec le numéro et ta réponse.
 
-## Toutes les pages (pied de page)
+1. L'offre fondateur te va telle quelle (49 €, 64 € de crédit, 7 € la session jusqu'au 31 août 2027) ? Oui / non
+2. Le club a déjà un compte Stripe ? Oui / non
+3. Nom exact de la société ?
+4. Forme juridique et capital ? (ex. SAS, 1 000 €)
+5. Numéro SIRET ? (ou "pas encore")
+6. Le siège social est à l'adresse du club ? Oui / non (si non, l'adresse)
+7. C'est toi le directeur de la publication du site ? Oui / non
+8. On garde les coordonnées des fondateurs jusqu'au 31 août 2027, puis on les supprime (hors factures) ? Oui / non
 
-- [ ] Quel est l'identifiant Instagram exact du club ?
+Merci !
+```
 
-## Accueil `/`
+## 1. Bloquant mise en ligne
 
-- [ ] Proposerez-vous des cours avec un coach ? Si oui, qui, quelles formules et quels prix ?
-- [ ] Proposerez-vous des abonnements ou des carnets de sessions ? Si oui, lesquels et à quel prix ?
-- [ ] À quelles dates passez-vous des horaires d'hiver (9h à 21h) aux horaires d'été (8h à 22h30) ? Tant qu'on ne les a pas, seuls les horaires d'hiver figurent dans le JSON-LD.
-- [ ] Quel format pour les soirées (fréquence, jour, principe) ?
-- [ ] Quelle formule et quel prix pour un anniversaire ou une privatisation ?
-- [ ] Quel logiciel de réservation utiliserez-vous et quand sera-t-il en ligne ?
-- [ ] Âge des enfants pour les stages (voir `/stages-padel-enfants`).
+Questions pour William (les 8 du message) :
 
-## Accès : accueil et `/padel-pezenas-meze-sete`
+- [ ] Validation de l'offre fondateur telle que décrite : 49 €, 64 € de crédit valable jusqu'au 31 mars 2027, 7 € la session jusqu'au 31 août 2027, invitation à l'inauguration, tournoi fondateurs en décembre 2026, nom sur le mur. Si oui : `fondateur.validee = true`.
+- [ ] Compte Stripe du club : existe-t-il ? Il faut ensuite créer le Payment Link limité à 100 paiements (`liens.stripe`). Sans lui, le bouton fondateur ouvre WhatsApp.
+- [ ] Raison sociale (`legal.raisonSociale`).
+- [ ] Forme juridique et capital (`legal.formeJuridique`).
+- [ ] SIRET (`legal.siret`).
+- [ ] Siège social (`legal.siege`).
+- [ ] Directeur de la publication (`legal.directeurPublication`).
+- [ ] Durée de conservation et usage des données des fondateurs (`legal.donneesConservation`).
 
-- [ ] Quelles sont les coordonnées GPS de l'entrée nord (latitude, longitude) ? Elles entreront dans le JSON-LD.
-- [ ] Quelle est l'adresse postale exacte du club (numéro, voie), si elle existe ?
-- [ ] Quel itinéraire conseiller pour rejoindre l'entrée nord (route, panneau, repère) ?
-- [ ] Temps de trajet en voiture jusqu'à l'entrée nord depuis Pézenas, Mèze, Sète, Agde et Béziers. Possible de les mesurer nous-mêmes sur Google Maps une fois le point GPS connu, à faire valider par William.
-- [ ] Quel est le lien de la fiche Google du club, une fois créée ?
+Côté Julien, pas de question à poser :
 
-## `/padel-entreprise-team-building`
+- [ ] Choisir l'hébergeur (Netlify ou Vercel), recopier son nom et son adresse officiels dans `legal.hebergeur`.
+- [ ] Créer le Payment Link Stripe (100 paiements, collecte nom, email, téléphone) et régler son URL de retour sur `https://padelbosque.fr/bienvenue-fondateur`.
+- [ ] Brancher padelbosque.fr.
 
-- [ ] Quels formats proposez-vous aux entreprises (demi-journée, soirée, tournoi interne) ?
-- [ ] Combien de personnes au maximum pour un événement d'entreprise ?
-- [ ] Un encadrant ou un coach peut-il animer l'événement ?
-- [ ] Quel tarif pour une privatisation ou un événement d'entreprise ?
+## 2. Sous un mois (avant l'ouverture, début novembre 2026)
 
-## `/stages-padel-enfants`
-
-- [ ] À partir de quel âge et jusqu'à quel âge les enfants peuvent-ils participer ?
-- [ ] Pendant quelles vacances scolaires auront lieu les premiers stages ?
-- [ ] Les stages sont-ils ouverts aux enfants qui n'ont jamais joué ? Y a-t-il des groupes de niveau ?
-- [ ] Quel est le déroulé d'une journée de stage (horaires, durée, demi-journée ou journée) ?
-- [ ] Qui encadre les stages et avec quel diplôme ?
-- [ ] Le matériel est-il fourni pendant les stages ?
-- [ ] Quel est le prix d'un stage ?
-
-## `/tournois-ligues-padel`
-
-- [ ] Quelle est la date du tournoi fondateurs de décembre 2026 ?
-- [ ] Quel calendrier pour les tournois et les ligues internes ?
-- [ ] Organiserez-vous des tournois homologués FFT ?
-- [ ] Les tournois et les ligues seront-ils ouverts à tous les niveaux ?
-- [ ] Comment fonctionnera une ligue interne (niveaux, durée, rencontres) ?
-- [ ] Comment s'inscrire à un tournoi et quel est le prix d'inscription ?
-
-## `/bienvenue-fondateur`
-
-- [ ] Quelle est la date exacte de l'inauguration ?
-- [ ] Quel est le lien d'invitation du groupe WhatsApp des membres fondateurs ? Tant qu'il manque, la page renvoie vers WhatsApp en direct.
-
-## `/mentions-legales`
-
-- [ ] Combien de temps conservez-vous les données des membres fondateurs, et à quoi servent-elles exactement ?
-- [ ] Les infos société listées en priorité ci-dessus.
-
-## Hors site (CLAUDE.md)
-
+- [ ] Horaires : passage aux horaires d'été le dernier dimanche de mars et aux horaires d'hiver le dernier dimanche d'octobre ? Oui / non. Si oui, dans `club.bascule` : `{ debutEte: { mois: 3, jour: 'dernier-dimanche' }, debutHiver: { mois: 10, jour: 'dernier-dimanche' } }`. Le JSON-LD publiera alors les deux plages avec validFrom et validThrough. Il faudra reconstruire le site au moins une fois par an pour mettre ces dates à jour.
+- [ ] Identifiant Instagram exact du club (pied de page, JSON-LD `sameAs`).
+- [ ] Coordonnées GPS de l'entrée nord (JSON-LD `geo`). Un point déposé sur Google Maps suffit.
+- [ ] Adresse postale exacte du club (numéro, voie), si elle existe.
+- [ ] Itinéraire conseillé pour l'entrée nord (route, panneau, repère).
+- [ ] Temps de trajet en voiture depuis Pézenas, Mèze, Sète, Agde et Béziers. Julien peut les mesurer sur Google Maps une fois le point GPS connu, puis les faire valider.
+- [ ] Lien de la fiche Google, une fois créée.
+- [ ] Date de pose de l'enseigne (nécessaire pour la vérification de la fiche Google).
+- [ ] Date exacte de l'inauguration.
+- [ ] Date du tournoi fondateurs de décembre 2026.
+- [ ] Lien d'invitation du groupe WhatsApp des fondateurs. Sans lui, `/bienvenue-fondateur` renvoie vers WhatsApp en direct.
+- [ ] Logiciel de réservation : lequel, et date de mise en ligne.
+- [ ] Cours avec un coach : oui ou non ? Si oui, qui, quelles formules, quels prix.
+- [ ] Abonnements ou carnets de sessions : oui ou non ? Si oui, lesquels et à quel prix.
+- [ ] Numéro de TVA intracommunautaire, s'il existe.
 - [ ] Logo en vectoriel et couleurs de marque (nécessaires pour le design).
 - [ ] Photos du chantier, rendus 3D, photo de William.
+
+## 3. Plus tard
+
+Entreprises (`/padel-entreprise-team-building`) :
+
+- [ ] Formats proposés (demi-journée, soirée, tournoi interne).
+- [ ] Capacité maximale d'un événement.
+- [ ] Un encadrant ou un coach peut-il animer l'événement ?
+- [ ] Tarif d'une privatisation ou d'un événement d'entreprise.
+
+Stages enfants (`/stages-padel-enfants`) :
+
+- [ ] Âges minimum et maximum.
+- [ ] Vacances scolaires des premiers stages.
+- [ ] Ouverts aux enfants qui n'ont jamais joué ? Groupes de niveau ?
+- [ ] Déroulé d'une journée (horaires, durée, demi-journée ou journée).
+- [ ] Encadrant et diplôme.
+- [ ] Matériel fourni pendant le stage ?
+- [ ] Prix d'un stage.
+
+Tournois, ligues et soirées (`/tournois-ligues-padel`) :
+
+- [ ] Calendrier des tournois et des ligues internes.
+- [ ] Tournois homologués FFT ?
+- [ ] Ouverts à tous les niveaux ?
+- [ ] Fonctionnement d'une ligue interne (niveaux, durée, rencontres).
+- [ ] Inscription à un tournoi et prix.
+- [ ] Format des soirées (fréquence, jour, principe).
+
+Autres :
+
+- [ ] Formule et prix d'un anniversaire ou d'une privatisation.
 - [ ] Date du shooting photo et vidéo sur place.
-- [ ] Date de pose de l'enseigne (nécessaire pour la vérification de la fiche Google).
-
-## À régler par Julien
-
-- [ ] Hébergeur retenu, Netlify ou Vercel. Recopier ensuite son nom et son adresse officiels dans `legal.hebergeur`.
-- [ ] Dans Stripe, régler l'URL de retour du Payment Link sur `https://padelbosque.fr/bienvenue-fondateur`.
-- [ ] Remplacer l'image de partage provisoire `public/og-default.png` (texte seul) quand logo et photos existent : `node scripts/generer-og.mjs`, ou un vrai visuel.
-- [ ] Remplacer le favicon provisoire `public/favicon.svg` par le logo.
+- [ ] Remplacer l'image de partage provisoire (`public/og-default.png`, texte seul) et le favicon provisoire par le logo et les photos.

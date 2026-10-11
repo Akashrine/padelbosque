@@ -25,7 +25,20 @@ export interface PlageHoraire {
   /** Format HH:MM */
   fermeture: string;
   jours: Jour[];
-  periode: string | Todo;
+}
+
+/** Règle annuelle de changement d'horaires : un jour fixe, ou le dernier dimanche du mois. */
+export interface RegleDate {
+  /** 1 = janvier, 12 = décembre */
+  mois: number;
+  jour: number | 'dernier-dimanche';
+}
+
+export interface Bascule {
+  /** Premier jour des horaires d'été. */
+  debutEte: RegleDate;
+  /** Premier jour des horaires d'hiver. */
+  debutHiver: RegleDate;
 }
 
 export interface Ville {
@@ -106,16 +119,25 @@ export const club = {
       ouverture: '09:00',
       fermeture: '21:00',
       jours: tousLesJours,
-      periode: 'TODO: À quelles dates commencent et finissent les horaires d\'hiver ?',
     },
     ete: {
       libelle: 'Été',
       ouverture: '08:00',
       fermeture: '22:30',
       jours: tousLesJours,
-      periode: 'TODO: À quelles dates commencent et finissent les horaires d\'été ?',
     },
   } satisfies Record<string, PlageHoraire>,
+
+  /**
+   * Dates de passage aux horaires d'été et d'hiver.
+   * Proposition à valider avec William : dernier dimanche de mars / dernier dimanche d'octobre, soit
+   * { debutEte: { mois: 3, jour: 'dernier-dimanche' }, debutHiver: { mois: 10, jour: 'dernier-dimanche' } }
+   * Une fois renseignées, le JSON-LD publie les deux plages avec validFrom et validThrough.
+   */
+  bascule:
+    'TODO: À quelles dates passez-vous aux horaires d\'été et d\'hiver ? Proposition : dernier dimanche de mars / dernier dimanche d\'octobre, à valider avec William.' as
+      | Bascule
+      | Todo,
 
   tarif: {
     prixParJoueur: 8,
@@ -301,7 +323,59 @@ export const heure = (hhmm: string) => {
 };
 
 export const plageTexte = (p: PlageHoraire) =>
-  `${heure(p.ouverture)} à ${heure(p.fermeture)}, 7 jours sur 7`;
+  `${heure(p.ouverture)} à ${heure(p.fermeture)}`;
+
+const nomsMois = [
+  'janvier', 'février', 'mars', 'avril', 'mai', 'juin',
+  'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre',
+];
+
+/** { mois: 3, jour: 'dernier-dimanche' } devient "dernier dimanche de mars". */
+export const regleTexte = (r: RegleDate) =>
+  r.jour === 'dernier-dimanche'
+    ? `dernier dimanche ${/^[ao]/.test(nomsMois[r.mois - 1]) ? 'd\'' : 'de '}${nomsMois[r.mois - 1]}`
+    : `${r.jour === 1 ? '1er' : r.jour} ${nomsMois[r.mois - 1]}`;
+
+/** Date (UTC, minuit) d'une règle pour une année donnée. */
+export function dateRegle(r: RegleDate, annee: number): Date {
+  if (r.jour !== 'dernier-dimanche') return new Date(Date.UTC(annee, r.mois - 1, r.jour));
+  const fin = new Date(Date.UTC(annee, r.mois, 0));
+  fin.setUTCDate(fin.getUTCDate() - fin.getUTCDay());
+  return fin;
+}
+
+export interface Saison {
+  plage: PlageHoraire;
+  du: Date;
+  au: Date;
+}
+
+/** Saison en cours à la date donnée, puis la suivante. Le site doit être reconstruit au moins une fois par an. */
+export function saisons(b: Bascule, aujourdhui = new Date()): [Saison, Saison] {
+  const veille = (d: Date) => new Date(d.getTime() - 86_400_000);
+  const a = aujourdhui.getUTCFullYear();
+  const ete = (y: number) => dateRegle(b.debutEte, y);
+  const hiver = (y: number) => dateRegle(b.debutHiver, y);
+  const { hiver: h, ete: e } = club.horaires;
+  if (aujourdhui < ete(a)) {
+    return [
+      { plage: h, du: hiver(a - 1), au: veille(ete(a)) },
+      { plage: e, du: ete(a), au: veille(hiver(a)) },
+    ];
+  }
+  if (aujourdhui < hiver(a)) {
+    return [
+      { plage: e, du: ete(a), au: veille(hiver(a)) },
+      { plage: h, du: hiver(a), au: veille(ete(a + 1)) },
+    ];
+  }
+  return [
+    { plage: h, du: hiver(a), au: veille(ete(a + 1)) },
+    { plage: e, du: ete(a + 1), au: veille(hiver(a + 1)) },
+  ];
+}
+
+export const isoDate = (d: Date) => d.toISOString().slice(0, 10);
 
 export const adresseTexte = () =>
   `${club.adresse.rue}, ${club.adresse.codePostal} ${club.adresse.ville}`;

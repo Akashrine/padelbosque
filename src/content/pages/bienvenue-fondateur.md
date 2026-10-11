@@ -14,9 +14,13 @@ Merci. Vous faites partie des {{fondateurCartes}} membres fondateurs de {{nom}}.
 
 - **Votre crédit de jeu.** {{fondateurCredit}}, soit {{fondateurSessions}} sessions, chargés dans le logiciel du club à l'ouverture. Valable jusqu'au {{fondateurCreditValidite}}.
 - **Votre tarif fondateur.** {{fondateurTarif}} la session jusqu'au {{fondateurTarifJusquau}}.
-- **L'inauguration.** Vous êtes invité. Elle aura lieu {{inauguration}}. Date exacte : {{inaugurationDate}}
-- **Le tournoi fondateurs.** Offert, en décembre 2026. Date exacte : {{tournoiFondateursDate}}
+- **L'inauguration.** Vous êtes invité. Elle aura lieu {{inauguration}}.
+- **Le tournoi fondateurs.** Offert, en décembre 2026.
 - **Le mur des fondateurs.** Votre nom y sera inscrit, au club.
+
+Date de l'inauguration : {{inaugurationDate}}
+
+Date du tournoi fondateurs : {{tournoiFondateursDate}}
 
 ## Restons en contact
 

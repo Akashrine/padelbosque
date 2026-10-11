@@ -9,6 +9,7 @@ import {
   fondateur,
   heure,
   legal,
+  regleTexte,
   stagesEnfants,
   tournois,
 } from '../config';
@@ -55,8 +56,9 @@ export const variables: Record<string, string> = {
   adressePostale: club.adresse.adressePostaleExacte,
   inaugurationDate: club.inauguration.date,
   tournoiFondateursDate: fondateur.tournoiDate,
-  periodeHiver: club.horaires.hiver.periode,
-  periodeEte: club.horaires.ete.periode,
+  bascule: estTodo(club.bascule)
+    ? club.bascule
+    : `Horaires d'été à partir du ${regleTexte(club.bascule.debutEte)}, horaires d'hiver à partir du ${regleTexte(club.bascule.debutHiver)}.`,
   cours: club.cours,
   formules: club.formules,
   reservationLogiciel: club.reservation.logiciel,
@@ -98,9 +100,16 @@ export const contientTodo = (texte: string) => remplir(texte).includes('TODO:');
 
 export { estTodo };
 
+/** Paragraphes d'un Markdown brut qui ne dépendent d'aucune valeur TODO (ceux qui restent en production). */
+export const paragraphesSansTodo = (markdown: string) =>
+  markdown
+    .split(/\n\s*\n/)
+    .filter((p) => p.trim() && !contientTodo(p))
+    .join('\n\n');
+
 /** Markdown brut vers texte simple, pour les réponses FAQ en JSON-LD. */
 export function texteSimple(markdown: string): string {
-  return remplir(markdown)
+  return remplir(paragraphesSansTodo(markdown))
     .replace(/<[^>]+>/g, '')
     .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
     .replace(/[*_`#>]/g, '')

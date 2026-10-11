@@ -1,19 +1,19 @@
 ---
-import { club, heure } from '../config';
+import { club, estTodo, plageTexte, regleTexte } from '../config';
 import Info from './Info.astro';
 
 const plages = [club.horaires.hiver, club.horaires.ete];
+const b = club.bascule;
 ---
 
 <div class="horaires">
   <h3>Horaires</h3>
+  <p>Ouvert 7 jours sur 7.</p>
   <table>
-    <caption>Ouvert 7 jours sur 7</caption>
     <thead>
       <tr>
         <th scope="col">Saison</th>
         <th scope="col">Horaires</th>
-        <th scope="col">Période</th>
       </tr>
     </thead>
     <tbody>
@@ -21,11 +21,19 @@ const plages = [club.horaires.hiver, club.horaires.ete];
         plages.map((p) => (
           <tr>
             <th scope="row">{p.libelle}</th>
-            <td>{heure(p.ouverture)} à {heure(p.fermeture)}</td>
-            <td><Info valeur={p.periode} /></td>
+            <td>{plageTexte(p)}</td>
           </tr>
         ))
       }
     </tbody>
   </table>
+  {
+    estTodo(b) ? (
+      <p><Info valeur={b} /></p>
+    ) : (
+      <p>
+        Horaires d'été à partir du {regleTexte(b.debutEte)}. Horaires d'hiver à partir du {regleTexte(b.debutHiver)}.
+      </p>
+    )
+  }
 </div>

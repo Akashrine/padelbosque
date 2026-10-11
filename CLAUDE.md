@@ -28,7 +28,9 @@ Budget serré (500 € pour landing, fiche Google et 3 à 4 pages SEO). Pas de s
 - Les textes vivent dans `src/content/` (pages, accueil, faq). Ils citent les infos de `src/config.ts` avec `{{cle}}` (liste dans `src/lib/gabarit.ts`). Une clé inconnue fait échouer le build. Une valeur `TODO: ...` s'affiche en `<mark class="todo">`.
 - `content/pages` : `type: seo` est généré par `src/pages/[slug].astro`, `type: systeme` a son propre fichier dans `src/pages/`.
 - Les champs TODO sont exclus du JSON-LD, et une question FAQ dont la réponse contient un TODO est exclue du FAQPage.
-- Contrôle après chaque changement : `npm run build && npm run verifier`.
+- En dev, les TODO sont surlignés. En build de production, l'intégration `src/integrations/masquer-todo.ts` retire tout bloc qui dépend d'un TODO (paragraphe, élément de liste, ligne de tableau, couple dt/dd), puis les titres et conteneurs devenus vides. Dans les textes, un TODO doit donc être seul dans son paragraphe, sinon il emporte des faits confirmés avec lui. `TODO_VISIBLES=1` désactive le masquage.
+- Contrôle après chaque changement : `npm run build && npm run verifier`. Le verifier liste les blocs masqués par page.
+- `npm run contenus` régénère `CONTENUS.md` (tous les textes du site, TODO visibles). Ne pas modifier ce fichier à la main.
 - Questions ouvertes pour William : `TODO.md`.
 
 ## Infos du club (source : questionnaire rempli par William)

@@ -4,7 +4,9 @@ titre: "Activités"
 
 ### Stages enfants
 
-Des stages de padel pendant les vacances scolaires. {{stagesAges}} [Voir les stages enfants](/stages-padel-enfants).
+Des stages de padel pendant les vacances scolaires. [Voir les stages enfants](/stages-padel-enfants).
+
+Âges : {{stagesAges}}
 
 ### Tournois et ligues internes
 
@@ -12,7 +14,9 @@ Des tournois et des ligues entre joueurs du club, pour progresser et se mesurer 
 
 ### Soirées
 
-Les terrains sont éclairés et le bar est sur place. Le club organisera des soirées padel. {{soirees}}
+Les terrains sont éclairés et le bar est sur place. Le club organisera des soirées padel.
+
+Format : {{soirees}}
 
 ### Entreprises
 
@@ -20,4 +24,6 @@ Team building, séminaire, sortie d'équipe : le padel se joue à quatre et s'ap
 
 ### Anniversaires et privatisations
 
-Vous pouvez privatiser des terrains pour un anniversaire ou un événement. {{anniversaires}}
+Vous pouvez privatiser des terrains pour un anniversaire ou un événement.
+
+Formule et prix : {{anniversaires}}

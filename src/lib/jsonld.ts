@@ -1,4 +1,4 @@
-import { club, estTodo, fondateur, liens, site } from '../config';
+import { club, estTodo, fondateur, isoDate, liens, saisons, site, type PlageHoraire } from '../config';
 
 export type JsonLd = Record<string, unknown>;
 
@@ -14,6 +14,23 @@ export const adressePostale = () => ({
   addressRegion: club.adresse.region,
   addressCountry: club.adresse.pays,
 });
+
+const specHoraires = (p: PlageHoraire, du?: Date, au?: Date) => ({
+  '@type': 'OpeningHoursSpecification',
+  dayOfWeek: p.jours.map((j) => `https://schema.org/${j}`),
+  opens: p.ouverture,
+  closes: p.fermeture,
+  ...(du && au ? { validFrom: isoDate(du), validThrough: isoDate(au) } : {}),
+});
+
+/**
+ * Avec les dates de bascule : saison en cours et saison suivante, chacune avec validFrom et validThrough.
+ * Sans elles : horaires d'hiver seuls (le club ouvre en novembre), car deux plages sans dates se contrediraient.
+ */
+function horaires() {
+  if (estTodo(club.bascule)) return [specHoraires(club.horaires.hiver)];
+  return saisons(club.bascule).map((s) => specHoraires(s.plage, s.du, s.au));
+}
 
 /**
  * Fiche du club. Les champs encore inconnus (TODO) sont exclus :
@@ -43,16 +60,7 @@ export function sportsActivityLocation(description: string): JsonLd {
           },
         }),
     hasMap: liens.googleMaps,
-    // Horaires d'hiver uniquement : le club ouvre en novembre, et les dates de bascule
-    // hiver/été sont encore inconnues. Deux plages sans dates se contrediraient.
-    openingHoursSpecification: [
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: club.horaires.hiver.jours.map((j) => `https://schema.org/${j}`),
-        opens: club.horaires.hiver.ouverture,
-        closes: club.horaires.hiver.fermeture,
-      },
-    ],
+    openingHoursSpecification: horaires(),
     priceRange: `${club.tarif.prixParJoueur} € par joueur`,
     currenciesAccepted: club.tarif.devise,
     publicAccess: true,
@@ -86,9 +94,9 @@ export function sportsActivityLocation(description: string): JsonLd {
   };
 }
 
-/** FAQPage : seules les questions sans TODO sont publiées. */
+/** FAQPage : la réponse ne garde que les paragraphes sans TODO ; une réponse vide n'est pas publiée. */
 export function faqPage(questions: { question: string; reponse: string }[]): JsonLd | null {
-  const publiables = questions.filter((q) => !q.reponse.includes('TODO:'));
+  const publiables = questions.filter((q) => q.reponse && !q.reponse.includes('TODO:'));
   if (!publiables.length) return null;
   return {
     '@context': 'https://schema.org',

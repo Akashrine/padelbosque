@@ -25,25 +25,31 @@ Jouer en double apprend aussi à jouer avec un partenaire : se parler, se placer
 
 ## Quand ont lieu les stages ?
 
-Les stages sont prévus pendant les vacances scolaires. {{stagesPeriodes}}
+Les stages sont prévus pendant les vacances scolaires.
+
+Premières dates : {{stagesPeriodes}}
 
 ## À partir de quel âge ?
 
-{{stagesAges}}
+Âges : {{stagesAges}}
 
-Les enfants qui n'ont jamais joué peuvent-ils s'inscrire ? {{stagesNiveaux}}
+Niveau requis : {{stagesNiveaux}}
 
 ## Comment se passe une journée de stage ?
 
-{{stagesDeroule}}
+Déroulé : {{stagesDeroule}}
 
-Qui encadre les enfants ? {{stagesEncadrement}}
+Encadrement : {{stagesEncadrement}}
 
 ## Que faut-il prévoir ?
 
 Une tenue de sport, des chaussures de sport et une gourde. Les terrains sont en extérieur : pensez à une casquette quand il fait beau et à une couche chaude en hiver.
 
-Pour la raquette, le club propose la location sur place. Le matériel est-il compris dans le stage ? {{stagesMateriel}}
+Marquez le nom de votre enfant sur ses affaires. Sur un stage, les gourdes et les vestes se ressemblent toutes.
+
+Pour la raquette, le club propose la location sur place.
+
+Matériel pendant le stage : {{stagesMateriel}}
 
 ## Un club pensé pour les familles
 
@@ -59,10 +65,12 @@ Et le cadre fait la différence. Les terrains sont installés au cœur du domain
 
 ## Comment inscrire votre enfant ?
 
-Les inscriptions ouvriront quand le programme sera fixé. Prix d'un stage : {{stagesTarif}}
+Les inscriptions ouvriront quand le programme sera fixé.
+
+Prix d'un stage : {{stagesTarif}}
 
 En attendant, écrivez-nous sur WhatsApp pour être prévenu. Vous pouvez aussi appeler le {{telephone}}.
 
 ## Et vous, vous jouez ?
 
-Le club est ouvert 7 jours sur 7, à {{prix}} par joueur pour un créneau de {{creneau}}, à toute heure. Si vous comptez jouer souvent, la carte Membre fondateur vous fait gagner du temps et de l'argent. Elle coûte {{fondateurPrix}} et comprend {{fondateurCredit}} de crédit de jeu. Ensuite, vous jouez à {{fondateurTarif}} la session jusqu'au {{fondateurTarifJusquau}}. Seules {{fondateurCartes}} cartes sont en vente.
+Le club est ouvert 7 jours sur 7, à {{prix}} par joueur pour un créneau de {{creneau}}, à toute heure. Si vous comptez jouer souvent, la carte Membre fondateur vous fait économiser sur chaque session. Elle coûte {{fondateurPrix}} et comprend {{fondateurCredit}} de crédit de jeu. Ensuite, vous jouez à {{fondateurTarif}} la session jusqu'au {{fondateurTarifJusquau}}. Seules {{fondateurCartes}} cartes sont en vente.

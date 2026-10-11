@@ -1,61 +1,76 @@
-// Vérifie le site construit (dist/) : JSON-LD, balises SEO, cohérence nom/adresse/téléphone, TODO.
-// Usage : npm run build && node scripts/verifier.mjs
-import { readFileSync, readdirSync } from 'node:fs';
+// Vérifie le site construit (dist/) : JSON-LD, balises SEO, cohérence nom/adresse/téléphone, TODO masqués.
+// Usage : npm run build && npm run verifier
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
+import { parseHTML } from 'linkedom';
 
 const dist = 'dist';
 const fichiers = readdirSync(dist).filter((f) => f.endsWith('.html')).sort();
+const rapport = existsSync('rapport-build/todo-masques.json')
+  ? JSON.parse(readFileSync('rapport-build/todo-masques.json', 'utf8'))
+  : null;
 const erreurs = [];
 const lignes = [];
 
-const texte = (html) =>
-  html
-    .replace(/<script[\s\S]*?<\/script>/g, ' ')
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/&#39;/g, "'")
-    .replace(/&amp;/g, '&')
-    .replace(/&nbsp;|\u00a0/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
-const mots = (t) => t.split(' ').filter((m) => /[\p{L}\p{N}]/u.test(m)).length;
-const attr = (html, re) => (html.match(re)?.[1] ?? '').replace(/&#39;/g, "'").replace(/&amp;/g, '&');
-
+const propre = (t) => (t ?? '').replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim();
+const mots = (t) => propre(t).split(' ').filter((m) => /[\p{L}\p{N}]/u.test(m)).length;
 const exiger = (cond, message) => cond || erreurs.push(message);
+const visible = (el) => {
+  const copie = el.cloneNode(true);
+  copie.querySelectorAll('script').forEach((s) => s.remove());
+  return propre(copie.textContent);
+};
 
 for (const f of fichiers) {
   const html = readFileSync(`${dist}/${f}`, 'utf8');
+  const { document } = parseHTML(html);
   const url = '/' + f.replace(/\.html$/, '').replace(/^index$/, '');
-  const title = attr(html, /<title>([^<]*)<\/title>/);
-  const description = attr(html, /<meta name="description" content="([^"]*)"/);
-  const h1s = [...html.matchAll(/<h1[^>]*>([\s\S]*?)<\/h1>/g)].map((m) => texte(m[1]));
-  const main = html.match(/<main[^>]*>([\s\S]*)<\/main>/)?.[1] ?? '';
-  const todos = [...html.matchAll(/<mark class="todo">([\s\S]*?)<\/mark>/g)].map((m) => texte(m[1]));
-  const article = html.match(/<article[^>]*>([\s\S]*?)<\/article>/)?.[1];
-  const sansTodo = (s) => s.replace(/<mark class="todo">[\s\S]*?<\/mark>/g, ' ');
-  const motsPage = mots(texte(sansTodo(main)));
-  const motsArticle = article ? mots(texte(sansTodo(article))) : null;
-  const noindex = html.includes('name="robots" content="noindex');
+  const title = propre(document.querySelector('title')?.textContent);
+  const description = document.querySelector('meta[name="description"]')?.getAttribute('content') ?? '';
+  const noindex = !!document.querySelector('meta[name="robots"][content*="noindex"]');
+  const main = document.querySelector('main');
+  const article = main.querySelector('article');
+  const todosAffiches = document.querySelectorAll('mark.todo').length;
+  const masques = rapport?.pages?.[f] ?? [];
 
   exiger(title, `${f} : title manquant`);
   exiger(description, `${f} : meta description manquante`);
-  exiger(h1s.length === 1, `${f} : ${h1s.length} H1`);
-  exiger(!/[—–]/.test(texte(main)), `${f} : tiret cadratin ou demi-cadratin`);
+  exiger(document.querySelectorAll('h1').length === 1, `${f} : nombre de H1 différent de 1`);
+  exiger(!/[—–]/.test(visible(main)), `${f} : tiret cadratin ou demi-cadratin`);
   exiger(!/Pad’el/.test(html), `${f} : apostrophe courbe dans le nom du club`);
   exiger(!/\{\{/.test(html), `${f} : variable {{ }} non remplacée`);
   if (!noindex) {
     exiger(title.length <= 65, `${f} : title de ${title.length} caractères (> 65)`);
     exiger(description.length >= 110 && description.length <= 160, `${f} : description de ${description.length} caractères (hors 110-160)`);
   }
+  if (rapport && !rapport.todoVisibles) {
+    exiger(!/TODO/.test(visible(document.body)) && todosAffiches === 0, `${f} : le mot TODO est affiché en production`);
+    exiger(!/TODO/.test(title + description), `${f} : TODO dans le title ou la description`);
+  }
+
+  // Titres sans contenu après masquage.
+  for (const h of main.querySelectorAll('h2, h3')) {
+    let s = h.nextElementSibling;
+    const niv = Number(h.tagName[1]);
+    const orphelin = !s || (/^H[1-6]$/.test(s.tagName) && Number(s.tagName[1]) <= niv);
+    exiger(!orphelin, `${f} : titre sans contenu « ${propre(h.textContent)} »`);
+  }
 
   // Pied de page : nom, adresse, téléphone identiques partout.
-  const pied = texte(html.match(/<footer[\s\S]*?<\/footer>/)?.[0] ?? '');
+  const pied = visible(document.querySelector('footer'));
   for (const attendu of ["Pad'el Bosque", 'Base départementale de Bessilles', '34530 Montagnac', '06 14 97 97 49']) {
     exiger(pied.includes(attendu), `${f} : pied de page sans « ${attendu} »`);
   }
 
+  // FAQ visible
+  const questionsVisibles = [...main.querySelectorAll('details summary')].map((s) => propre(s.textContent));
+  if (article && !noindex && f !== 'mentions-legales.html') {
+    exiger(questionsVisibles.length >= 3 && questionsVisibles.length <= 5, `${f} : ${questionsVisibles.length} questions FAQ visibles (attendu 3 à 5)`);
+  }
+
   // JSON-LD
-  const blocs = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((m) => m[1]);
   const types = [];
-  for (const brut of blocs) {
+  for (const script of document.querySelectorAll('script[type="application/ld+json"]')) {
+    const brut = script.textContent;
     let d;
     try {
       d = JSON.parse(brut);
@@ -76,15 +91,18 @@ for (const f of fichiers) {
         a.streetAddress === 'Base départementale de Bessilles' && a.postalCode === '34530' && a.addressLocality === 'Montagnac' && a.addressRegion === 'Occitanie' && a.addressCountry === 'FR',
         `${f} : adresse JSON-LD différente`,
       );
-      for (const o of d.openingHoursSpecification) {
+      const plages = d.openingHoursSpecification;
+      for (const o of plages) {
         exiger(/^\d\d:\d\d$/.test(o.opens) && /^\d\d:\d\d$/.test(o.closes) && o.dayOfWeek.length, `${f} : horaires JSON-LD mal formés`);
+        if (o.validFrom) exiger(o.validFrom < o.validThrough, `${f} : validFrom après validThrough`);
       }
+      exiger(plages.length === 1 || plages.every((o) => o.validFrom && o.validThrough), `${f} : plusieurs plages horaires sans dates de validité`);
     }
     if (d['@type'] === 'FAQPage') {
       exiger(d.mainEntity.length > 0, `${f} : FAQPage vide`);
       for (const q of d.mainEntity) {
         exiger(q['@type'] === 'Question' && q.name && q.acceptedAnswer?.text, `${f} : question FAQ incomplète`);
-        exiger(html.includes(q.name.replace(/'/g, '&#39;')) || html.includes(q.name), `${f} : question FAQ absente de la page visible`);
+        exiger(questionsVisibles.includes(q.name), `${f} : question FAQ du JSON-LD absente de la page « ${q.name} »`);
       }
     }
     if (d['@type'] === 'BreadcrumbList') {
@@ -92,13 +110,34 @@ for (const f of fichiers) {
     }
   }
 
-  lignes.push({ url, title, description, motsPage, motsArticle, todos: todos.length, jsonld: types.join(' + ') || '-', noindex });
+  lignes.push({
+    url, title, description, noindex, masques, todosAffiches,
+    motsPage: mots(visible(main)),
+    motsArticle: article ? mots(visible(article)) : null,
+    faq: questionsVisibles.length,
+    jsonld: types.join(' + ') || '-',
+  });
 }
 
-console.log('| URL | Title | Meta description | Mots (main) | Mots (article) | TODO | JSON-LD |');
-console.log('| --- | --- | --- | --- | --- | --- | --- |');
+const mode = !rapport ? 'rapport de masquage absent' : rapport.todoVisibles ? 'TODO visibles (TODO_VISIBLES=1)' : 'production, TODO masqués';
+console.log(`Mode du build : ${mode}\n`);
+console.log('| URL | Title | Meta description | Mots (page) | Mots (texte rédigé) | FAQ | TODO affichés | Blocs masqués | JSON-LD |');
+console.log('| --- | --- | --- | --- | --- | --- | --- | --- | --- |');
 for (const l of lignes) {
-  console.log(`| \`${l.url}\`${l.noindex ? ' (noindex)' : ''} | ${l.title} (${l.title.length}) | ${l.description} (${l.description.length}) | ${l.motsPage} | ${l.motsArticle ?? '-'} | ${l.todos} | ${l.jsonld} |`);
+  console.log(`| \`${l.url}\`${l.noindex ? ' (noindex)' : ''} | ${l.title} (${l.title.length}) | ${l.description} (${l.description.length}) | ${l.motsPage} | ${l.motsArticle ?? '-'} | ${l.faq} | ${l.todosAffiches} | ${l.masques.length} | ${l.jsonld} |`);
 }
+
+if (rapport && !rapport.todoVisibles) {
+  console.log('\n## Blocs masqués en production\n');
+  for (const l of lignes) {
+    if (!l.masques.length) continue;
+    console.log(`### ${l.url}\n`);
+    for (const m of l.masques) {
+      console.log(`- ${m.texte ? `« ${m.texte.slice(0, 90)}${m.texte.length > 90 ? '…' : ''} » ` : ''}→ ${m.questions.map((q) => q.replace(/^TODO: /, '')).join(' / ')}`);
+    }
+    console.log('');
+  }
+}
+
 console.log(erreurs.length ? `\n${erreurs.length} problème(s) :\n- ${erreurs.join('\n- ')}` : '\nAucun problème détecté.');
 process.exit(erreurs.length ? 1 : 0);

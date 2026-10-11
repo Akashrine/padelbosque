@@ -31,9 +31,11 @@ Vous êtes plus nombreux ? Capacité maximale d'un événement : {{entrepriseCap
 
 ## Comment se déroule un événement d'entreprise ?
 
-Le format dépend de votre groupe et de vos objectifs. {{entrepriseFormats}}
+Le format dépend de votre groupe et de vos objectifs.
 
-Un encadrant peut-il animer la séance ? {{entrepriseEncadrement}}
+Formats proposés : {{entrepriseFormats}}
+
+Animation de la séance : {{entrepriseEncadrement}}
 
 Pour préparer votre demande, notez ces quatre points :
 
@@ -46,7 +48,9 @@ Envoyez-les sur WhatsApp. Nous revenons vers vous avec une proposition.
 
 ## Peut-on privatiser les terrains ?
 
-Oui. Le club propose des privatisations pour les entreprises, les anniversaires et les événements. Tarif : {{entrepriseTarif}}
+Oui. Le club propose des privatisations pour les entreprises, les anniversaires et les événements.
+
+Tarif : {{entrepriseTarif}}
 
 Pour mémoire, le tarif public est de {{prix}} par joueur et par créneau de {{creneau}}, à toute heure.
 

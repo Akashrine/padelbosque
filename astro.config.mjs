@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import { satteri } from '@astrojs/markdown-satteri';
 import { variablesConfig } from './src/lib/markdown-variables.ts';
+import masquerTodo from './src/integrations/masquer-todo.ts';
 
 export default defineConfig({
   site: 'https://padelbosque.fr',
@@ -18,6 +19,7 @@ export default defineConfig({
     }),
   },
   integrations: [
+    masquerTodo(),
     sitemap({
       filter: (page) => !page.includes('/bienvenue-fondateur') && !page.includes('/404'),
     }),

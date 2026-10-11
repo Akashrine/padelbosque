@@ -17,7 +17,9 @@ Le club ouvre {{ouverture}}. Le calendrier se construit maintenant. Laissez votr
 
 ## Quel est le premier tournoi ?
 
-Le premier rendez-vous est le tournoi fondateurs, en décembre 2026. Il est offert aux membres fondateurs, les {{fondateurCartes}} premiers à prendre la carte avant l'inauguration. Date exacte : {{tournoiFondateursDate}}
+Le premier rendez-vous est le tournoi fondateurs, en décembre 2026. Il est offert aux membres fondateurs, les {{fondateurCartes}} premiers à prendre la carte avant l'inauguration.
+
+Date du tournoi fondateurs : {{tournoiFondateursDate}}
 
 C'est le premier tournoi du club. Il réunira ceux qui ont cru au projet avant l'ouverture.
 
@@ -25,17 +27,17 @@ La carte coûte {{fondateurPrix}}. En plus du tournoi, elle comprend {{fondateur
 
 ## Quels tournois seront organisés ensuite ?
 
-{{tournoisCalendrier}}
+Calendrier : {{tournoisCalendrier}}
 
-Tournois homologués ou tournois internes ? {{tournoisHomologation}}
+Homologation : {{tournoisHomologation}}
 
-À quel niveau ? {{tournoisNiveaux}}
+Niveaux : {{tournoisNiveaux}}
 
 ## Qu'est-ce qu'une ligue interne ?
 
 Une ligue interne réunit des joueurs du club sur plusieurs semaines. Les équipes se rencontrent à tour de rôle et un classement évolue au fil des matchs. C'est une bonne façon de jouer régulièrement, à son niveau, contre des adversaires différents.
 
-Comment fonctionnera la ligue du club ? {{ligueFormat}}
+Format de la ligue du club : {{ligueFormat}}
 
 ## Et les soirées padel ?
 
@@ -51,9 +53,9 @@ Un créneau dure {{creneau}}. Assez pour s'échauffer et jouer un vrai match.
 
 ## Comment s'inscrire ?
 
-{{tournoisInscription}}
+Inscription : {{tournoisInscription}}
 
-En attendant, écrivez-nous sur WhatsApp. Nous vous prévenons dès qu'un tournoi, une ligue ou une soirée ouvre ses inscriptions.
+Pour être prévenu dès qu'un tournoi, une ligue ou une soirée ouvre ses inscriptions, écrivez-nous sur WhatsApp.
 
 ## Pourquoi jouer vos tournois à Bessilles ?
 

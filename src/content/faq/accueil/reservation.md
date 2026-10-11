@@ -4,4 +4,6 @@ page: accueil
 ordre: 7
 ---
 
-En attendant l'ouverture du logiciel de réservation, écrivez-nous sur WhatsApp. {{reservationLogiciel}}
+En attendant l'ouverture du logiciel de réservation, écrivez-nous sur WhatsApp.
+
+Logiciel de réservation : {{reservationLogiciel}}
