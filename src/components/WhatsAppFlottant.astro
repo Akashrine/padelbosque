@@ -9,6 +9,19 @@ interface Props {
 const { contexte = 'general' } = Astro.props;
 ---
 
-<a class="whatsapp-flottant" href={lienWhatsApp(contexte)} rel="noopener" aria-label="Nous écrire sur WhatsApp">
-  WhatsApp
+<a class="whatsapp-flottant" href={lienWhatsApp(contexte)} rel="noopener">
+  <span class="visuellement-cache">Nous écrire sur WhatsApp</span>
 </a>
+
+<script>
+  const flottant = document.querySelector<HTMLElement>('.whatsapp-flottant');
+  const boutons = document.querySelectorAll('.cta-whatsapp a');
+  if (flottant && boutons.length && 'IntersectionObserver' in window) {
+    const visibles = new Set<Element>();
+    const obs = new IntersectionObserver((entrees) => {
+      for (const e of entrees) e.isIntersecting ? visibles.add(e.target) : visibles.delete(e.target);
+      flottant.toggleAttribute('data-cache', visibles.size > 0);
+    });
+    boutons.forEach((b) => obs.observe(b));
+  }
+</script>

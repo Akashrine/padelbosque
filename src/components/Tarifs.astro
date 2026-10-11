@@ -5,20 +5,132 @@ import Info from './Info.astro';
 const t = club.tarif;
 ---
 
-<div class="tarifs">
-  <h3>Tarifs</h3>
+<div class="ticket tarifs">
   <dl>
-    <dt>Prix</dt>
-    <dd>
-      {euros(t.prixParJoueur)} par joueur, soit {euros(prixTerrain())} le terrain pour {t.dureeCreneauMinutes} minutes
-    </dd>
-    <dt>Durée d'un créneau</dt>
-    <dd>{t.dureeCreneauMinutes} minutes</dd>
-    <dt>Heures creuses, heures pleines</dt>
-    <dd>{t.mention}</dd>
-    <dt>Cours</dt>
-    <dd><Info valeur={club.cours} /></dd>
-    <dt>Abonnements et carnets</dt>
-    <dd><Info valeur={club.formules} /></dd>
+    <div class="ticket-prix">
+      <dt class="visuellement-cache">Prix</dt>
+      <dd>
+        <strong>{euros(t.prixParJoueur)}</strong>
+        <span>par joueur, soit {euros(prixTerrain())} le terrain pour {t.dureeCreneauMinutes} minutes</span>
+      </dd>
+    </div>
+    <div>
+      <dt>Durée d'un créneau</dt>
+      <dd>{t.dureeCreneauMinutes} minutes</dd>
+    </div>
+    <div>
+      <dt>Heures creuses, heures pleines</dt>
+      <dd>{t.mention}</dd>
+    </div>
+    <div>
+      <dt>Cours</dt>
+      <dd><Info valeur={club.cours} /></dd>
+    </div>
+    <div>
+      <dt>Abonnements et carnets</dt>
+      <dd><Info valeur={club.formules} /></dd>
+    </div>
   </dl>
 </div>
+
+<style>
+  /* Le ticket : talon craie perforé, champs en vert forêt. */
+  .ticket {
+    position: relative;
+    background: var(--craie);
+    color: var(--foret);
+    border-radius: var(--rayon-carte);
+    --pad: 1.5rem;
+    padding: var(--pad) var(--pad) 0.75rem;
+    --mousse: var(--encre-2);
+  }
+
+  dl {
+    margin: 0;
+  }
+
+  dl > div {
+    padding: 0.8rem 0;
+    border-top: 1px solid var(--craie-filet);
+    display: grid;
+    gap: 0.2rem;
+  }
+
+  dd {
+    margin: 0;
+    font-weight: 600;
+  }
+
+  dl > .ticket-prix {
+    border-top: 0;
+    padding-top: 0;
+    padding-bottom: 1.25rem;
+  }
+
+  .ticket-prix dd {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.25rem 1rem;
+    font-weight: 500;
+  }
+
+  .ticket-prix strong {
+    font-family: var(--f-display);
+    font-weight: 800;
+    font-size: clamp(5rem, 22vw, 7.5rem);
+    line-height: 0.85;
+    color: var(--foret);
+  }
+
+  .ticket-prix span {
+    max-width: 16rem;
+    font-size: 1.05rem;
+    line-height: 1.35;
+  }
+
+  /* Perforation sous le prix */
+  /* Ligne de découpe : trous ronds répartis sans en couper un, encoches aux deux bords. */
+  .ticket-prix::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 10px;
+    background: radial-gradient(circle, var(--foret) 3.5px, transparent 4px) center / 14px 10px space no-repeat;
+  }
+
+  .ticket-prix::before {
+    content: '';
+    position: absolute;
+    left: calc(-1 * var(--pad) - 1px);
+    right: calc(-1 * var(--pad) - 1px);
+    bottom: -13px;
+    height: 26px;
+    background:
+      radial-gradient(circle at 0 50%, var(--foret) 13px, transparent 13.5px) left / 50% 100% no-repeat,
+      radial-gradient(circle at 100% 50%, var(--foret) 13px, transparent 13.5px) right / 50% 100% no-repeat;
+  }
+
+  .ticket-prix {
+    position: relative;
+  }
+
+  .ticket-prix + div {
+    margin-top: 0.9rem;
+    border-top: 0;
+  }
+
+  @media (min-width: 40rem) {
+    .ticket {
+      --pad: 2rem;
+      padding: var(--pad) var(--pad) 1rem;
+    }
+
+    dl > div:not(.ticket-prix) {
+      grid-template-columns: 14rem 1fr;
+      align-items: baseline;
+    }
+  }
+</style>

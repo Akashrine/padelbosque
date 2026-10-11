@@ -9,7 +9,7 @@ const messages: Record<ContexteWhatsApp, string> = {
 };
 
 export const libellesWhatsApp: Record<ContexteWhatsApp, string> = {
-  fondateur: 'Une question sur la carte fondateur ? Écrivez-nous sur WhatsApp',
+  fondateur: 'Une question ? Écrivez-nous sur WhatsApp',
   entreprise: 'Parlons de votre événement sur WhatsApp',
   stage: 'Être prévenu des stages sur WhatsApp',
   tournoi: 'Être prévenu des tournois sur WhatsApp',

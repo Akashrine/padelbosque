@@ -1,8 +1,10 @@
 ---
 import { getEntry, render } from 'astro:content';
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CtaFondateur from '../components/CtaFondateur.astro';
 import CtaWhatsApp from '../components/CtaWhatsApp.astro';
+import CarteFondateur from '../components/CarteFondateur.astro';
 import OffreFondateur from '../components/OffreFondateur.astro';
 import Equipements from '../components/Equipements.astro';
 import Tarifs from '../components/Tarifs.astro';
@@ -10,8 +12,10 @@ import Horaires from '../components/Horaires.astro';
 import Activites from '../components/Activites.astro';
 import Acces from '../components/Acces.astro';
 import Faq from '../components/Faq.astro';
+import { club } from '../config';
 import { remplir } from '../lib/gabarit';
 import { sportsActivityLocation } from '../lib/jsonld';
+import photoChantier from '../assets/chantier/chantier-9.jpg';
 
 const section = async (id: string) => {
   const entree = await getEntry('accueil', id);
@@ -28,41 +32,276 @@ const acces = await section('acces');
 
 const title = remplir(hero.data.title ?? hero.titre);
 const description = remplir(hero.data.description ?? '');
+
+// "Pad'el Bosque, le padel au cœur de Bessilles" : le nom en signature, la promesse en grand.
+const [nomHero, ...reste] = hero.titre.split(', ');
+const promesse = reste.join(', ');
 ---
 
 <BaseLayout title={title} description={description} jsonLd={[sportsActivityLocation(description)]}>
-  <section id="accueil" aria-labelledby="titre-accueil">
-    <h1 id="titre-accueil">{hero.titre}</h1>
-    {hero.data.sousTitre && <p>{remplir(hero.data.sousTitre)}</p>}
-    <hero.Contenu />
-    <CtaFondateur />
-    <CtaWhatsApp contexte="general" />
+  <section id="accueil" class="hero" aria-labelledby="titre-accueil">
+    <div class="bloc hero-grille">
+      <div class="hero-texte">
+        <h1 id="titre-accueil">
+          {promesse ? (<><span class="visuellement-cache">{nomHero}, </span> <span class="hero-promesse">{promesse}</span></>) : hero.titre}
+        </h1>
+        {hero.data.sousTitre && <p class="hero-ouverture">{remplir(hero.data.sousTitre)}</p>}
+      </div>
+      <div class="hero-carte">
+        <CarteFondateur annotations />
+      </div>
+      <div class="hero-suite">
+        <div class="hero-contenu"><hero.Contenu /></div>
+        <div class="actions">
+          <CtaFondateur />
+          <CtaWhatsApp contexte="general" />
+        </div>
+      </div>
+    </div>
   </section>
 
   <OffreFondateur titre={fondateur.titre}>
     <fondateur.Contenu />
   </OffreFondateur>
 
-  <section id="club" aria-labelledby="titre-club">
-    <h2 id="titre-club">{leClub.titre}</h2>
-    <leClub.Contenu />
-    <Equipements />
+  <section id="club" class="club" aria-labelledby="titre-club">
+    <div class="bloc club-grille">
+      <div class="club-intro">
+        <h2 id="titre-club">{leClub.titre}</h2>
+        <div class="club-cadre"><leClub.Contenu /></div>
+      </div>
+      <figure class="club-photo">
+        <Image
+          src={photoChantier}
+          alt={`Les structures des terrains de ${club.nom} en cours de montage, entourées de pins, au domaine de Bessilles`}
+          widths={[480, 800, 1200]}
+          sizes="(min-width: 64rem) 36rem, 100vw"
+          format="webp"
+          loading="lazy"
+        />
+        <figcaption>Le chantier en cours, avant l'ouverture. Photos du club à venir.</figcaption>
+      </figure>
+      <div class="club-equipements"><Equipements /></div>
+    </div>
   </section>
 
-  <section id="tarifs" aria-labelledby="titre-tarifs">
-    <h2 id="titre-tarifs">{tarifs.titre}</h2>
-    <tarifs.Contenu />
-    <Tarifs />
-    <Horaires />
+  <section id="tarifs" class="tarifs-section" aria-labelledby="titre-tarifs">
+    <div class="bloc">
+      <h2 id="titre-tarifs">{tarifs.titre}</h2>
+      <div class="tarifs-intro"><tarifs.Contenu /></div>
+      <div class="tarifs-grille">
+        <Tarifs />
+        <Horaires />
+      </div>
+    </div>
   </section>
 
   <Activites titre={activites.titre}>
     <activites.Contenu />
   </Activites>
 
-  <Acces titre={acces.titre}>
+  <Acces titre={acces.titre} verso>
     <acces.Contenu />
   </Acces>
 
-  <Faq page="accueil" />
+  <Faq page="accueil" verso />
 </BaseLayout>
+
+<style>
+  /* ---------- Premier écran ---------- */
+  .hero {
+    padding-block: clamp(1.5rem, 5vw, 4rem) clamp(3.5rem, 8vw, 6rem);
+    overflow: hidden;
+  }
+
+  .hero-grille {
+    display: grid;
+    grid-template-areas: 'texte' 'carte' 'suite';
+    row-gap: 1.75rem;
+  }
+
+  .hero-texte {
+    grid-area: texte;
+  }
+
+  .hero-carte {
+    grid-area: carte;
+  }
+
+  .hero-suite {
+    grid-area: suite;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  .hero-promesse {
+    display: block;
+    font-size: clamp(3.4rem, 15.5vw, 6rem);
+    line-height: 0.86;
+  }
+
+  .hero-ouverture {
+    margin: 1rem 0 0;
+    font-family: var(--f-display);
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--mousse);
+  }
+
+  /* Sur mobile, la carte prend toute la largeur : le libellé « Membre fondateur » reste lisible. */
+  .hero-carte :global(.carte-scene) {
+    --largeur-carte: 100%;
+  }
+
+  .hero-contenu :global(p) {
+    color: var(--mousse);
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-contenu {
+    margin-bottom: 1.5rem;
+  }
+
+  .hero .actions {
+    max-width: 30rem;
+  }
+
+  .hero :global(.cta-whatsapp) {
+    margin-top: 0.75rem;
+  }
+
+  @media (max-width: 47.99rem) {
+    /* Le bouton remonte sous la carte : il reste visible sans défiler. */
+    .hero-suite {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 2rem;
+    }
+
+    .hero-contenu {
+      margin-bottom: 0;
+    }
+
+    .hero-carte :global(figcaption) {
+      margin-top: 0.75rem;
+    }
+  }
+
+  /* Téléphones courts (iPhone SE, 320 × 640) : le premier écran se resserre
+     pour que les deux boutons restent visibles sans défiler. */
+  @media (max-width: 47.99rem) and (max-height: 47.99rem) {
+    .hero {
+      padding-top: 1rem;
+    }
+
+    .hero-grille {
+      row-gap: 1.25rem;
+    }
+
+    .hero-promesse {
+      font-size: clamp(2.75rem, 13vw, 3.6rem);
+    }
+
+    .hero-ouverture {
+      margin-top: 0.5rem;
+      font-size: 1.25rem;
+    }
+
+    .hero-carte :global(.carte-scene) {
+      --largeur-carte: 88%;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .hero-grille {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      grid-template-areas:
+        'texte carte'
+        'suite carte';
+      column-gap: clamp(2rem, 5vw, 5rem);
+      align-items: start;
+    }
+
+    .hero-carte {
+      align-self: center;
+    }
+
+    .hero-promesse {
+      font-size: clamp(4rem, 8.4vw, 7.25rem);
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .hero-grille {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+      column-gap: 3rem;
+    }
+  }
+
+  /* ---------- Le club ---------- */
+  .club-grille {
+    display: grid;
+    gap: 2.5rem;
+  }
+
+  .club-cadre :global(p) {
+    font-family: var(--f-display);
+    font-weight: 700;
+    font-size: clamp(1.75rem, 5.5vw, 2.6rem);
+    line-height: 1.1;
+    max-width: 24ch;
+    margin: 0;
+  }
+
+  .club-photo {
+    margin: 0;
+  }
+
+  .club-photo :global(img) {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: var(--rayon-carte);
+  }
+
+  .club-photo figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    color: var(--mousse);
+  }
+
+  @media (min-width: 64rem) {
+    .club-grille {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 4rem;
+      row-gap: 3.5rem;
+    }
+
+    .club-equipements {
+      grid-column: 1 / -1;
+    }
+  }
+
+  /* ---------- Tarifs et horaires ---------- */
+  .tarifs-intro :global(p) {
+    color: var(--mousse);
+    font-size: 1.15rem;
+  }
+
+  .tarifs-grille {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  @media (min-width: 56rem) {
+    .tarifs-grille {
+      grid-template-columns: 1.35fr 1fr;
+      align-items: stretch;
+    }
+  }
+</style>

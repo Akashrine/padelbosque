@@ -1,9 +1,8 @@
 ---
 import { club } from '../config';
-import CtaFondateur from './CtaFondateur.astro';
+import Embleme from './Embleme.astro';
 
 const liensAccueil = [
-  { href: '/#fondateur', libelle: 'Offre fondateur' },
   { href: '/#club', libelle: 'Le club' },
   { href: '/#tarifs', libelle: 'Tarifs et horaires' },
   { href: '/#activites', libelle: 'Activités' },
@@ -12,12 +11,15 @@ const liensAccueil = [
 ];
 ---
 
-<header>
-  <a href="/" aria-label={`${club.nom}, accueil`}>{club.nom}</a>
+<header class="bloc entete">
+  <a class="marque" href="/" aria-label={`${club.nom}, accueil`}>
+    <Embleme />
+    <span class="marque-nom">{club.nom}</span>
+  </a>
   <nav aria-label="Navigation principale">
     <ul>
       {liensAccueil.map((l) => <li><a href={l.href}>{l.libelle}</a></li>)}
     </ul>
   </nav>
-  <CtaFondateur />
+  <a class="entete-cta" href="/#fondateur">Carte fondateur</a>
 </header>

@@ -5,44 +5,164 @@ import Info from './Info.astro';
 interface Props {
   titre?: string;
   id?: string;
+  /** Section claire (verso de la carte). */
+  verso?: boolean;
 }
 
-const { titre = 'Accès', id = 'acces' } = Astro.props;
+const { titre = 'Accès', id = 'acces', verso = false } = Astro.props;
 ---
 
-<section id={id} aria-labelledby={`titre-${id}`}>
-  <h2 id={`titre-${id}`}>{titre}</h2>
-  <address>
-    {club.nom}<br />
-    {club.adresse.rue}<br />
-    {club.adresse.complement}<br />
-    {club.adresse.codePostal} {club.adresse.ville}
-  </address>
-  <p><Info valeur={club.adresse.adressePostaleExacte} /></p>
-  <p><a href={liens.googleMaps} rel="noopener">Ouvrir dans Google Maps</a></p>
-  <p>Itinéraire : <Info valeur={acces.itineraire} /></p>
-  <p>Parking gratuit de {club.parking.places.toLocaleString('fr-FR')} places.</p>
+<section id={id} class:list={['acces', { verso }]} aria-labelledby={`titre-${id}`}>
+  <div class="bloc acces-grille">
+    <div class="acces-texte">
+      <h2 id={`titre-${id}`}>{titre}</h2>
+      <slot />
+      <p class="acces-carte">
+        <a class="bouton" href={liens.googleMaps} rel="noopener">Ouvrir dans Google Maps</a>
+      </p>
+    </div>
 
-  <div class="trajets">
-  <h3>Temps de trajet en voiture</h3>
-  <table>
-    <thead>
-      <tr>
-        <th scope="col">Depuis</th>
-        <th scope="col">Temps de trajet</th>
-      </tr>
-    </thead>
-    <tbody>
-      {
-        acces.villes.map((v) => (
-          <tr>
-            <th scope="row">{v.nom}</th>
-            <td><Info valeur={v.tempsDeTrajet} /></td>
-          </tr>
-        ))
-      }
-    </tbody>
-  </table>
+    <div class="acces-fiche">
+      <address>
+        <span class="acces-nom">{club.nom}</span>
+        {club.adresse.rue}<br />
+        {club.adresse.complement}<br />
+        {club.adresse.codePostal} {club.adresse.ville}
+      </address>
+      <p><Info valeur={club.adresse.adressePostaleExacte} /></p>
+      <p>Itinéraire : <Info valeur={acces.itineraire} /></p>
+      <p>Parking gratuit de {club.parking.places.toLocaleString('fr-FR')} places.</p>
+
+      <div class="trajets">
+        <h3>Temps de trajet en voiture</h3>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Depuis</th>
+              <th scope="col">Temps de trajet</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              acces.villes.map((v) => (
+                <tr>
+                  <th scope="row">{v.nom}</th>
+                  <td><Info valeur={v.tempsDeTrajet} /></td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
-  <slot />
 </section>
+
+<style>
+  .acces-grille {
+    display: grid;
+    gap: 2.5rem;
+  }
+
+  .acces-texte :global(p) {
+    font-size: 1.1rem;
+  }
+
+  .acces-texte :global(a:not(.bouton)) {
+    font-weight: 600;
+  }
+
+  .bouton {
+    background: var(--foret);
+    color: var(--craie);
+    width: 100%;
+    max-width: 26rem;
+  }
+
+  .bouton:hover {
+    background: var(--foret-3);
+  }
+
+  .acces-carte {
+    margin-top: 1.5rem;
+  }
+
+  .acces-fiche {
+    border-top: 3px solid var(--foret);
+    padding-top: 1.25rem;
+  }
+
+  address {
+    font-style: normal;
+    font-family: var(--f-display);
+    font-weight: 700;
+    font-size: clamp(1.7rem, 6vw, 2.2rem);
+    line-height: 1.05;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+  }
+
+  .acces-nom {
+    display: block;
+    color: var(--orange-presse);
+  }
+
+  :not(.verso) > .bloc .acces-nom {
+    color: var(--orange);
+  }
+
+  :not(.verso) > .bloc .bouton {
+    background: var(--orange);
+    color: var(--foret);
+  }
+
+  :not(.verso) > .bloc .acces-fiche {
+    border-top-color: var(--orange);
+  }
+
+  .acces-fiche p {
+    margin-bottom: 0.5rem;
+  }
+
+  .trajets {
+    margin-top: 1.5rem;
+  }
+
+  h3 {
+    font-family: var(--f-texte);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    color: var(--mousse);
+    margin-bottom: 0.5rem;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-variant-numeric: tabular-nums;
+  }
+
+  th,
+  td {
+    text-align: left;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--filet);
+  }
+
+  thead th {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--mousse);
+  }
+
+  @media (min-width: 56rem) {
+    .acces-grille {
+      grid-template-columns: 1.1fr 1fr;
+      column-gap: 5rem;
+      align-items: start;
+    }
+  }
+</style>

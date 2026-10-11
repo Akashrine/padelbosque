@@ -7,10 +7,17 @@ const b = club.bascule;
 ---
 
 <div class="horaires">
-  <h3>Horaires</h3>
-  <ul>
-    {plages.map((p) => <li>{p.libelle} : {plageTexte(p)}, 7 jours sur 7</li>)}
-  </ul>
+  <dl>
+    {
+      plages.map((p) => (
+        <div>
+          <dt>Horaires {p.libelle.toLowerCase()}</dt>
+          <dd>{plageTexte(p)}</dd>
+        </div>
+      ))
+    }
+  </dl>
+  <p class="jours">Ouvert 7 jours sur 7.</p>
   {
     estTodo(b) ? (
       <p><Info valeur={b} /></p>
@@ -21,3 +28,48 @@ const b = club.bascule;
     )
   }
 </div>
+
+<style>
+  .horaires {
+    border: 1px solid var(--filet);
+    border-radius: var(--rayon-carte);
+    padding: 0.5rem 1.5rem 1rem;
+    align-self: start;
+  }
+
+  dl {
+    margin: 0 0 0.75rem;
+  }
+
+  dl > div {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--filet);
+  }
+
+  dd {
+    margin: 0.25rem 0 0;
+    font-family: var(--f-display);
+    font-weight: 700;
+    font-size: clamp(2.4rem, 10vw, 3.2rem);
+    line-height: 1;
+    color: var(--orange);
+    font-variant-numeric: tabular-nums;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: var(--mousse);
+    margin-bottom: 0.5rem;
+  }
+
+  .jours {
+    color: var(--craie);
+    font-weight: 600;
+  }
+
+  @media (min-width: 40rem) {
+    .horaires {
+      padding: 0.75rem 2rem 1.25rem;
+    }
+  }
+</style>

@@ -7,9 +7,11 @@ import { remplir, texteSimple } from '../lib/gabarit';
 interface Props {
   page: (typeof pagesFaq)[number];
   titre?: string;
+  /** Section claire (verso de la carte). */
+  verso?: boolean;
 }
 
-const { page, titre = 'Questions fréquentes' } = Astro.props;
+const { page, titre = 'Questions fréquentes', verso = false } = Astro.props;
 const entrees = (await getCollection('faq', (e) => e.data.page === page)).sort(
   (a, b) => a.data.ordre - b.data.ordre,
 );
@@ -23,8 +25,10 @@ const questions = await Promise.all(
 const jsonLd = faqPage(questions);
 ---
 
-<section id="faq" aria-labelledby="titre-faq">
+<section id="faq" class:list={{ verso }} aria-labelledby="titre-faq">
+  <div class="bloc faq-bloc">
   <h2 id="titre-faq">{titre}</h2>
+  <div class="faq-liste">
   {
     questions.map(({ question, Contenu }) => (
       <details>
@@ -33,5 +37,18 @@ const jsonLd = faqPage(questions);
       </details>
     ))
   }
+  </div>
+  </div>
   {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
 </section>
+
+<style>
+  @media (min-width: 56rem) {
+    .faq-bloc {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+      column-gap: 3rem;
+      align-items: start;
+    }
+  }
+</style>

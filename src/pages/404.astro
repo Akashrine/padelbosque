@@ -7,7 +7,7 @@ const page = await pageSysteme('404');
 ---
 
 <BaseLayout title={page.title} description={page.description} noindex>
-  <article>
+  <article class="bloc">
     <h1>{page.h1}</h1>
     <page.Contenu />
     <CtaWhatsApp contexte="general" />

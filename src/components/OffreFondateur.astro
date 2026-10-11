@@ -10,32 +10,171 @@ interface Props {
 
 const { titre } = Astro.props;
 const f = fondateur;
+const prix = euros(club.tarif.prixParJoueur);
 ---
 
-<section id="fondateur" aria-labelledby="titre-fondateur">
-  <h2 id="titre-fondateur">{titre}</h2>
-  {!f.validee && <p><Info valeur={f.validation} /></p>}
-  <slot />
+<section id="fondateur" class="offre" aria-labelledby="titre-fondateur">
+  <div class="bloc offre-grille">
+    <div class="offre-texte">
+      <h2 id="titre-fondateur">{titre}</h2>
+      {!f.validee && <p><Info valeur={f.validation} /></p>}
+      <slot />
+    </div>
 
-  <p><strong>{euros(f.prix)}</strong> la carte. {f.accroche}</p>
-
-  <h3>Ce que comprend la carte</h3>
-  <ul>
-    <li>
-      {euros(f.credit.montant)} de crédit de jeu, soit {f.credit.sessions} sessions à {euros(club.tarif.prixParJoueur)}.
-      Crédit {f.credit.chargement}, valable jusqu'au {f.credit.validiteJusquau}.
-    </li>
-    <li>
-      Tarif fondateur : {euros(f.tarifReduit.prixSession)} la session au lieu de {euros(club.tarif.prixParJoueur)},
-      jusqu'au {f.tarifReduit.jusquau}.
-    </li>
-    <li>{f.inauguration}.</li>
-    <li>{f.tournoi}.</li>
-    <li>{f.mur}.</li>
-  </ul>
-
-  <p>En vente jusqu'à {f.venteJusqua}. {f.nombreCartes} cartes au total.</p>
-
-  <CtaFondateur />
-  <CtaWhatsApp contexte="fondateur" />
+    <div class="offre-detail">
+      {/* La carte posée à plat : ses champs, en clair. */}
+      <div class="carte-plate">
+        <h3 class="visuellement-cache">Ce que comprend la carte</h3>
+        <dl>
+          <div class="champ-prix">
+            <dt>Prix de la carte</dt>
+            <dd><strong>{euros(f.prix)}</strong> <span>{f.accroche}</span></dd>
+          </div>
+          <div>
+            <dt>Crédit de jeu</dt>
+            <dd>
+              <strong>{euros(f.credit.montant)}</strong>
+              <span>soit {f.credit.sessions} sessions à {prix}, {f.credit.chargement}, valable jusqu'au {f.credit.validiteJusquau}</span>
+            </dd>
+          </div>
+          <div>
+            <dt>Tarif session</dt>
+            <dd>
+              <strong>{euros(f.tarifReduit.prixSession)}</strong>
+              <span>au lieu de {prix}, jusqu'au {f.tarifReduit.jusquau}</span>
+            </dd>
+          </div>
+          <div>
+            <dt>Inauguration</dt>
+            <dd>{f.inauguration}</dd>
+          </div>
+          <div>
+            <dt>Tournoi</dt>
+            <dd>{f.tournoi}</dd>
+          </div>
+        </dl>
+        <p class="carte-plate-signature">{f.mur}</p>
+      </div>
+      <p class="offre-vente">En vente jusqu'à {f.venteJusqua}. {f.nombreCartes} cartes au total.</p>
+      <div class="actions">
+        <CtaFondateur />
+        <CtaWhatsApp contexte="fondateur" />
+      </div>
+    </div>
+  </div>
 </section>
+
+<style>
+  .offre {
+    background: var(--foret-2);
+  }
+
+  .offre-grille {
+    display: grid;
+    gap: 2.5rem;
+  }
+
+  .offre-texte :global(p) {
+    color: var(--mousse);
+    font-size: 1.1rem;
+  }
+
+  /* Carte à plat : coins ISO, champs étiquetés, panneau de signature */
+  .carte-plate {
+    background: var(--foret-3);
+    border-radius: var(--rayon-carte);
+    padding: 0.5rem 1.4rem 1.4rem;
+    margin-bottom: 1.25rem;
+  }
+
+  dl {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  dl > div {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--filet);
+    grid-column: 1 / -1;
+  }
+
+  /* Inauguration et tournoi côte à côte */
+  dl > div:nth-child(n + 4) {
+    grid-column: auto;
+  }
+
+  dl > div:nth-child(5) {
+    padding-left: 1rem;
+    border-left: 1px solid var(--filet);
+  }
+
+  dd {
+    margin: 0.3rem 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.2rem 0.85rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  dd strong {
+    font-family: var(--f-display);
+    font-weight: 800;
+    font-size: 3rem;
+    line-height: 0.9;
+    color: var(--orange);
+    font-variant-numeric: tabular-nums;
+  }
+
+  dd span {
+    flex: 1 1 14rem;
+    font-weight: 500;
+    color: var(--mousse);
+  }
+
+  .champ-prix dd strong {
+    font-size: clamp(5rem, 22vw, 7rem);
+    line-height: 0.82;
+  }
+
+  .champ-prix dd span {
+    color: var(--craie);
+    font-weight: 600;
+  }
+
+  .carte-plate-signature {
+    margin: 1.25rem 0 0;
+    max-width: none;
+    background: var(--craie);
+    color: var(--foret);
+    border-radius: 6px;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+  }
+
+  .offre-vente {
+    font-size: 0.95rem;
+    color: var(--mousse);
+    margin-bottom: 1.5rem;
+  }
+
+  .offre :global(.cta-whatsapp) {
+    margin-top: 0.75rem;
+  }
+
+  @media (min-width: 40rem) {
+    .carte-plate {
+      padding: 0.75rem 2rem 2rem;
+    }
+  }
+
+  @media (min-width: 60rem) {
+    .offre-grille {
+      grid-template-columns: 0.9fr 1.1fr;
+      column-gap: 5rem;
+      align-items: start;
+    }
+  }
+</style>

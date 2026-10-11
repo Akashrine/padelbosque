@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import { club, estTodo } from '../config';
 import Info from './Info.astro';
+import Embleme from './Embleme.astro';
 
 const pagesSeo = (await getCollection('pages', (p) => p.data.type === 'seo')).sort(
   (a, b) => a.data.ordre - b.data.ordre,
@@ -10,7 +11,9 @@ const annee = new Date().getFullYear();
 ---
 
 <footer>
+  <div class="bloc pied">
   <section aria-labelledby="pied-coordonnees">
+    <Embleme class="pied-embleme" />
     <h2 id="pied-coordonnees">{club.nom}</h2>
     <address>
       {club.adresse.rue}<br />
@@ -35,4 +38,5 @@ const annee = new Date().getFullYear();
   </nav>
 
   <p><small>© {annee} {club.nom}</small></p>
+  </div>
 </footer>

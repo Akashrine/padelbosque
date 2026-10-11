@@ -1,20 +1,60 @@
 ---
 import { club } from '../config';
 
-const terrains = `${club.terrains.nombre} terrains ${club.terrains.caracteristiques.join(', ')}`;
+const minuscule = (t: string) => t.charAt(0).toLowerCase() + t.slice(1);
+const liste = (items: string[]) => items.map((t, i) => (i ? minuscule(t) : t)).join(', ');
+
+const champs = [
+  { etiquette: 'Terrains', valeur: `${club.terrains.nombre} terrains ${club.terrains.caracteristiques.join(', ')}` },
+  { etiquette: 'Parking', valeur: `Gratuit, ${club.parking.places.toLocaleString('fr-FR')} places` },
+  { etiquette: 'Accessibilité', valeur: club.accessibilite },
+  { etiquette: 'Sur place', valeur: liste(club.equipements) },
+  { etiquette: 'Matériel', valeur: liste(club.materiel) },
+];
 ---
 
-<div class="equipements">
-  <h3>Sur place</h3>
-  <ul>
-    <li>{terrains}</li>
-    {club.equipements.map((e) => <li>{e}</li>)}
-    <li>Parking gratuit de {club.parking.places.toLocaleString('fr-FR')} places</li>
-    <li>{club.accessibilite}</li>
-  </ul>
+<dl class="equipements">
+  {
+    champs.map((c) => (
+      <div>
+        <dt>{c.etiquette}</dt>
+        <dd>{c.valeur}</dd>
+      </div>
+    ))
+  }
+</dl>
 
-  <h3>Matériel</h3>
-  <ul>
-    {club.materiel.map((m) => <li>{m}</li>)}
-  </ul>
-</div>
+<style>
+  .equipements {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
+    column-gap: 2.5rem;
+    border-top: 1px solid var(--filet);
+  }
+
+  .equipements > div {
+    padding: 1rem 0 1.1rem;
+    border-bottom: 1px solid var(--filet);
+  }
+
+  dd {
+    margin: 0.35rem 0 0;
+    font-weight: 600;
+    font-size: 1.05rem;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 39.99rem) {
+    .equipements {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 1.25rem;
+    }
+
+    /* Les valeurs longues prennent toute la ligne */
+    .equipements > div:nth-child(1),
+    .equipements > div:nth-child(n + 4) {
+      grid-column: 1 / -1;
+    }
+  }
+</style>

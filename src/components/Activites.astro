@@ -6,7 +6,76 @@ interface Props {
 const { titre } = Astro.props;
 ---
 
-<section id="activites" aria-labelledby="titre-activites">
-  <h2 id="titre-activites">{titre}</h2>
-  <slot />
+<section id="activites" class="activites" aria-labelledby="titre-activites">
+  <div class="bloc">
+    <h2 id="titre-activites">{titre}</h2>
+    <div class="activites-liste">
+      <slot />
+    </div>
+  </div>
 </section>
+
+<style>
+  .activites-liste {
+    border-bottom: 1px solid var(--filet);
+  }
+
+  .activites-liste :global(h3) {
+    padding-top: 1.4rem;
+    margin-bottom: 0.6rem;
+    border-top: 1px solid var(--filet);
+  }
+
+  .activites-liste :global(p) {
+    color: var(--mousse);
+    margin-bottom: 0.6rem;
+    max-width: none;
+  }
+
+  .activites-liste :global(p:last-child),
+  .activites-liste :global(p:has(+ h3)) {
+    padding-bottom: 1rem;
+  }
+
+  .activites-liste :global(a) {
+    color: var(--craie);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .activites-liste :global(a:hover) {
+    color: var(--orange);
+  }
+
+  @media (min-width: 56rem) {
+    .activites-liste {
+      display: grid;
+      grid-template-columns: minmax(14rem, 0.8fr) 1.2fr;
+      column-gap: 3rem;
+    }
+
+    .activites-liste :global(h3) {
+      grid-column: 1;
+      padding-bottom: 1.4rem;
+    }
+
+    .activites-liste :global(p) {
+      grid-column: 2;
+    }
+
+    .activites-liste :global(h3 + p) {
+      grid-row: span 1;
+      padding-top: 1.55rem;
+      border-top: 1px solid var(--filet);
+      margin-top: 0;
+    }
+
+    .activites-liste :global(h3) {
+      grid-row: span 1;
+    }
+
+    .activites-liste :global(h3) {
+      align-self: start;
+    }
+  }
+</style>

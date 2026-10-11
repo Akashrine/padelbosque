@@ -1,0 +1,444 @@
+---
+/**
+ * La carte Membre fondateur, recto et verso. Elle se retourne au toucher ou au bouton.
+ * Tous les chiffres viennent de config.ts.
+ */
+import { club, euros, fondateur } from '../config';
+import Embleme from './Embleme.astro';
+
+interface Props {
+  /** Lignes de rappel vers les avantages (grand écran). */
+  annotations?: boolean;
+}
+
+const { annotations = false } = Astro.props;
+const f = fondateur;
+---
+
+<figure class:list={['carte-scene', { 'carte-annotee': annotations }]} data-carte>
+  <div class="carte-cadre">
+  <div class="carte" data-face="recto">
+    <div class="carte-face carte-recto">
+      <div class="carte-tete">
+        <Embleme class="carte-embleme" />
+        <p class="carte-club">{club.nom}</p>
+        <p class="carte-type">Membre<br />fondateur</p>
+      </div>
+      <p class="carte-numero">
+        <span class="visuellement-cache">Numéro sur {f.nombreCartes}, à attribuer</span>
+        <span class="carte-no" aria-hidden="true">Nº</span>
+        <span class="carte-blanc" aria-hidden="true"></span>
+        <span class="carte-sur" aria-hidden="true">/ {f.nombreCartes}</span>
+      </p>
+      <dl class="carte-champs">
+        <div>
+          <dt>Prix</dt>
+          <dd>{euros(f.prix)}</dd>
+        </div>
+        <div>
+          <dt>Crédit de jeu</dt>
+          <dd>{euros(f.credit.montant)}</dd>
+        </div>
+        <div>
+          <dt>Tarif session</dt>
+          <dd>{euros(f.tarifReduit.prixSession)}</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="carte-face carte-verso">
+      <div class="carte-piste" aria-hidden="true"></div>
+      <ul class="carte-avantages">
+        <li>{euros(f.credit.montant)} de crédit, valable jusqu'au {f.credit.validiteJusquau}</li>
+        <li>{euros(f.tarifReduit.prixSession)} la session jusqu'au {f.tarifReduit.jusquau}</li>
+        <li>{f.inauguration}</li>
+        <li>{f.tournoi}</li>
+      </ul>
+      <p class="carte-signature"><span>{f.mur}</span></p>
+    </div>
+  </div>
+
+  {
+    annotations && (
+      <ul class="carte-rappels" aria-hidden="true">
+        <li class="rappel rappel-numero">{f.accroche}</li>
+        <li class="rappel rappel-credit">
+          {euros(f.credit.montant)} de jeu, soit {f.credit.sessions} sessions
+        </li>
+        <li class="rappel rappel-tarif">
+          {euros(f.tarifReduit.prixSession)} la session au lieu de {euros(club.tarif.prixParJoueur)}
+        </li>
+      </ul>
+    )
+  }
+  </div>
+
+  <figcaption>
+    <button type="button" class="carte-retourner" data-retourner aria-pressed="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.7M20 4v4.7h-4.7M20 12a8 8 0 0 1-13.7 5.6L4 15.3M4 20v-4.7h4.7"></path>
+      </svg>
+      <span data-libelle>Voir le verso</span>
+    </button>
+  </figcaption>
+</figure>
+
+<script>
+  for (const scene of document.querySelectorAll<HTMLElement>('[data-carte]')) {
+    const carte = scene.querySelector<HTMLElement>('.carte');
+    const bouton = scene.querySelector<HTMLButtonElement>('[data-retourner]');
+    const libelle = scene.querySelector<HTMLElement>('[data-libelle]');
+    if (!carte || !bouton || !libelle) continue;
+    const retourner = () => {
+      const verso = carte.dataset.face === 'recto';
+      carte.dataset.face = verso ? 'verso' : 'recto';
+      bouton.setAttribute('aria-pressed', String(verso));
+      libelle.textContent = verso ? 'Voir le recto' : 'Voir le verso';
+    };
+    bouton.addEventListener('click', retourner);
+    carte.addEventListener('click', retourner);
+  }
+</script>
+
+<style>
+  .carte-scene {
+    --largeur-carte: min(100%, 30rem);
+    margin: 0;
+    position: relative;
+    perspective: 1600px;
+  }
+
+  .carte {
+    position: relative;
+    aspect-ratio: 85.6 / 54;
+    transform-style: preserve-3d;
+    transform: rotate(var(--inclinaison, -5deg));
+    transition: transform 0.9s var(--sortie);
+    cursor: pointer;
+  }
+
+  .carte[data-face='verso'] {
+    transform: rotate(var(--inclinaison, -5deg)) rotateY(180deg);
+  }
+
+  /* La carte est distribuée : l'animation porte sur le cadre, pour ne pas aplatir l'espace 3D du retournement. */
+  @keyframes distribuer {
+    from {
+      transform: translateY(2.5rem) rotate(-9deg);
+      opacity: 0;
+    }
+  }
+
+  .carte-face {
+    position: absolute;
+    inset: 0;
+    border-radius: var(--rayon-carte);
+    backface-visibility: hidden;
+    overflow: hidden;
+    box-shadow:
+      0 1px 0 rgb(255 255 255 / 0.25) inset,
+      0 28px 50px -18px rgb(0 0 0 / 0.7),
+      0 6px 14px -6px rgb(0 0 0 / 0.45);
+  }
+
+  /* Recto : carte orange, marquage vert forêt */
+  .carte-recto {
+    --fond: var(--orange);
+    background: var(--orange);
+    color: var(--foret);
+    padding: 6cqi 6.5cqi;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  /* Filigrane : l'emblème en grand, coupé par le bord */
+  .carte-recto::before {
+    content: '';
+    position: absolute;
+    width: 78cqi;
+    aspect-ratio: 1;
+    right: -22cqi;
+    top: -12cqi;
+    border-radius: 50%;
+    border: 1.6cqi solid rgb(26 33 22 / 0.09);
+    box-shadow: 0 0 0 7cqi rgb(26 33 22 / 0.035);
+  }
+
+  .carte-tete {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 3cqi;
+  }
+
+  .carte-tete :global(.carte-embleme) {
+    width: 13cqi;
+    color: var(--foret);
+    display: block;
+  }
+
+  .carte-tete :global(.carte-embleme svg) {
+    width: 100%;
+    height: auto;
+  }
+
+  .carte-club {
+    margin: 0;
+    font-family: var(--f-display);
+    font-weight: 800;
+    font-size: 6.2cqi;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    line-height: 1;
+  }
+
+  .carte-type {
+    margin: 0;
+    text-align: right;
+    font-size: 3.1cqi;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    line-height: 1.25;
+  }
+
+  .carte-numero {
+    margin: 0;
+    align-self: center;
+    display: flex;
+    align-items: baseline;
+    gap: 2.5cqi;
+    font-family: var(--f-display);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+  }
+
+  .carte-no {
+    font-size: 9cqi;
+  }
+
+  .carte-blanc {
+    display: inline-block;
+    width: 24cqi;
+    height: 1.2cqi;
+    background: var(--foret);
+    opacity: 0.8;
+    border-radius: 1px;
+    transform: translateY(-0.6cqi);
+  }
+
+  .carte-sur {
+    font-size: 14cqi;
+    font-weight: 800;
+  }
+
+  .carte-champs {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: start;
+    column-gap: 9cqi;
+    border-top: 0.3cqi solid rgb(26 33 22 / 0.35);
+    padding-top: 2.6cqi;
+  }
+
+  .carte-champs dt {
+    font-size: 2.5cqi;
+    letter-spacing: 0.14em;
+    color: rgb(26 33 22 / 0.75);
+  }
+
+  .carte-champs dd {
+    margin: 0.6cqi 0 0;
+    font-family: var(--f-display);
+    font-weight: 800;
+    font-size: 7.5cqi;
+    line-height: 1;
+  }
+
+  /* Verso : vert forêt, piste magnétique, panneau de signature craie */
+  .carte-verso {
+    transform: rotateY(180deg);
+    background: var(--foret-3);
+    color: var(--craie);
+    padding: 0 6.5cqi 5cqi;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .carte-piste {
+    height: 13cqi;
+    margin: 6cqi -6.5cqi 4cqi;
+    background: #0d110b;
+  }
+
+  .carte-avantages {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 3.4cqi;
+    line-height: 1.35;
+    display: grid;
+    gap: 1.2cqi;
+  }
+
+  .carte-avantages li {
+    display: flex;
+    gap: 2cqi;
+  }
+
+  .carte-avantages li::before {
+    content: '';
+    flex: none;
+    width: 1.6cqi;
+    height: 1.6cqi;
+    margin-top: 1cqi;
+    border-radius: 50%;
+    background: var(--orange);
+  }
+
+  .carte-signature {
+    margin: auto 0 0;
+    max-width: none;
+    background: var(--craie);
+    color: var(--foret);
+    border-radius: 1cqi;
+    padding: 2.4cqi 3cqi;
+    font-size: 3.2cqi;
+    font-weight: 600;
+  }
+
+  figcaption {
+    margin-top: 1.4rem;
+  }
+
+  .carte-retourner {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: 0;
+    padding: 0.4rem 0;
+    color: var(--mousse);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .carte-retourner:hover {
+    color: var(--craie);
+  }
+
+  .carte-retourner svg {
+    width: 1.15rem;
+    height: 1.15rem;
+  }
+
+  /* Lignes de rappel, grand écran seulement : elles partent d'un champ de la carte. */
+  .carte-cadre {
+    position: relative;
+    width: var(--largeur-carte);
+    container-type: inline-size;
+    perspective: 1600px;
+    animation: distribuer 1.1s var(--sortie) backwards;
+  }
+
+  .carte {
+    width: 100%;
+  }
+
+  .carte-rappels {
+    display: none;
+  }
+
+  @media (min-width: 64rem) {
+    .carte-annotee {
+      padding-right: 12rem;
+    }
+
+    .carte-rappels {
+      display: block;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Les rappels désignent le recto : ils s'effacent quand la carte est retournée. */
+    .carte-rappels {
+      transition: opacity 0.3s;
+    }
+
+    .carte[data-face='verso'] ~ .carte-rappels {
+      opacity: 0;
+    }
+
+    .rappel {
+      position: absolute;
+      left: calc(100% + 1.5rem);
+      width: 10.5rem;
+      top: var(--y);
+      transform: translateY(-0.7em);
+      font-size: 0.9rem;
+      line-height: 1.35;
+      text-wrap: balance;
+      color: var(--craie);
+      animation: apparaitre 0.6s var(--sortie) 1s both;
+    }
+
+    /* Trait du libellé jusqu'au champ visé (--x : position du champ, en fraction de la largeur de la carte) */
+    .rappel::before {
+      content: '';
+      position: absolute;
+      top: 0.7em;
+      right: calc(100% + 0.5rem);
+      width: calc((1 - var(--x)) * 100cqi + 1rem);
+      border-top: 1px solid rgb(238 241 232 / 0.6);
+    }
+
+    .rappel::after {
+      content: '';
+      position: absolute;
+      top: calc(0.7em - 3.5px);
+      right: calc(100% + 0.5rem + (1 - var(--x)) * 100cqi + 1rem - 3.5px);
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--foret);
+      box-shadow: 0 0 0 2px var(--craie);
+    }
+
+    .rappel-numero {
+      --x: 0.86;
+      --y: 44%;
+    }
+
+    .rappel-tarif {
+      --x: 0.8;
+      --y: 84%;
+      animation-delay: 1.1s;
+    }
+
+    .rappel-credit {
+      --x: 0.47;
+      --y: 96%;
+      animation-delay: 1.2s;
+    }
+
+    @keyframes apparaitre {
+      from {
+        opacity: 0;
+      }
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .carte-cadre {
+      animation: none;
+    }
+
+    .carte {
+      transition: none;
+    }
+  }
+</style>

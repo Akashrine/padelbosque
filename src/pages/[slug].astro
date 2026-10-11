@@ -45,14 +45,14 @@ const description = remplir(d.description);
   contexteWhatsApp={d.contexteWhatsApp}
   jsonLd={[filAriane([{ nom: club.nom, chemin: '/' }, { nom: h1, chemin: `/${d.slug}` }])]}
 >
-  <nav aria-label="Fil d'Ariane">
+  <nav class="bloc" aria-label="Fil d'Ariane">
     <ol>
       <li><a href="/">Accueil</a></li>
       <li aria-current="page">{h1}</li>
     </ol>
   </nav>
 
-  <article>
+  <article class="bloc">
     <h1>{h1}</h1>
     <Content />
 
@@ -64,15 +64,17 @@ const description = remplir(d.description);
   {d.blocs.includes('acces') && <Acces titre="Adresse et temps de trajet" id="adresse" />}
 
   <section aria-labelledby="titre-cta">
+    <div class="bloc">
     <h2 id="titre-cta">Devenez membre fondateur</h2>
     <p>{remplir('{{fondateurCartes}} cartes à {{fondateurPrix}}, avec {{fondateurCredit}} de crédit de jeu. En vente jusqu\'à {{fondateurVenteJusqua}}.')}</p>
     <CtaFondateur />
     <CtaWhatsApp contexte={d.contexteWhatsApp} />
+    </div>
   </section>
 
   {d.faq && <Faq page={d.faq} />}
 
-  <nav aria-labelledby="titre-liens">
+  <nav class="bloc" aria-labelledby="titre-liens">
     <h2 id="titre-liens">À découvrir aussi</h2>
     <ul>
       <li><a href="/">Accueil : {club.promesse}</a></li>
