@@ -1,0 +1,719 @@
+@import '@fontsource-variable/big-shoulders-display/wght';
+/*
+ * Pad'el Bosque : la carte Membre fondateur comme système.
+ * Fond vert forêt et orange du logo, craie pour le verso. Étiquettes de champ, chiffres embossés, talons perforés.
+ */
+
+:root {
+  --foret: #1a2116;
+  --foret-2: #222b1d;
+  --foret-3: #2c3826;
+  --filet: #3b4834;
+  --orange: #fd670e;
+  --orange-vif: #ff7d2e;
+  --orange-presse: #d9560a;
+  --craie: #eef1e8;
+  --craie-2: #dde3d4;
+  --craie-filet: #c5ceba;
+  --mousse: #a9b59d;
+  --encre-2: #4a5642;
+
+  --f-display: 'Big Shoulders Display Variable', 'Big Shoulders Display', 'Arial Narrow', sans-serif;
+  --f-texte: 'Barlow', 'Helvetica Neue', Arial, sans-serif;
+
+  --gouttiere: clamp(1rem, 4vw, 2.5rem);
+  --largeur: 76rem;
+  --rayon-carte: 14px;
+  --rayon: 8px;
+  --sortie: cubic-bezier(0.16, 1, 0.3, 1);
+
+  color-scheme: dark;
+  accent-color: var(--orange);
+  scrollbar-color: var(--filet) var(--foret);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1.5rem;
+}
+
+body {
+  background: var(--foret);
+  color: var(--craie);
+  font-family: var(--f-texte);
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  font-variant-numeric: lining-nums;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--orange);
+  color: var(--foret);
+}
+
+:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
+  transition: text-decoration-color 0.2s;
+}
+
+a:hover {
+  text-decoration-color: currentColor;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--f-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 0.92;
+  letter-spacing: 0;
+  margin: 0;
+  text-wrap: balance;
+}
+
+h2 {
+  font-size: clamp(2.6rem, 9vw, 4.75rem);
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  font-size: clamp(1.6rem, 5vw, 2.1rem);
+  line-height: 1;
+}
+
+p,
+ul,
+ol,
+dl {
+  margin: 0 0 1rem;
+}
+
+p {
+  max-width: 62ch;
+  text-wrap: pretty;
+}
+
+strong {
+  font-weight: 700;
+}
+
+/* Lien d'évitement */
+.evitement {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 50;
+  background: var(--orange);
+  color: var(--foret);
+  padding: 0.6rem 1rem;
+  border-radius: var(--rayon);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.evitement:focus {
+  top: 1rem;
+}
+
+/* Valeurs manquantes : visibles en développement, retirées en production. */
+mark.todo {
+  background: #ffe14d;
+  color: #1a1a1a;
+  padding: 0.05em 0.3em;
+  border-radius: 3px;
+  font-size: 0.85em;
+}
+
+/* ---------- Étiquette de champ (le vocabulaire de la carte) ---------- */
+
+.etiquette,
+dt {
+  font-family: var(--f-texte);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mousse);
+}
+
+/* ---------- Gabarit ---------- */
+
+.bloc {
+  width: min(100% - 2 * var(--gouttiere), var(--largeur));
+  margin-inline: auto;
+}
+
+main > section,
+main > article,
+main > nav {
+  padding-block: clamp(3.5rem, 10vw, 7rem);
+}
+
+main > section + section {
+  border-top: 1px solid var(--filet);
+}
+
+/* Verso : sections claires (accès, questions). */
+.verso {
+  background: var(--craie);
+  color: var(--foret);
+  color-scheme: light;
+  --mousse: var(--encre-2);
+  --filet: var(--craie-filet);
+}
+
+main > section.verso + section.verso {
+  border-top-color: var(--craie-filet);
+}
+
+/* Passage au verso : la même ligne de découpe que le ticket des tarifs. */
+main > section.verso {
+  position: relative;
+}
+
+main > section:not(.verso) + section.verso {
+  border-top: 0;
+}
+
+main > section:not(.verso) + section.verso::before {
+  content: '';
+  position: absolute;
+  inset: -5px 0 auto;
+  height: 10px;
+  background: radial-gradient(circle, var(--foret) 3.5px, transparent 4px) center / 14px 10px space no-repeat;
+}
+
+/* ---------- Boutons ---------- */
+
+.cta {
+  margin: 0;
+}
+
+.cta a,
+.bouton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 3.5rem;
+  padding: 0.85rem 1.4rem;
+  border-radius: var(--rayon);
+  font-family: var(--f-display);
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    transform 0.2s var(--sortie),
+    box-shadow 0.2s;
+}
+
+.cta-fondateur a {
+  width: 100%;
+  background: var(--orange);
+  color: var(--foret);
+  box-shadow: 0 10px 22px -12px rgb(0 0 0 / 0.6);
+}
+
+.cta-fondateur a::after {
+  content: '';
+  width: 1.1em;
+  height: 1.1em;
+  background: currentColor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+  transition: transform 0.25s var(--sortie);
+}
+
+.cta-fondateur a:hover {
+  background: var(--orange-vif);
+  transform: translateY(-1px);
+}
+
+.cta-fondateur a:hover::after {
+  transform: translateX(3px);
+}
+
+.cta-fondateur a:active {
+  background: var(--orange-presse);
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+.cta-whatsapp a {
+  width: 100%;
+  font-family: var(--f-texte);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  border: 1px solid color-mix(in srgb, currentColor 40%, transparent);
+  color: inherit;
+}
+
+.cta-whatsapp a::before {
+  content: '';
+  flex: none;
+  width: 1.3rem;
+  height: 1.3rem;
+  background: currentColor;
+  mask: var(--icone-whatsapp) center / contain no-repeat;
+}
+
+.cta-whatsapp a:hover {
+  border-color: currentColor;
+  background: color-mix(in srgb, currentColor 8%, transparent);
+}
+
+.cta-conditions {
+  margin: 0.6rem 0 0;
+  font-size: 0.875rem;
+  color: var(--mousse);
+}
+
+.cta-conditions + p,
+.cta-conditions + .cta {
+  margin-top: 1rem;
+}
+
+.actions {
+  display: grid;
+  gap: 0;
+  max-width: 26rem;
+}
+
+:root {
+  --icone-whatsapp: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4.2 19.8l1.1-3.9A8.2 8.2 0 1 1 8.4 19z'/%3E%3Cpath d='M9 8.6c.2-.5.6-.6 1-.5l.6 1.4c.1.3 0 .5-.2.7l-.4.4c.5 1.1 1.4 2 2.5 2.5l.4-.4c.2-.2.5-.3.7-.2l1.4.6c.1.4 0 .8-.5 1-1.6.8-5.1-1.6-5.9-4.5-.1-.4 0-.8.4-1z' fill='black' stroke='none'/%3E%3C/svg%3E");
+}
+
+.embleme {
+  display: inline-block;
+  line-height: 0;
+}
+
+.embleme svg {
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- En-tête ---------- */
+
+.entete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-block: 0.9rem;
+}
+
+.marque {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: var(--orange);
+}
+
+.marque .embleme {
+  flex-shrink: 0;
+}
+
+.marque svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.marque-nom {
+  font-family: var(--f-display);
+  font-weight: 800;
+  font-size: clamp(1.05rem, 4.6vw, 1.3rem);
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--craie);
+  line-height: 1;
+}
+
+.entete nav ul {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.entete nav a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--mousse);
+}
+
+.entete nav a:hover {
+  color: var(--craie);
+}
+
+.entete-cta {
+  font-family: var(--f-display);
+  font-weight: 800;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--orange);
+  text-decoration: none;
+  border: 1px solid currentColor;
+  border-radius: var(--rayon);
+  padding: 0.45rem 0.8rem;
+  white-space: nowrap;
+}
+
+.entete-cta:hover {
+  background: var(--orange);
+  color: var(--foret);
+}
+
+/* Très petits écrans : le nom et le bouton tiennent sur une ligne. */
+@media (max-width: 23.99rem) {
+  .marque svg {
+    width: 2.1rem;
+    height: 2.1rem;
+  }
+
+  .entete-cta {
+    font-size: 0.95rem;
+    padding-inline: 0.65rem;
+  }
+}
+
+@media (min-width: 60rem) {
+  .entete nav ul {
+    display: flex;
+    gap: 1.6rem;
+  }
+}
+
+/* ---------- Bouton WhatsApp flottant ---------- */
+
+.whatsapp-flottant {
+  position: fixed;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: var(--craie);
+  color: var(--foret);
+  box-shadow:
+    0 8px 22px -6px rgb(0 0 0 / 0.55),
+    0 0 0 1px rgb(26 33 22 / 0.08);
+  transition:
+    transform 0.25s var(--sortie),
+    opacity 0.25s;
+}
+
+.whatsapp-flottant::before {
+  content: '';
+  width: 1.7rem;
+  height: 1.7rem;
+  background: currentColor;
+  mask: var(--icone-whatsapp) center / contain no-repeat;
+}
+
+.whatsapp-flottant:hover {
+  transform: scale(1.06);
+}
+
+/* Masqué tant qu'un bouton WhatsApp de la page est à l'écran. visibility le retire
+   aussi du clavier et des lecteurs d'écran, une fois le fondu terminé. */
+.whatsapp-flottant[data-cache] {
+  opacity: 0;
+  transform: scale(0.8);
+  visibility: hidden;
+  transition:
+    transform 0.25s var(--sortie),
+    opacity 0.25s,
+    visibility 0s 0.25s;
+}
+
+.visuellement-cache {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ---------- Pied de page ---------- */
+
+footer {
+  border-top: 1px solid var(--filet);
+  padding-block: 3.5rem 6rem;
+  color: var(--mousse);
+  font-size: 0.95rem;
+}
+
+footer .pied {
+  display: grid;
+  gap: 2.5rem;
+}
+
+footer h2 {
+  font-size: 2rem;
+  color: var(--craie);
+  margin-bottom: 1rem;
+}
+
+footer address {
+  font-style: normal;
+  line-height: 1.7;
+}
+
+footer address a {
+  color: var(--craie);
+}
+
+footer nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+}
+
+/* Cible tactile d'au moins 28 px, sans changer l'espacement visuel. */
+footer nav a {
+  display: inline-block;
+  padding-block: 0.3rem;
+  text-decoration: none;
+}
+
+footer nav a:hover {
+  color: var(--craie);
+}
+
+footer .pied-embleme {
+  width: 4.5rem;
+  color: var(--orange);
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 48rem) {
+  footer .pied {
+    grid-template-columns: 1.2fr 1fr auto;
+    align-items: start;
+  }
+}
+
+/* ---------- Pages de contenu (SEO, légales) ---------- */
+
+main > nav[aria-label="Fil d'Ariane"] {
+  padding-block: 1.5rem 0;
+  font-size: 0.875rem;
+  color: var(--mousse);
+}
+
+main > nav[aria-label="Fil d'Ariane"] ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+main > nav[aria-label="Fil d'Ariane"] li + li::before {
+  content: '/';
+  margin-right: 0.5rem;
+  opacity: 0.6;
+}
+
+main > article {
+  padding-top: 2rem;
+}
+
+main > article h1 {
+  font-size: clamp(2.8rem, 10vw, 5.5rem);
+  margin-bottom: 1.75rem;
+  max-width: 18ch;
+}
+
+main > article h2 {
+  font-size: clamp(1.9rem, 6vw, 2.8rem);
+  margin: 3rem 0 1rem;
+  color: var(--orange);
+}
+
+main > article h3 {
+  margin: 2rem 0 0.75rem;
+}
+
+main > article ul {
+  padding-left: 1.2rem;
+}
+
+main > article li {
+  margin-bottom: 0.4rem;
+}
+
+main > article li::marker {
+  color: var(--orange);
+}
+
+main > article dl {
+  display: grid;
+  grid-template-columns: minmax(8rem, max-content) 1fr;
+  gap: 0.75rem 1.5rem;
+  border-top: 1px solid var(--filet);
+  padding-top: 1rem;
+}
+
+main > article dd {
+  margin: 0;
+}
+
+main > article table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 36rem;
+  font-variant-numeric: tabular-nums;
+}
+
+main > article th,
+main > article td {
+  text-align: left;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--filet);
+}
+
+main > article th[scope='col'] {
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mousse);
+}
+
+main > article .cta {
+  margin-block: 1rem;
+}
+
+/* Bloc d'appel à l'action des pages SEO et liens croisés */
+main > section[aria-labelledby='titre-cta'] {
+  background: var(--orange);
+  color: var(--foret);
+  border-top: 0;
+}
+
+main > section[aria-labelledby='titre-cta'] .cta-fondateur a {
+  background: var(--foret);
+  color: var(--craie);
+  box-shadow: none;
+}
+
+main > section[aria-labelledby='titre-cta'] .cta-conditions {
+  color: var(--foret);
+}
+
+main > section[aria-labelledby='titre-cta'] .cta-whatsapp {
+  margin-top: 1rem;
+}
+
+main > nav[aria-labelledby='titre-liens'] h2 {
+  font-size: clamp(2rem, 6vw, 3rem);
+}
+
+main > nav[aria-labelledby='titre-liens'] ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--filet);
+}
+
+main > nav[aria-labelledby='titre-liens'] li {
+  border-bottom: 1px solid var(--filet);
+}
+
+main > nav[aria-labelledby='titre-liens'] a {
+  display: block;
+  padding: 1rem 0;
+  font-family: var(--f-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+main > nav[aria-labelledby='titre-liens'] a:hover {
+  color: var(--orange);
+}
+
+/* ---------- Questions fréquentes ---------- */
+
+#faq details {
+  border-bottom: 1px solid var(--filet);
+}
+
+#faq details:first-of-type {
+  border-top: 1px solid var(--filet);
+}
+
+#faq summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.15rem 0;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.35;
+}
+
+#faq summary::-webkit-details-marker {
+  display: none;
+}
+
+#faq summary::after {
+  content: '';
+  flex: none;
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-top: 0.05rem;
+  background: var(--orange);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath d='M12 5v14M5 12h14'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+  transition: transform 0.3s var(--sortie);
+}
+
+#faq details[open] summary::after {
+  transform: rotate(45deg);
+}
+
+#faq details > :not(summary) {
+  padding-right: 2.5rem;
+}
+
+#faq details p:last-child {
+  margin-bottom: 1.3rem;
+}
+
+.verso#faq summary::after,
+.verso #faq summary::after {
+  background: var(--orange-presse);
+}

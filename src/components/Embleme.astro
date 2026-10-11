@@ -1,0 +1,17 @@
+---
+/** Emblème vectoriel du logo (src/assets/logo/embleme.svg), coloré par currentColor. */
+import embleme from '../assets/logo/embleme.svg?raw';
+
+interface Props {
+  class?: string;
+  /** Texte alternatif ; vide si l'emblème est décoratif. */
+  titre?: string;
+}
+
+const { class: classe, titre } = Astro.props;
+const svg = titre
+  ? embleme.replace(/aria-label="[^"]*"/, `aria-label="${titre}"`)
+  : embleme.replace(/role="img" aria-label="[^"]*"/, 'aria-hidden="true" focusable="false"');
+---
+
+<span class:list={['embleme', classe]} set:html={svg} />

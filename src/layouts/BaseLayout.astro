@@ -1,5 +1,9 @@
 ---
+import '@fontsource/barlow/400.css';
+import '@fontsource/barlow/600.css';
+import '@fontsource/barlow/700.css';
 import '../styles/reset.css';
+import '../styles/global.css';
 import { site, type ContexteWhatsApp } from '../config';
 import Seo from '../components/Seo.astro';
 import Header from '../components/Header.astro';
@@ -23,12 +27,13 @@ const { title, description, noindex, jsonLd, contexteWhatsApp = 'general' } = As
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1a2116" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <Seo title={title} description={description} noindex={noindex} jsonLd={jsonLd} />
   </head>
   <body>
-    <a href="#contenu">Aller au contenu</a>
+    <a class="evitement" href="#contenu">Aller au contenu</a>
     <Header />
     <main id="contenu">
       <slot />
