@@ -3,8 +3,8 @@ type: seo
 slug: padel-pezenas-meze-sete
 ordre: 4
 title: "Padel près de Pézenas, Mèze et Sète, {{nom}}"
-description: "Club de padel près de Pézenas, Mèze et Sète : {{terrains}} terrains panoramiques et éclairés au domaine de Bessilles. Parking gratuit, {{prix}} par joueur."
-h1: "Padel près de Pézenas, Mèze et Sète : venez jouer à Bessilles"
+description: "Club de padel près de Pézenas, Mèze et Sète : {{terrains}} terrains panoramiques et éclairés à Montagnac. Parking gratuit, {{prix}} par joueur."
+h1: "Padel près de Pézenas, Mèze et Sète : venez jouer à Montagnac"
 requete: "padel Pézenas, padel Mèze, padel près de Sète"
 libelleLien: "Padel près de Pézenas, Mèze et Sète"
 contexteWhatsApp: general
@@ -12,17 +12,17 @@ faq: acces
 blocs: [acces]
 ---
 
-Vous habitez Pézenas, Mèze, Sète, Agde ou Béziers et vous cherchez où jouer au padel ? {{nom}} ouvre {{ouverture}} au domaine de Bessilles, à {{ville}}.
+Vous habitez Pézenas, Mèze, Sète, Agde ou Béziers et vous cherchez où jouer au padel ? {{nom}} ouvre {{ouverture}} à {{ville}}.
 
 Le club compte {{terrainsDetail}}. Un seul prix : {{prix}} par joueur, soit {{prixTerrain}} le terrain pour {{creneau}}, à toute heure.
 
 ## Où se trouve le club ?
 
-Le club est installé à l'{{entree}} du domaine de Bessilles. L'adresse : {{adresse}}.
+Le club est installé à l'{{entree}} de la base départementale. L'adresse : {{adresse}}.
 
-## Pourquoi venir jouer à Bessilles ?
+## Pourquoi venir jouer à Montagnac ?
 
-Pour le cadre, d'abord. Bosque veut dire forêt. Les terrains sont installés au cœur du domaine de Bessilles, dans un environnement naturel. Vous jouez dehors.
+Pour le cadre, d'abord. Bosque veut dire forêt. Les terrains sont installés au cœur de la base départementale, dans un environnement naturel. Vous jouez dehors.
 
 Pour les terrains, ensuite. Ils sont panoramiques et éclairés. Vous pouvez jouer le soir, jusqu'à {{fermetureHiver}} en hiver et {{fermetureEte}} en été.
 

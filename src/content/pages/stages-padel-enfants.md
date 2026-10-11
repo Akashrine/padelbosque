@@ -3,15 +3,15 @@ type: seo
 slug: stages-padel-enfants
 ordre: 2
 title: "Stages de padel enfants près de Pézenas, {{nom}}"
-description: "Stages de padel enfants pendant les vacances scolaires, au domaine de Bessilles près de Pézenas. Le club ouvre {{ouverture}}. Soyez prévenu en premier."
-h1: "Stages de padel pour enfants à Bessilles, près de Pézenas"
+description: "Stages de padel enfants pendant les vacances scolaires, à Montagnac, près de Pézenas. Le club ouvre {{ouverture}}. Soyez prévenu en premier."
+h1: "Stages de padel pour enfants à Montagnac, près de Pézenas"
 requete: "stage padel enfant, padel enfant Pézenas"
 libelleLien: "Stages de padel enfants"
 contexteWhatsApp: stage
 faq: stages
 ---
 
-{{nom}} prépare des stages de padel pour les enfants, pendant les vacances scolaires. Le club ouvre {{ouverture}} au domaine de Bessilles, à {{ville}}, près de Pézenas.
+{{nom}} prépare des stages de padel pour les enfants, pendant les vacances scolaires. Le club ouvre {{ouverture}} à {{ville}}, près de Pézenas.
 
 Le programme détaillé arrive. Laissez-nous votre contact sur WhatsApp : vous serez prévenu dès l'ouverture des inscriptions.
 
@@ -57,7 +57,7 @@ Les familles font partie des publics que le club veut accueillir. Pendant que le
 
 Le club dispose de vestiaires et de douches. Le parking est gratuit, avec {{parking}}. Le site est accessible aux personnes à mobilité réduite.
 
-Et le cadre fait la différence. Les terrains sont installés au cœur du domaine de Bessilles, dans un environnement naturel.
+Et le cadre fait la différence. Les terrains sont installés au cœur de la base départementale, dans un environnement naturel.
 
 ## Et après le stage ?
 
@@ -65,7 +65,7 @@ Un enfant qui a aimé son stage peut continuer à jouer en famille. Le padel se 
 
 ## Où se trouve le club ?
 
-À l'{{entree}} du domaine de Bessilles, à {{ville}}. Vous venez de Pézenas, Mèze ou Sète ? [Consultez la page accès](/padel-pezenas-meze-sete).
+À l'{{entree}} de la base départementale, à {{ville}}. Vous venez de Pézenas, Mèze ou Sète ? [Consultez la page accès](/padel-pezenas-meze-sete).
 
 ## Comment inscrire votre enfant ?
 

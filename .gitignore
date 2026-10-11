@@ -10,3 +10,4 @@ rapport-build/
 # Caches d'outils
 .impeccable/
 graphify-out/
+.vercel

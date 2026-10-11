@@ -11,22 +11,17 @@ Les passages **[À compléter : …]** sont des infos manquantes. En production,
 
 **Lien :** Pad'el Bosque
 
-- Offre fondateur
 - Le club
 - Tarifs et horaires
 - Activités
 - Accès
 - FAQ
 
-**Bouton :** Je deviens membre fondateur
-
-Conditions de la carte
-
-[À compléter : Quel est le lien Stripe Payment Link de la carte fondateur (limité à 100 paiements) ?]
+**Lien :** Carte fondateur
 
 ### Bouton flottant
 
-**Bouton :** WhatsApp (ouvre WhatsApp, message prérempli selon la page)
+**Bouton :** Nous écrire sur WhatsApp (ouvre WhatsApp, message prérempli selon la page)
 
 ### Pied de page
 
@@ -48,15 +43,32 @@ Instagram : [À compléter : Quel est l'identifiant Instagram exact du club ?]
 
 ## /
 
-**Title :** Pad'el Bosque, padel à Bessilles près de Montagnac (34)
+**Title :** Pad'el Bosque, club de padel à Montagnac près de Pézenas (34)
 
-**Meta description :** 4 terrains extérieurs, panoramiques et éclairés au cœur du domaine de Bessilles, à Montagnac. 8 € par joueur. Ouverture début novembre 2026.
+**Meta description :** 4 terrains extérieurs, panoramiques et éclairés au cœur de la base départementale, à Montagnac. 8 € par joueur. Ouverture début novembre 2026.
 
-**H1 :** Pad'el Bosque, le padel au cœur de Bessilles
+**H1 :** Pad'el Bosque, le padel en pleine nature
 
 Ouverture début novembre 2026.
 
-4 terrains extérieurs, panoramiques et éclairés, au cœur du domaine de Bessilles. À Montagnac, dans l'Hérault, près de Pézenas, Mèze et Sète.
+Pad'el Bosque
+
+Membre, fondateur
+
+Numéro sur 100, à attribuerNº/ 100
+
+- 64 € de crédit, valable jusqu'au 31 mars 2027
+- 7 € la session jusqu'au 31 août 2027
+- Invitation à l'inauguration
+- Tournoi fondateurs offert en décembre 2026
+
+Votre nom sur le mur des fondateurs au club
+
+- 100 cartes, pas une de plus.
+- 64 € de jeu, soit 8 sessions
+- 7 € la session au lieu de 8 €
+
+4 terrains extérieurs, panoramiques et éclairés, au cœur de la base départementale. À Montagnac, dans l'Hérault, près de Pézenas, Mèze et Sète.
 
 100 cartes Membre fondateur sont en vente avant l'ouverture. 49 € la carte, 64 € de jeu inclus.
 
@@ -78,15 +90,9 @@ La carte Membre fondateur vous donne du jeu et un tarif réduit. Elle est réser
 
 Le paiement se fait en ligne, sur une page de paiement sécurisée Stripe.
 
-49 € la carte. 100 cartes, pas une de plus.
-
 **H3 :** Ce que comprend la carte
 
-- 64 € de crédit de jeu, soit 8 sessions à 8 €. Crédit chargé dans le logiciel du club à l'ouverture, valable jusqu'au 31 mars 2027.
-- Tarif fondateur : 7 € la session au lieu de 8 €, jusqu'au 31 août 2027.
-- Invitation à l'inauguration.
-- Tournoi fondateurs offert en décembre 2026.
-- Votre nom sur le mur des fondateurs au club.
+Votre nom sur le mur des fondateurs au club
 
 En vente jusqu'à l'inauguration ou jusqu'à épuisement. 100 cartes au total.
 
@@ -96,45 +102,17 @@ Conditions de la carte
 
 [À compléter : Quel est le lien Stripe Payment Link de la carte fondateur (limité à 100 paiements) ?]
 
-**Bouton :** Une question sur la carte fondateur ? Écrivez-nous sur WhatsApp
+**Bouton :** Une question ? Écrivez-nous sur WhatsApp
 
 **H2 :** Le club
 
-Bosque veut dire forêt : chez Pad'el Bosque, vous jouez au padel dans le cadre naturel du domaine de Bessilles.
-
-**H3 :** Sur place
-
-- 4 terrains extérieurs, panoramiques, éclairés
-- Vestiaires
-- Douches
-- Bar
-- Restauration
-- Espace détente
-- Parking gratuit de 2 000 places
-- Accès PMR
-
-**H3 :** Matériel
-
-- Location de raquettes
-- Vente de balles
-- Boutique : matériel et textile
+Bosque veut dire forêt : chez Pad'el Bosque, vous jouez au padel dans le cadre naturel de la base départementale.
 
 **H2 :** Tarifs et horaires
 
 Un seul prix, quelle que soit l'heure, et des horaires qui suivent les saisons.
 
-**H3 :** Tarifs
-
-- Prix : 8 € par joueur, soit 32 € le terrain pour 90 minutes
-- Durée d'un créneau : 90 minutes
-- Heures creuses, heures pleines : même prix à toute heure.
-- Cours : [À compléter : Proposerez-vous des cours avec un coach ? Si oui, qui, quelles formules et quels prix ?]
-- Abonnements et carnets : [À compléter : Proposerez-vous des abonnements ou des carnets de sessions ? Si oui, lesquels et à quel prix ?]
-
-**H3 :** Horaires
-
-- Hiver : 9h à 21h, 7 jours sur 7
-- Été : 8h à 22h30, 7 jours sur 7
+Ouvert 7 jours sur 7.
 
 [À compléter : À quelles dates passez-vous aux horaires d'été et d'hiver ? Proposition : dernier dimanche de mars / dernier dimanche d'octobre, à valider avec William.]
 
@@ -168,11 +146,15 @@ Formule et prix : [À compléter : Quelle formule et quel prix pour un anniversa
 
 **H2 :** Accès
 
-Pad'el Bosque, Base départementale de Bessilles, Entrée nord, 34530 Montagnac
+Le club se trouve à l'entrée nord de la base départementale, à Montagnac. Le parking est gratuit.
 
-[À compléter : Quelle est l'adresse postale exacte du club (numéro, voie) si elle existe ?]
+Vous venez de Pézenas, Mèze, Sète, Agde ou Béziers ? Consultez la page accès détaillée.
 
 Ouvrir dans Google Maps
+
+Pad'el BosqueBase départementale de Bessilles, Entrée nord, 34530 Montagnac
+
+[À compléter : Quelle est l'adresse postale exacte du club (numéro, voie) si elle existe ?]
 
 Itinéraire : [À compléter : Quel itinéraire conseiller pour rejoindre l'entrée nord (route, panneau, repère) ?]
 
@@ -185,10 +167,6 @@ Parking gratuit de 2 000 places.
 - Sète : [À compléter : Temps de trajet en voiture depuis Sète jusqu'à l'entrée nord ? (Julien, mesure sur Google Maps)]
 - Agde : [À compléter : Temps de trajet en voiture depuis Agde jusqu'à l'entrée nord ? (Julien, mesure sur Google Maps)]
 - Béziers : [À compléter : Temps de trajet en voiture depuis Béziers jusqu'à l'entrée nord ? (Julien, mesure sur Google Maps)]
-
-Le club se trouve à l'entrée nord du domaine de Bessilles, à Montagnac. Le parking est gratuit.
-
-Vous venez de Pézenas, Mèze, Sète, Agde ou Béziers ? Consultez la page accès détaillée.
 
 **H2 :** Questions fréquentes
 
@@ -208,7 +186,7 @@ Réponse : Oui. Le padel se joue à quatre, sur un terrain plus petit qu'un cour
 Réponse : Oui, les 4 terrains sont éclairés. Le club ferme à 21h en hiver et à 22h30 en été.
 
 **Question :** Où se garer ?
-Réponse : Le parking est gratuit, avec 2 000 places. Le club se trouve à l'entrée nord du domaine de Bessilles.
+Réponse : Le parking est gratuit, avec 2 000 places. Le club se trouve à l'entrée nord de la base départementale.
 
 **Question :** Comment réserver un terrain ?
 Réponse : En attendant l'ouverture du logiciel de réservation, écrivez-nous sur WhatsApp. Logiciel de réservation : [À compléter : Quel logiciel de réservation utiliserez-vous et quand sera-t-il en ligne ?]
@@ -220,7 +198,7 @@ Réponse : Le club ouvre début novembre 2026, au plus tard fin novembre 2026. L
 
 **Title :** Padel entreprise et team building dans l'Hérault, Pad'el Bosque
 
-**Meta description :** Team building padel dans l'Hérault, au cœur du domaine de Bessilles : 4 terrains éclairés, bar et restauration sur place, parking gratuit.
+**Meta description :** Team building padel dans l'Hérault, au cœur de la base départementale : 4 terrains éclairés, bar et restauration sur place, parking gratuit.
 
 Fil d'Ariane : Accueil > Padel entreprise et team building dans l'Hérault
 
@@ -228,7 +206,7 @@ Fil d'Ariane : Accueil > Padel entreprise et team building dans l'Hérault
 
 Vous cherchez une activité pour réunir vos équipes ? Le padel coche beaucoup de cases. Il se joue à quatre. Les bases s'apprennent vite. Et il fait autant rire que courir.
 
-Pad'el Bosque vous accueille au cœur du domaine de Bessilles, à Montagnac, dans l'Hérault. Sur place : 4 terrains extérieurs, panoramiques et éclairés, un bar, de la restauration et un espace détente. Votre événement se déroule au même endroit, du premier échange au dernier verre.
+Pad'el Bosque vous accueille au cœur de la base départementale, à Montagnac, dans l'Hérault. Sur place : 4 terrains extérieurs, panoramiques et éclairés, un bar, de la restauration et un espace détente. Votre événement se déroule au même endroit, du premier échange au dernier verre.
 
 **H2 :** Pourquoi choisir le padel pour un team building ?
 
@@ -236,7 +214,7 @@ Le padel met tout le monde sur un pied d'égalité. Pas besoin d'avoir déjà jo
 
 Il se joue en double. Vous gagnez ou vous perdez à deux. Il faut se parler, se placer, s'encourager. C'est exactement ce que vous cherchez dans un team building.
 
-Enfin, le cadre change du bureau. Les terrains sont installés au cœur du domaine de Bessilles. Vos équipes jouent dehors, dans un cadre naturel.
+Enfin, le cadre change du bureau. Les terrains sont installés au cœur de la base départementale. Vos équipes jouent dehors, dans un cadre naturel.
 
 **H2 :** Combien de personnes peuvent jouer ?
 
@@ -277,7 +255,7 @@ C'est souvent là que le team building fait son effet : autour d'un verre, en re
 
 **H2 :** Comment venir avec vos équipes ?
 
-Le club se trouve à l'entrée nord du domaine de Bessilles, à Montagnac. Le parking est gratuit, avec 2 000 places. Le site est accessible aux personnes à mobilité réduite.
+Le club se trouve à l'entrée nord de la base départementale, à Montagnac. Le parking est gratuit, avec 2 000 places. Le site est accessible aux personnes à mobilité réduite.
 
 Vous venez de Pézenas, Mèze, Sète, Agde ou Béziers ? Consultez la page accès.
 
@@ -316,7 +294,7 @@ Réponse : [À compléter : Quel tarif pour une privatisation ou un événement 
 
 **H2 :** À découvrir aussi
 
-- Accueil : Le padel au cœur de Bessilles
+- Accueil : Le padel en pleine nature
 - Stages de padel enfants
 - Tournois et ligues de padel
 - Padel près de Pézenas, Mèze et Sète
@@ -325,13 +303,13 @@ Réponse : [À compléter : Quel tarif pour une privatisation ou un événement 
 
 **Title :** Stages de padel enfants près de Pézenas, Pad'el Bosque
 
-**Meta description :** Stages de padel enfants pendant les vacances scolaires, au domaine de Bessilles près de Pézenas. Le club ouvre début novembre 2026. Soyez prévenu en premier.
+**Meta description :** Stages de padel enfants pendant les vacances scolaires, à Montagnac, près de Pézenas. Le club ouvre début novembre 2026. Soyez prévenu en premier.
 
-Fil d'Ariane : Accueil > Stages de padel pour enfants à Bessilles, près de Pézenas
+Fil d'Ariane : Accueil > Stages de padel pour enfants à Montagnac, près de Pézenas
 
-**H1 :** Stages de padel pour enfants à Bessilles, près de Pézenas
+**H1 :** Stages de padel pour enfants à Montagnac, près de Pézenas
 
-Pad'el Bosque prépare des stages de padel pour les enfants, pendant les vacances scolaires. Le club ouvre début novembre 2026 au domaine de Bessilles, à Montagnac, près de Pézenas.
+Pad'el Bosque prépare des stages de padel pour les enfants, pendant les vacances scolaires. Le club ouvre début novembre 2026 à Montagnac, près de Pézenas.
 
 Le programme détaillé arrive. Laissez-nous votre contact sur WhatsApp : vous serez prévenu dès l'ouverture des inscriptions.
 
@@ -377,7 +355,7 @@ Les familles font partie des publics que le club veut accueillir. Pendant que le
 
 Le club dispose de vestiaires et de douches. Le parking est gratuit, avec 2 000 places. Le site est accessible aux personnes à mobilité réduite.
 
-Et le cadre fait la différence. Les terrains sont installés au cœur du domaine de Bessilles, dans un environnement naturel.
+Et le cadre fait la différence. Les terrains sont installés au cœur de la base départementale, dans un environnement naturel.
 
 **H2 :** Et après le stage ?
 
@@ -385,7 +363,7 @@ Un enfant qui a aimé son stage peut continuer à jouer en famille. Le padel se 
 
 **H2 :** Où se trouve le club ?
 
-À l'entrée nord du domaine de Bessilles, à Montagnac. Vous venez de Pézenas, Mèze ou Sète ? Consultez la page accès.
+À l'entrée nord de la base départementale, à Montagnac. Vous venez de Pézenas, Mèze ou Sète ? Consultez la page accès.
 
 **H2 :** Comment inscrire votre enfant ?
 
@@ -426,7 +404,7 @@ Réponse : Une tenue de sport, des chaussures de sport et une gourde. Le club lo
 
 **H2 :** À découvrir aussi
 
-- Accueil : Le padel au cœur de Bessilles
+- Accueil : Le padel en pleine nature
 - Padel entreprise et team building
 - Tournois et ligues de padel
 - Padel près de Pézenas, Mèze et Sète
@@ -435,13 +413,13 @@ Réponse : Une tenue de sport, des chaussures de sport et une gourde. Le club lo
 
 **Title :** Tournois et ligues de padel dans l'Hérault, Pad'el Bosque
 
-**Meta description :** Tournois, ligues internes et soirées padel au domaine de Bessilles, à Montagnac. Premier rendez-vous : le tournoi fondateurs en décembre 2026.
+**Meta description :** Tournois, ligues internes et soirées padel à Montagnac. Premier rendez-vous : le tournoi fondateurs en décembre 2026.
 
 Fil d'Ariane : Accueil > Tournois et ligues de padel dans l'Hérault
 
 **H1 :** Tournois et ligues de padel dans l'Hérault
 
-Vous aimez la compétition ? Ou simplement jouer contre de nouvelles têtes ? Pad'el Bosque organisera des tournois, des ligues internes et des soirées padel au domaine de Bessilles, à Montagnac.
+Vous aimez la compétition ? Ou simplement jouer contre de nouvelles têtes ? Pad'el Bosque organisera des tournois, des ligues internes et des soirées padel à Montagnac.
 
 Le club ouvre début novembre 2026. Le calendrier se construit maintenant. Laissez votre contact sur WhatsApp pour être prévenu des premières dates.
 
@@ -487,9 +465,9 @@ Inscription : [À compléter : Comment s'inscrire à un tournoi et quel est le p
 
 Pour être prévenu dès qu'un tournoi, une ligue ou une soirée ouvre ses inscriptions, écrivez-nous sur WhatsApp.
 
-**H2 :** Pourquoi jouer vos tournois à Bessilles ?
+**H2 :** Pourquoi jouer vos tournois à Montagnac ?
 
-D'abord pour le cadre. Les terrains sont installés au cœur du domaine de Bessilles. Vous jouez dehors, dans un environnement naturel.
+D'abord pour le cadre. Les terrains sont installés au cœur de la base départementale. Vous jouez dehors, dans un environnement naturel.
 
 Ensuite pour les conditions. 4 terrains extérieurs, panoramiques et éclairés. Des vestiaires et des douches. Un bar, de la restauration et un espace détente pour attendre son prochain match ou fêter une victoire.
 
@@ -522,11 +500,11 @@ Réponse : [À compléter : Organiserez-vous des tournois homologués FFT ?]
 Réponse : Écrivez-nous sur WhatsApp. Nous vous prévenons dès qu'un tournoi, une ligue ou une soirée ouvre ses inscriptions.
 
 **Question :** Où se déroulent les tournois ?
-Réponse : Sur les 4 terrains extérieurs, panoramiques et éclairés du club, au domaine de Bessilles, à Montagnac. Le bar et la restauration sont sur place.
+Réponse : Sur les 4 terrains extérieurs, panoramiques et éclairés du club, à Montagnac. Le bar et la restauration sont sur place.
 
 **H2 :** À découvrir aussi
 
-- Accueil : Le padel au cœur de Bessilles
+- Accueil : Le padel en pleine nature
 - Padel entreprise et team building
 - Stages de padel enfants
 - Padel près de Pézenas, Mèze et Sète
@@ -535,23 +513,23 @@ Réponse : Sur les 4 terrains extérieurs, panoramiques et éclairés du club, a
 
 **Title :** Padel près de Pézenas, Mèze et Sète, Pad'el Bosque
 
-**Meta description :** Club de padel près de Pézenas, Mèze et Sète : 4 terrains panoramiques et éclairés au domaine de Bessilles. Parking gratuit, 8 € par joueur.
+**Meta description :** Club de padel près de Pézenas, Mèze et Sète : 4 terrains panoramiques et éclairés à Montagnac. Parking gratuit, 8 € par joueur.
 
-Fil d'Ariane : Accueil > Padel près de Pézenas, Mèze et Sète : venez jouer à Bessilles
+Fil d'Ariane : Accueil > Padel près de Pézenas, Mèze et Sète : venez jouer à Montagnac
 
-**H1 :** Padel près de Pézenas, Mèze et Sète : venez jouer à Bessilles
+**H1 :** Padel près de Pézenas, Mèze et Sète : venez jouer à Montagnac
 
-Vous habitez Pézenas, Mèze, Sète, Agde ou Béziers et vous cherchez où jouer au padel ? Pad'el Bosque ouvre début novembre 2026 au domaine de Bessilles, à Montagnac.
+Vous habitez Pézenas, Mèze, Sète, Agde ou Béziers et vous cherchez où jouer au padel ? Pad'el Bosque ouvre début novembre 2026 à Montagnac.
 
 Le club compte 4 terrains extérieurs, panoramiques et éclairés. Un seul prix : 8 € par joueur, soit 32 € le terrain pour 90 minutes, à toute heure.
 
 **H2 :** Où se trouve le club ?
 
-Le club est installé à l'entrée nord du domaine de Bessilles. L'adresse : Base départementale de Bessilles, 34530 Montagnac.
+Le club est installé à l'entrée nord de la base départementale. L'adresse : Base départementale de Bessilles, 34530 Montagnac.
 
-**H2 :** Pourquoi venir jouer à Bessilles ?
+**H2 :** Pourquoi venir jouer à Montagnac ?
 
-Pour le cadre, d'abord. Bosque veut dire forêt. Les terrains sont installés au cœur du domaine de Bessilles, dans un environnement naturel. Vous jouez dehors.
+Pour le cadre, d'abord. Bosque veut dire forêt. Les terrains sont installés au cœur de la base départementale, dans un environnement naturel. Vous jouez dehors.
 
 Pour les terrains, ensuite. Ils sont panoramiques et éclairés. Vous pouvez jouer le soir, jusqu'à 21h en hiver et 22h30 en été.
 
@@ -589,11 +567,11 @@ Au-delà des parties entre amis, le club propose des stages de padel pour enfant
 
 **H2 :** Adresse et temps de trajet
 
-Pad'el Bosque, Base départementale de Bessilles, Entrée nord, 34530 Montagnac
+Ouvrir dans Google Maps
+
+Pad'el BosqueBase départementale de Bessilles, Entrée nord, 34530 Montagnac
 
 [À compléter : Quelle est l'adresse postale exacte du club (numéro, voie) si elle existe ?]
-
-Ouvrir dans Google Maps
 
 Itinéraire : [À compléter : Quel itinéraire conseiller pour rejoindre l'entrée nord (route, panneau, repère) ?]
 
@@ -634,11 +612,11 @@ Réponse : Oui. Le club loue des raquettes sur place et vend des balles.
 Réponse : Jusqu'à 21h en hiver et 22h30 en été. Les terrains sont éclairés.
 
 **Question :** Par quelle entrée du domaine faut-il arriver ?
-Réponse : Par l'entrée nord du domaine de Bessilles, à Montagnac.
+Réponse : Par l'entrée nord de la base départementale, à Montagnac.
 
 **H2 :** À découvrir aussi
 
-- Accueil : Le padel au cœur de Bessilles
+- Accueil : Le padel en pleine nature
 - Padel entreprise et team building
 - Stages de padel enfants
 - Tournois et ligues de padel
@@ -732,7 +710,7 @@ Voir aussi les mentions légales.
 
 **Title :** Mentions légales, Pad'el Bosque
 
-**Meta description :** Mentions légales du site de Pad'el Bosque, club de padel au domaine de Bessilles, à Montagnac : éditeur, hébergeur, données personnelles.
+**Meta description :** Mentions légales du site de Pad'el Bosque, club de padel à Montagnac : éditeur, hébergeur, données personnelles.
 
 **H1 :** Mentions légales
 
@@ -782,7 +760,7 @@ Pad'el Bosque, Base départementale de Bessilles, 34530 Montagnac. Téléphone :
 
 **Title :** Page introuvable, Pad'el Bosque
 
-**Meta description :** Cette page n'existe pas ou a été déplacée. Retrouvez Pad'el Bosque, le padel au cœur du domaine de Bessilles, à Montagnac.
+**Meta description :** Cette page n'existe pas ou a été déplacée. Retrouvez Pad'el Bosque, le padel au cœur de la base départementale, à Montagnac.
 
 **H1 :** Page introuvable
 

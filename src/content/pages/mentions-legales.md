@@ -2,7 +2,7 @@
 type: systeme
 slug: mentions-legales
 title: "Mentions légales, {{nom}}"
-description: "Mentions légales du site de {{nom}}, club de padel au domaine de Bessilles, à Montagnac : éditeur, hébergeur, données personnelles."
+description: "Mentions légales du site de {{nom}}, club de padel à Montagnac : éditeur, hébergeur, données personnelles."
 h1: "Mentions légales"
 ---
 

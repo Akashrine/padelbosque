@@ -3,7 +3,7 @@ type: seo
 slug: tournois-ligues-padel
 ordre: 3
 title: "Tournois et ligues de padel dans l'Hérault, {{nom}}"
-description: "Tournois, ligues internes et soirées padel au domaine de Bessilles, à Montagnac. Premier rendez-vous : le tournoi fondateurs en décembre 2026."
+description: "Tournois, ligues internes et soirées padel à Montagnac. Premier rendez-vous : le tournoi fondateurs en décembre 2026."
 h1: "Tournois et ligues de padel dans l'Hérault"
 requete: "tournoi padel Hérault, ligue padel"
 libelleLien: "Tournois et ligues de padel"
@@ -11,7 +11,7 @@ contexteWhatsApp: tournoi
 faq: tournois
 ---
 
-Vous aimez la compétition ? Ou simplement jouer contre de nouvelles têtes ? {{nom}} organisera des tournois, des ligues internes et des soirées padel au domaine de Bessilles, à {{ville}}.
+Vous aimez la compétition ? Ou simplement jouer contre de nouvelles têtes ? {{nom}} organisera des tournois, des ligues internes et des soirées padel à {{ville}}.
 
 Le club ouvre {{ouverture}}. Le calendrier se construit maintenant. Laissez votre contact sur WhatsApp pour être prévenu des premières dates.
 
@@ -57,9 +57,9 @@ Inscription : {{tournoisInscription}}
 
 Pour être prévenu dès qu'un tournoi, une ligue ou une soirée ouvre ses inscriptions, écrivez-nous sur WhatsApp.
 
-## Pourquoi jouer vos tournois à Bessilles ?
+## Pourquoi jouer vos tournois à Montagnac ?
 
-D'abord pour le cadre. Les terrains sont installés au cœur du domaine de Bessilles. Vous jouez dehors, dans un environnement naturel.
+D'abord pour le cadre. Les terrains sont installés au cœur de la base départementale. Vous jouez dehors, dans un environnement naturel.
 
 Ensuite pour les conditions. {{terrainsDetail}}. Des vestiaires et des douches. Un bar, de la restauration et un espace détente pour attendre son prochain match ou fêter une victoire.
 

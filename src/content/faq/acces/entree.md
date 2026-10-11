@@ -4,4 +4,4 @@ page: acces
 ordre: 5
 ---
 
-Par l'{{entree}} du domaine de Bessilles, à {{ville}}.
+Par l'{{entree}} de la base départementale, à {{ville}}.

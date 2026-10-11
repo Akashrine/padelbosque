@@ -55,7 +55,7 @@ Budget serré (500 € pour landing, fiche Google et 3 à 4 pages SEO). Pas de s
 | Accessibilité | Accès PMR |
 | Activités | Stages enfants, tournois, ligues internes, soirées, offre entreprise, anniversaires et privatisations |
 | Publics | Joueurs de padel, entreprises, enfants et familles, débutants, touristes l'été |
-| Ce qui le distingue | Le cadre : terrains au cœur du domaine de Bessilles |
+| Ce qui le distingue | Le cadre : terrains en pleine nature, au cœur de la base départementale |
 | Ton | Sportif |
 | Référence de com | Puntaco |
 
@@ -76,7 +76,7 @@ Paiement par Stripe Payment Link limité à 100 paiements. Le checkout Stripe co
 ### 1. Accueil (`/`)
 
 Sections dans cet ordre :
-1. Hero : nom, promesse liée au cadre ("Le padel au cœur de Bessilles"), date d'ouverture, bouton principal "Je deviens membre fondateur", bouton secondaire WhatsApp.
+1. Hero : nom, promesse liée au cadre ("Le padel en pleine nature"), date d'ouverture, bouton principal "Je deviens membre fondateur", bouton secondaire WhatsApp.
 2. L'offre fondateur : contenu complet, prix, bouton Stripe.
 3. Le club : 4 terrains panoramiques éclairés, cadre, équipements, parking gratuit.
 4. Tarifs et horaires : 8 € par joueur, créneau de 90 min, horaires hiver et été.
@@ -94,7 +94,7 @@ Une page par intention réelle, chacune avec du contenu propre, jamais de pages 
 | `/padel-entreprise-team-building` | padel entreprise Hérault, team building padel | Format, déroulé, privatisation, bar et restauration sur place, contact |
 | `/stages-padel-enfants` | stage padel enfant, padel enfant Pézenas | Stages vacances scolaires, âges, déroulé. Infos détaillées à venir |
 | `/tournois-ligues-padel` | tournoi padel Hérault, ligue padel | Tournois, ligues internes, soirées, tournoi fondateurs |
-| `/padel-pezenas-meze-sete` | padel Pézenas, padel Mèze, padel près de Sète | Page accès : trajet et temps depuis chaque ville, parking, pourquoi venir à Bessilles |
+| `/padel-pezenas-meze-sete` | padel Pézenas, padel Mèze, padel près de Sète | Page accès : trajet et temps depuis chaque ville, parking, pourquoi venir jouer ici |
 
 ### 3. Mentions légales (`/mentions-legales`)
 
@@ -122,6 +122,7 @@ Gabarit avec champs à compléter (raison sociale, SIRET, hébergeur).
 - Une info manquante devient un `TODO` visible dans `src/config.ts`, jamais une valeur inventée.
 - Images de banque libres de droits en attendant le shooting, signalées comme provisoires.
 - Textes en français, phrases courtes, tutoiement à éviter sur le site (vouvoiement).
+- Le nom « Bessilles » est protégé par le propriétaire du domaine. Il n'apparaît que dans l'adresse « Base départementale de Bessilles ». Ailleurs : « la base départementale », « Montagnac » ou « en pleine nature ». Le verifier fait échouer le build sinon.
 
 ## Infos manquantes
 

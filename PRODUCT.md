@@ -32,7 +32,7 @@ Le site réussit s'il :
 
 Trois arguments, et seulement ceux-là :
 
-- **Le cadre.** Les terrains sont au cœur du domaine départemental de Bessilles. « Bosque » veut dire forêt. C'est l'argument principal, celui qu'a donné William.
+- **Le cadre.** Les terrains sont au cœur de la base départementale (le nom « Bessilles » est réservé à l'adresse). « Bosque » veut dire forêt. C'est l'argument principal, celui qu'a donné William.
 - **Un prix unique à toute heure.** 8 € par joueur pour 90 minutes, soit 32 € le terrain, sans heures pleines ni heures creuses.
 - **Tout sur place.** Vestiaires, douches, bar, restauration, espace détente, boutique, location de raquettes, parking gratuit de 2 000 places. On peut venir pour la journée.
 
@@ -60,7 +60,7 @@ Faits encore ouverts (voir `TODO.md`) : date exacte d'ouverture et d'inauguratio
 
 ## Brand Commitments
 
-- Nom : Pad'el Bosque. Promesse : « Le padel au cœur de Bessilles ».
+- Nom : Pad'el Bosque. Promesse : « Le padel en pleine nature ».
 - Ton : sportif. Phrases courtes, vouvoiement, en français.
 - Référence de communication : Puntaco, pour son esprit de club (communauté, événements, ambiance). Rien d'autre n'est repris de Puntaco.
 - Univers demandé par le brief : le cadre naturel du domaine allié à un ton sportif.
@@ -76,7 +76,7 @@ Faits encore ouverts (voir `TODO.md`) : date exacte d'ouverture et d'inauguratio
 ## Product Principles
 
 1. **L'exactitude d'abord.** Aucun fait inventé. Ce qui n'est pas confirmé reste un TODO, masqué en production.
-2. **Le cadre est la promesse.** Chaque page rappelle où l'on joue : au cœur du domaine de Bessilles.
+2. **Le cadre est la promesse.** Chaque page rappelle où l'on joue : en pleine nature, au cœur de la base départementale.
 3. **Accueillir les deux joueurs.** Le confirmé trouve l'info en un coup d'œil, le débutant comprend qu'il peut venir sans rien savoir ni rien apporter.
 4. **Une action claire par écran.** Devenir membre fondateur, ou écrire sur WhatsApp. Rien qui détourne de ces deux gestes.
 5. **Un club, pas un simple terrain.** Tournois, ligues, soirées, fondateurs : le site montre une communauté qui se forme, sans promettre ce qui n'est pas encore décidé.

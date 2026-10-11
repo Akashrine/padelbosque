@@ -67,8 +67,8 @@ export const site = {
 
 export const club = {
   nom: "Pad'el Bosque",
-  promesse: 'Le padel au cœur de Bessilles',
-  argument: 'Des terrains au cœur du domaine de Bessilles',
+  promesse: 'Le padel en pleine nature',
+  argument: 'Des terrains en pleine nature',
 
   adresse: {
     rue: 'Base départementale de Bessilles',
@@ -238,7 +238,7 @@ export const liens = {
 };
 
 export const acces = {
-  repere: 'Entrée nord du domaine de Bessilles',
+  repere: 'Entrée nord de la base départementale',
   villes: [
     { nom: 'Pézenas', tempsDeTrajet: 'TODO: Temps de trajet en voiture depuis Pézenas jusqu\'à l\'entrée nord ? (Julien, mesure sur Google Maps)' },
     { nom: 'Mèze', tempsDeTrajet: 'TODO: Temps de trajet en voiture depuis Mèze jusqu\'à l\'entrée nord ? (Julien, mesure sur Google Maps)' },

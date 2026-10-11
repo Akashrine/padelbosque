@@ -3,7 +3,7 @@ type: seo
 slug: padel-entreprise-team-building
 ordre: 1
 title: "Padel entreprise et team building dans l'Hérault, {{nom}}"
-description: "Team building padel dans l'Hérault, au cœur du domaine de Bessilles : {{terrains}} terrains éclairés, bar et restauration sur place, parking gratuit."
+description: "Team building padel dans l'Hérault, au cœur de la base départementale : {{terrains}} terrains éclairés, bar et restauration sur place, parking gratuit."
 h1: "Padel entreprise et team building dans l'Hérault"
 requete: "padel entreprise Hérault, team building padel"
 libelleLien: "Padel entreprise et team building"
@@ -13,7 +13,7 @@ faq: entreprise
 
 Vous cherchez une activité pour réunir vos équipes ? Le padel coche beaucoup de cases. Il se joue à quatre. Les bases s'apprennent vite. Et il fait autant rire que courir.
 
-{{nom}} vous accueille au cœur du domaine de Bessilles, à {{ville}}, dans l'Hérault. Sur place : {{terrainsDetail}}, un bar, de la restauration et un espace détente. Votre événement se déroule au même endroit, du premier échange au dernier verre.
+{{nom}} vous accueille au cœur de la base départementale, à {{ville}}, dans l'Hérault. Sur place : {{terrainsDetail}}, un bar, de la restauration et un espace détente. Votre événement se déroule au même endroit, du premier échange au dernier verre.
 
 ## Pourquoi choisir le padel pour un team building ?
 
@@ -21,7 +21,7 @@ Le padel met tout le monde sur un pied d'égalité. Pas besoin d'avoir déjà jo
 
 Il se joue en double. Vous gagnez ou vous perdez à deux. Il faut se parler, se placer, s'encourager. C'est exactement ce que vous cherchez dans un team building.
 
-Enfin, le cadre change du bureau. Les terrains sont installés au cœur du domaine de Bessilles. Vos équipes jouent dehors, dans un cadre naturel.
+Enfin, le cadre change du bureau. Les terrains sont installés au cœur de la base départementale. Vos équipes jouent dehors, dans un cadre naturel.
 
 ## Combien de personnes peuvent jouer ?
 
@@ -62,7 +62,7 @@ C'est souvent là que le team building fait son effet : autour d'un verre, en re
 
 ## Comment venir avec vos équipes ?
 
-Le club se trouve à l'{{entree}} du domaine de Bessilles, à {{ville}}. Le parking est gratuit, avec {{parking}}. Le site est accessible aux personnes à mobilité réduite.
+Le club se trouve à l'{{entree}} de la base départementale, à {{ville}}. Le parking est gratuit, avec {{parking}}. Le site est accessible aux personnes à mobilité réduite.
 
 Vous venez de Pézenas, Mèze, Sète, Agde ou Béziers ? [Consultez la page accès](/padel-pezenas-meze-sete).
 

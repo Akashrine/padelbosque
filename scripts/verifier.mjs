@@ -36,6 +36,10 @@ const visible = (el) => {
 for (const f of fichiers) {
   const html = readFileSync(`${dist}/${f}`, 'utf8');
   const { document } = parseHTML(html);
+
+  // Nom protégé : « Bessilles » n'apparaît que dans l'adresse.
+  const horsAdresse = html.replaceAll('Base départementale de Bessilles', '').replaceAll(encodeURIComponent('Base départementale de Bessilles'), '');
+  exiger(!/Bessilles/i.test(horsAdresse), `${f} : « Bessilles » hors de l'adresse`);
   const url = '/' + f.replace(/\.html$/, '').replace(/^index$/, '');
   const title = propre(document.querySelector('title')?.textContent);
   const description = document.querySelector('meta[name="description"]')?.getAttribute('content') ?? '';
