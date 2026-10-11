@@ -17,13 +17,11 @@ Le club ouvre {{ouverture}}. Le calendrier se construit maintenant. Laissez votr
 
 ## Quel est le premier tournoi ?
 
-Le premier rendez-vous est le tournoi fondateurs, en décembre 2026. Il est offert aux membres fondateurs, les {{fondateurCartes}} premiers à prendre la carte avant l'inauguration.
+Le premier rendez-vous est le tournoi fondateurs, en décembre 2026. Il réunit les membres fondateurs du club.
 
 Date du tournoi fondateurs : {{tournoiFondateursDate}}
 
 C'est le premier tournoi du club. Il réunira ceux qui ont cru au projet avant l'ouverture.
-
-La carte coûte {{fondateurPrix}}. En plus du tournoi, elle comprend {{fondateurCredit}} de crédit de jeu, le tarif fondateur à {{fondateurTarif}} la session, une invitation à l'inauguration et votre nom sur le mur des fondateurs. [Découvrir l'offre fondateur](/#fondateur).
 
 ## Quels tournois seront organisés ensuite ?
 
@@ -51,6 +49,8 @@ Un tournoi se joue en double. Le plus important est de trouver votre partenaire 
 
 Un créneau dure {{creneau}}. Assez pour s'échauffer et jouer un vrai match.
 
+Le jour du tournoi, arrivez en avance pour vous échauffer. Les terrains sont en extérieur : prévoyez de l'eau et une tenue adaptée à la saison. Les vestiaires et les douches sont sur place.
+
 ## Comment s'inscrire ?
 
 Inscription : {{tournoisInscription}}
@@ -64,7 +64,3 @@ D'abord pour le cadre. Les terrains sont installés au cœur du domaine de Bessi
 Ensuite pour les conditions. {{terrainsDetail}}. Des vestiaires et des douches. Un bar, de la restauration et un espace détente pour attendre son prochain match ou fêter une victoire.
 
 Enfin pour l'accès. Le parking est gratuit, avec {{parking}}. Le club est accessible aux personnes à mobilité réduite. Vous venez de Pézenas, Mèze, Sète, Agde ou Béziers ? [Consultez la page accès](/padel-pezenas-meze-sete).
-
-## Jouer en dehors des tournois
-
-Les terrains sont ouverts 7 jours sur 7, à {{prix}} par joueur pour un créneau de {{creneau}}, à toute heure. Les membres fondateurs jouent à {{fondateurTarif}} la session jusqu'au {{fondateurTarifJusquau}}.

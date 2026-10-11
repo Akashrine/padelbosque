@@ -1,0 +1,16 @@
+---
+/** Identité de la société, partagée par les mentions légales et les conditions de la carte. À placer dans un <dl>. */
+import { club, legal } from '../config';
+import Info from './Info.astro';
+---
+
+<dt>Nom commercial</dt>
+<dd>{club.nom}</dd>
+<dt>Raison sociale</dt>
+<dd><Info valeur={legal.raisonSociale} /></dd>
+<dt>Forme juridique et capital</dt>
+<dd><Info valeur={legal.formeJuridique} /></dd>
+<dt>SIRET</dt>
+<dd><Info valeur={legal.siret} /></dd>
+<dt>Siège social</dt>
+<dd><Info valeur={legal.siege} /></dd>

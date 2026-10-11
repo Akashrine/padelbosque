@@ -10,17 +10,19 @@ h1: "Mentions légales"
 
 Les textes, le nom et le logo de {{nom}} sont protégés. Toute reproduction sans autorisation est interdite.
 
-Si des photos de banque d'images libres de droits sont utilisées en attendant les photos du club, elles sont signalées comme provisoires.
-
 ## Données personnelles
 
 Ce site ne dépose pas de cookie et n'utilise pas d'outil de mesure d'audience.
 
-Le site ne collecte pas directement de données personnelles. Le paiement de la carte Membre fondateur se fait sur une page externe Stripe, qui recueille votre nom, votre email et votre téléphone pour traiter la commande. Ces données servent à gérer votre carte et à vous contacter au sujet du club.
+Le site ne collecte aucune donnée personnelle. Il n'a pas de formulaire et pas de compte utilisateur.
 
-Durée de conservation et usage des données : {{donneesConservation}}
+Le paiement de la carte Membre fondateur se fait sur une page externe Stripe. Stripe recueille votre nom, votre email et votre téléphone pour traiter le paiement. Vos données bancaires restent chez Stripe : le club n'y a jamais accès.
 
-Les liens WhatsApp ouvrent une conversation dans l'application WhatsApp. Les messages que vous envoyez sont soumis aux conditions de WhatsApp.
+Le club reçoit votre nom, votre email et votre téléphone. Ils servent uniquement à gérer votre carte : charger votre crédit de jeu, appliquer le tarif fondateur, vous inviter à l'inauguration et au tournoi fondateurs. Ils ne sont ni vendus ni cédés.
+
+Ces données sont conservées jusqu'à la fin des avantages fondateurs, le {{fondateurTarifJusquau}}, puis supprimées. Les factures sont conservées 10 ans, comme la loi l'impose.
+
+Les liens WhatsApp ouvrent une conversation dans l'application WhatsApp. Les messages que vous envoyez sont soumis aux conditions de WhatsApp. Le club les utilise seulement pour vous répondre.
 
 Vous pouvez demander l'accès, la rectification ou la suppression de vos données en écrivant à {{email}}.
 

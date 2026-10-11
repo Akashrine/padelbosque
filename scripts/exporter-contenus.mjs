@@ -11,6 +11,7 @@ const pages = [
   'tournois-ligues-padel',
   'padel-pezenas-meze-sete',
   'bienvenue-fondateur',
+  'conditions-carte-fondateur',
   'mentions-legales',
   '404',
 ];

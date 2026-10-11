@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Info from '../components/Info.astro';
+import Societe from '../components/Societe.astro';
 import { adresseTexte, club, legal } from '../config';
 import { pageSysteme } from '../lib/pages';
 
@@ -13,18 +14,9 @@ const page = await pageSysteme('mentions-legales');
 
     <h2>Éditeur du site</h2>
     <dl>
-      <dt>Nom commercial</dt>
-      <dd>{club.nom}</dd>
-      <dt>Raison sociale</dt>
-      <dd><Info valeur={legal.raisonSociale} /></dd>
-      <dt>Forme juridique et capital</dt>
-      <dd><Info valeur={legal.formeJuridique} /></dd>
-      <dt>SIRET</dt>
-      <dd><Info valeur={legal.siret} /></dd>
+      <Societe />
       <dt>TVA intracommunautaire</dt>
       <dd><Info valeur={legal.tva} /></dd>
-      <dt>Siège social</dt>
-      <dd><Info valeur={legal.siege} /></dd>
       <dt>Adresse du club</dt>
       <dd>{adresseTexte()}</dd>
       <dt>Téléphone</dt>

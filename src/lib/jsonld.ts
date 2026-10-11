@@ -20,11 +20,13 @@ const specHoraires = (p: PlageHoraire, du?: Date, au?: Date) => ({
   dayOfWeek: p.jours.map((j) => `https://schema.org/${j}`),
   opens: p.ouverture,
   closes: p.fermeture,
-  ...(du && au ? { validFrom: isoDate(du), validThrough: isoDate(au) } : {}),
+  ...(du ? { validFrom: isoDate(du) } : {}),
+  ...(au ? { validThrough: isoDate(au) } : {}),
 });
 
 /**
- * Avec les dates de bascule : saison en cours et saison suivante, chacune avec validFrom et validThrough.
+ * Avec les dates de bascule : première saison (à partir de la date d'ouverture) et saison suivante,
+ * chacune avec validFrom et validThrough. Tant que la date d'ouverture est inconnue, la première n'a que validThrough.
  * Sans elles : horaires d'hiver seuls (le club ouvre en novembre), car deux plages sans dates se contrediraient.
  */
 function horaires() {

@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Societe from '../components/Societe.astro';
+import { adresseTexte, club } from '../config';
+import { pageSysteme } from '../lib/pages';
+
+const page = await pageSysteme('conditions-carte-fondateur');
+---
+
+<BaseLayout title={page.title} description={page.description} noindex contexteWhatsApp="fondateur">
+  <article>
+    <h1>{page.h1}</h1>
+    <page.Contenu />
+
+    <h2>Vendeur</h2>
+    <dl>
+      <Societe />
+      <dt>Adresse du club</dt>
+      <dd>{adresseTexte()}</dd>
+      <dt>Téléphone</dt>
+      <dd>{club.telephone.affichage}</dd>
+      <dt>Email</dt>
+      <dd>{club.email}</dd>
+    </dl>
+    <p>Voir aussi les <a href="/mentions-legales">mentions légales</a>.</p>
+  </article>
+</BaseLayout>

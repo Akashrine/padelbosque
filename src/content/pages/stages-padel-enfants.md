@@ -45,7 +45,7 @@ Encadrement : {{stagesEncadrement}}
 
 Une tenue de sport, des chaussures de sport et une gourde. Les terrains sont en extérieur : pensez à une casquette quand il fait beau et à une couche chaude en hiver.
 
-Marquez le nom de votre enfant sur ses affaires. Sur un stage, les gourdes et les vestes se ressemblent toutes.
+Marquez le nom de votre enfant sur ses affaires.
 
 Pour la raquette, le club propose la location sur place.
 
@@ -59,6 +59,10 @@ Le club dispose de vestiaires et de douches. Le parking est gratuit, avec {{park
 
 Et le cadre fait la différence. Les terrains sont installés au cœur du domaine de Bessilles, dans un environnement naturel.
 
+## Et après le stage ?
+
+Un enfant qui a aimé son stage peut continuer à jouer en famille. Le padel se joue à quatre, et un parent débutant peut partager le terrain avec son enfant. Le club est ouvert 7 jours sur 7 et loue des raquettes sur place : il suffit de venir en tenue de sport.
+
 ## Où se trouve le club ?
 
 À l'{{entree}} du domaine de Bessilles, à {{ville}}. Vous venez de Pézenas, Mèze ou Sète ? [Consultez la page accès](/padel-pezenas-meze-sete).
@@ -70,7 +74,3 @@ Les inscriptions ouvriront quand le programme sera fixé.
 Prix d'un stage : {{stagesTarif}}
 
 En attendant, écrivez-nous sur WhatsApp pour être prévenu. Vous pouvez aussi appeler le {{telephone}}.
-
-## Et vous, vous jouez ?
-
-Le club est ouvert 7 jours sur 7, à {{prix}} par joueur pour un créneau de {{creneau}}, à toute heure. Si vous comptez jouer souvent, la carte Membre fondateur vous fait économiser sur chaque session. Elle coûte {{fondateurPrix}} et comprend {{fondateurCredit}} de crédit de jeu. Ensuite, vous jouez à {{fondateurTarif}} la session jusqu'au {{fondateurTarifJusquau}}. Seules {{fondateurCartes}} cartes sont en vente.

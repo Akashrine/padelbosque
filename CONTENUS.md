@@ -20,6 +20,8 @@ Les passages **[À compléter : …]** sont des infos manquantes. En production,
 
 **Bouton :** Je deviens membre fondateur
 
+Conditions de la carte
+
 [À compléter : Quel est le lien Stripe Payment Link de la carte fondateur (limité à 100 paiements) ?]
 
 ### Bouton flottant
@@ -39,6 +41,7 @@ Instagram : [À compléter : Quel est l'identifiant Instagram exact du club ?]
 - Stages de padel enfants
 - Tournois et ligues de padel
 - Padel près de Pézenas, Mèze et Sète
+- Conditions de la carte
 - Mentions légales
 
 © 2026 Pad'el Bosque
@@ -59,6 +62,8 @@ Ouverture début novembre 2026.
 
 **Bouton :** Je deviens membre fondateur
 
+Conditions de la carte
+
 [À compléter : Quel est le lien Stripe Payment Link de la carte fondateur (limité à 100 paiements) ?]
 
 **Bouton :** Nous écrire sur WhatsApp
@@ -69,7 +74,7 @@ Ouverture début novembre 2026.
 
 Le club n'est pas encore ouvert. Vous pouvez déjà en faire partie.
 
-La carte Membre fondateur vous donne du jeu, un tarif réduit et une place à part dans l'histoire du club. Elle est réservée aux 100 premiers.
+La carte Membre fondateur vous donne du jeu et un tarif réduit. Elle est réservée aux 100 premiers.
 
 Le paiement se fait en ligne, sur une page de paiement sécurisée Stripe.
 
@@ -87,17 +92,15 @@ En vente jusqu'à l'inauguration ou jusqu'à épuisement. 100 cartes au total.
 
 **Bouton :** Je deviens membre fondateur
 
+Conditions de la carte
+
 [À compléter : Quel est le lien Stripe Payment Link de la carte fondateur (limité à 100 paiements) ?]
 
 **Bouton :** Une question sur la carte fondateur ? Écrivez-nous sur WhatsApp
 
 **H2 :** Le club
 
-Bosque veut dire forêt. Le nom dit l'essentiel : chez Pad'el Bosque, vous jouez au padel dans le cadre naturel du domaine de Bessilles.
-
-Le club compte 4 terrains extérieurs, panoramiques et éclairés. L'éclairage permet de jouer en fin de journée, jusqu'à la fermeture.
-
-Après le match, tout est sur place : vestiaires, douches, bar, restauration et espace détente. Le parking est gratuit, avec 2 000 places. Le club est accessible aux personnes à mobilité réduite.
+Bosque veut dire forêt : chez Pad'el Bosque, vous jouez au padel dans le cadre naturel du domaine de Bessilles.
 
 **H3 :** Sur place
 
@@ -118,24 +121,20 @@ Après le match, tout est sur place : vestiaires, douches, bar, restauration et 
 
 **H2 :** Tarifs et horaires
 
-Un seul prix : 8 € par joueur pour un créneau de 90 minutes. Le matin, le midi ou le soir, le prix ne change pas.
-
-Le club est ouvert 7 jours sur 7. En hiver, de 9h à 21h. En été, de 8h à 22h30.
+Un seul prix, quelle que soit l'heure, et des horaires qui suivent les saisons.
 
 **H3 :** Tarifs
 
-- Prix : 8 € par joueur et par créneau
+- Prix : 8 € par joueur, soit 32 € le terrain pour 90 minutes
 - Durée d'un créneau : 90 minutes
-- Heures creuses, heures pleines : Même prix à toute heure.
+- Heures creuses, heures pleines : même prix à toute heure.
 - Cours : [À compléter : Proposerez-vous des cours avec un coach ? Si oui, qui, quelles formules et quels prix ?]
 - Abonnements et carnets : [À compléter : Proposerez-vous des abonnements ou des carnets de sessions ? Si oui, lesquels et à quel prix ?]
 
 **H3 :** Horaires
 
-Ouvert 7 jours sur 7.
-
-- Hiver : 9h à 21h
-- Été : 8h à 22h30
+- Hiver : 9h à 21h, 7 jours sur 7
+- Été : 8h à 22h30, 7 jours sur 7
 
 [À compléter : À quelles dates passez-vous aux horaires d'été et d'hiver ? Proposition : dernier dimanche de mars / dernier dimanche d'octobre, à valider avec William.]
 
@@ -181,11 +180,11 @@ Parking gratuit de 2 000 places.
 
 **H3 :** Temps de trajet en voiture
 
-- Pézenas : [À compléter : Temps de trajet en voiture depuis Pézenas jusqu'à l'entrée nord ?]
-- Mèze : [À compléter : Temps de trajet en voiture depuis Mèze jusqu'à l'entrée nord ?]
-- Sète : [À compléter : Temps de trajet en voiture depuis Sète jusqu'à l'entrée nord ?]
-- Agde : [À compléter : Temps de trajet en voiture depuis Agde jusqu'à l'entrée nord ?]
-- Béziers : [À compléter : Temps de trajet en voiture depuis Béziers jusqu'à l'entrée nord ?]
+- Pézenas : [À compléter : Temps de trajet en voiture depuis Pézenas jusqu'à l'entrée nord ? (Julien, mesure sur Google Maps)]
+- Mèze : [À compléter : Temps de trajet en voiture depuis Mèze jusqu'à l'entrée nord ? (Julien, mesure sur Google Maps)]
+- Sète : [À compléter : Temps de trajet en voiture depuis Sète jusqu'à l'entrée nord ? (Julien, mesure sur Google Maps)]
+- Agde : [À compléter : Temps de trajet en voiture depuis Agde jusqu'à l'entrée nord ? (Julien, mesure sur Google Maps)]
+- Béziers : [À compléter : Temps de trajet en voiture depuis Béziers jusqu'à l'entrée nord ? (Julien, mesure sur Google Maps)]
 
 Le club se trouve à l'entrée nord du domaine de Bessilles, à Montagnac. Le parking est gratuit.
 
@@ -194,7 +193,7 @@ Vous venez de Pézenas, Mèze, Sète, Agde ou Béziers ? Consultez la page accè
 **H2 :** Questions fréquentes
 
 **Question :** Combien coûte une partie de padel ?
-Réponse : 8 € par joueur pour un créneau de 90 minutes. Le prix est le même à toute heure.
+Réponse : 8 € par joueur, soit 32 € le terrain pour 90 minutes. Le prix est le même à toute heure.
 
 **Question :** Combien de temps dure un créneau ?
 Réponse : Un créneau dure 90 minutes.
@@ -268,7 +267,7 @@ Oui. Le club propose des privatisations pour les entreprises, les anniversaires 
 
 Tarif : [À compléter : Quel tarif pour une privatisation ou un événement d'entreprise ?]
 
-Pour mémoire, le tarif public est de 8 € par joueur et par créneau de 90 minutes, à toute heure.
+Pour mémoire, le tarif public est de 8 € par joueur, soit 32 € le terrain pour 90 minutes, à toute heure.
 
 **H2 :** Que prévoir après le match ?
 
@@ -278,7 +277,7 @@ C'est souvent là que le team building fait son effet : autour d'un verre, en re
 
 **H2 :** Comment venir avec vos équipes ?
 
-Le club se trouve à l'entrée nord du domaine de Bessilles, à Montagnac. Le parking est gratuit, avec 2 000 places. Pas de souci si vos équipes arrivent en plusieurs voitures. Le site est accessible aux personnes à mobilité réduite.
+Le club se trouve à l'entrée nord du domaine de Bessilles, à Montagnac. Le parking est gratuit, avec 2 000 places. Le site est accessible aux personnes à mobilité réduite.
 
 Vous venez de Pézenas, Mèze, Sète, Agde ou Béziers ? Consultez la page accès.
 
@@ -291,6 +290,8 @@ Le plus simple est WhatsApp. Vous pouvez aussi appeler le 06 14 97 97 49 ou écr
 100 cartes à 49 €, avec 64 € de crédit de jeu. En vente jusqu'à l'inauguration ou jusqu'à épuisement.
 
 **Bouton :** Je deviens membre fondateur
+
+Conditions de la carte
 
 [À compléter : Quel est le lien Stripe Payment Link de la carte fondateur (limité à 100 paiements) ?]
 
@@ -364,7 +365,7 @@ Encadrement : [À compléter : Qui encadre les stages et avec quel diplôme ?]
 
 Une tenue de sport, des chaussures de sport et une gourde. Les terrains sont en extérieur : pensez à une casquette quand il fait beau et à une couche chaude en hiver.
 
-Marquez le nom de votre enfant sur ses affaires. Sur un stage, les gourdes et les vestes se ressemblent toutes.
+Marquez le nom de votre enfant sur ses affaires.
 
 Pour la raquette, le club propose la location sur place.
 
@@ -378,6 +379,10 @@ Le club dispose de vestiaires et de douches. Le parking est gratuit, avec 2 000 
 
 Et le cadre fait la différence. Les terrains sont installés au cœur du domaine de Bessilles, dans un environnement naturel.
 
+**H2 :** Et après le stage ?
+
+Un enfant qui a aimé son stage peut continuer à jouer en famille. Le padel se joue à quatre, et un parent débutant peut partager le terrain avec son enfant. Le club est ouvert 7 jours sur 7 et loue des raquettes sur place : il suffit de venir en tenue de sport.
+
 **H2 :** Où se trouve le club ?
 
 À l'entrée nord du domaine de Bessilles, à Montagnac. Vous venez de Pézenas, Mèze ou Sète ? Consultez la page accès.
@@ -390,15 +395,13 @@ Prix d'un stage : [À compléter : Quel est le prix d'un stage ?]
 
 En attendant, écrivez-nous sur WhatsApp pour être prévenu. Vous pouvez aussi appeler le 06 14 97 97 49.
 
-**H2 :** Et vous, vous jouez ?
-
-Le club est ouvert 7 jours sur 7, à 8 € par joueur pour un créneau de 90 minutes, à toute heure. Si vous comptez jouer souvent, la carte Membre fondateur vous fait économiser sur chaque session. Elle coûte 49 € et comprend 64 € de crédit de jeu. Ensuite, vous jouez à 7 € la session jusqu'au 31 août 2027. Seules 100 cartes sont en vente.
-
 **H2 :** Devenez membre fondateur
 
 100 cartes à 49 €, avec 64 € de crédit de jeu. En vente jusqu'à l'inauguration ou jusqu'à épuisement.
 
 **Bouton :** Je deviens membre fondateur
+
+Conditions de la carte
 
 [À compléter : Quel est le lien Stripe Payment Link de la carte fondateur (limité à 100 paiements) ?]
 
@@ -444,13 +447,11 @@ Le club ouvre début novembre 2026. Le calendrier se construit maintenant. Laiss
 
 **H2 :** Quel est le premier tournoi ?
 
-Le premier rendez-vous est le tournoi fondateurs, en décembre 2026. Il est offert aux membres fondateurs, les 100 premiers à prendre la carte avant l'inauguration.
+Le premier rendez-vous est le tournoi fondateurs, en décembre 2026. Il réunit les membres fondateurs du club.
 
 Date du tournoi fondateurs : [À compléter : Quelle est la date du tournoi fondateurs de décembre 2026 ?]
 
 C'est le premier tournoi du club. Il réunira ceux qui ont cru au projet avant l'ouverture.
-
-La carte coûte 49 €. En plus du tournoi, elle comprend 64 € de crédit de jeu, le tarif fondateur à 7 € la session, une invitation à l'inauguration et votre nom sur le mur des fondateurs. Découvrir l'offre fondateur.
 
 **H2 :** Quels tournois seront organisés ensuite ?
 
@@ -478,6 +479,8 @@ Un tournoi se joue en double. Le plus important est de trouver votre partenaire 
 
 Un créneau dure 90 minutes. Assez pour s'échauffer et jouer un vrai match.
 
+Le jour du tournoi, arrivez en avance pour vous échauffer. Les terrains sont en extérieur : prévoyez de l'eau et une tenue adaptée à la saison. Les vestiaires et les douches sont sur place.
+
 **H2 :** Comment s'inscrire ?
 
 Inscription : [À compléter : Comment s'inscrire à un tournoi et quel est le prix d'inscription ?]
@@ -492,15 +495,13 @@ Ensuite pour les conditions. 4 terrains extérieurs, panoramiques et éclairés.
 
 Enfin pour l'accès. Le parking est gratuit, avec 2 000 places. Le club est accessible aux personnes à mobilité réduite. Vous venez de Pézenas, Mèze, Sète, Agde ou Béziers ? Consultez la page accès.
 
-**H2 :** Jouer en dehors des tournois
-
-Les terrains sont ouverts 7 jours sur 7, à 8 € par joueur pour un créneau de 90 minutes, à toute heure. Les membres fondateurs jouent à 7 € la session jusqu'au 31 août 2027.
-
 **H2 :** Devenez membre fondateur
 
 100 cartes à 49 €, avec 64 € de crédit de jeu. En vente jusqu'à l'inauguration ou jusqu'à épuisement.
 
 **Bouton :** Je deviens membre fondateur
+
+Conditions de la carte
 
 [À compléter : Quel est le lien Stripe Payment Link de la carte fondateur (limité à 100 paiements) ?]
 
@@ -509,7 +510,7 @@ Les terrains sont ouverts 7 jours sur 7, à 8 € par joueur pour un créneau de
 **H2 :** Questions fréquentes
 
 **Question :** Qui peut jouer le tournoi fondateurs ?
-Réponse : Les membres fondateurs. Le tournoi est compris dans la carte Membre fondateur, vendue à 100 exemplaires avant l'inauguration.
+Réponse : Les membres fondateurs : le tournoi est compris dans leur carte.
 
 **Question :** Les tournois sont-ils ouverts à tous les niveaux ?
 Réponse : [À compléter : Les tournois et les ligues seront-ils ouverts à tous les niveaux ?]
@@ -542,23 +543,15 @@ Fil d'Ariane : Accueil > Padel près de Pézenas, Mèze et Sète : venez jouer �
 
 Vous habitez Pézenas, Mèze, Sète, Agde ou Béziers et vous cherchez où jouer au padel ? Pad'el Bosque ouvre début novembre 2026 au domaine de Bessilles, à Montagnac.
 
-Le club compte 4 terrains extérieurs, panoramiques et éclairés. Un seul prix : 8 € par joueur pour un créneau de 90 minutes, à toute heure.
+Le club compte 4 terrains extérieurs, panoramiques et éclairés. Un seul prix : 8 € par joueur, soit 32 € le terrain pour 90 minutes, à toute heure.
 
 **H2 :** Où se trouve le club ?
 
 Le club est installé à l'entrée nord du domaine de Bessilles. L'adresse : Base départementale de Bessilles, 34530 Montagnac.
 
-Adresse postale exacte : [À compléter : Quelle est l'adresse postale exacte du club (numéro, voie) si elle existe ?]
-
-Le lien Google Maps et l'itinéraire sont plus bas sur cette page.
-
-**H2 :** Combien de temps de trajet depuis chez vous ?
-
-Le tableau plus bas donne le temps de trajet en voiture depuis Pézenas, Mèze, Sète, Agde et Béziers. Vous venez à plusieurs ? Le padel se joue à quatre : une voiture suffit souvent pour toute l'équipe.
-
 **H2 :** Pourquoi venir jouer à Bessilles ?
 
-Pour le cadre, d'abord. Bosque veut dire forêt. Les terrains sont installés au cœur du domaine de Bessilles, dans un environnement naturel. Vous jouez dehors, loin du béton.
+Pour le cadre, d'abord. Bosque veut dire forêt. Les terrains sont installés au cœur du domaine de Bessilles, dans un environnement naturel. Vous jouez dehors.
 
 Pour les terrains, ensuite. Ils sont panoramiques et éclairés. Vous pouvez jouer le soir, jusqu'à 21h en hiver et 22h30 en été.
 
@@ -570,7 +563,13 @@ Le parking est gratuit, avec 2 000 places. Le club est accessible aux personnes 
 
 **H2 :** Quand venir jouer ?
 
-Le club est ouvert 7 jours sur 7. En hiver, de 9h à 21h. En été, de 8h à 22h30. Le prix reste le même le matin, le midi et le soir.
+Le club est ouvert 7 jours sur 7. En hiver, de 9h à 21h. En été, de 8h à 22h30. Le prix reste le même le matin, le midi et le soir. L'été, les créneaux du matin et du soir évitent les heures les plus chaudes.
+
+**H2 :** Première fois au padel ?
+
+Le padel se joue en double, sur un terrain plus petit qu'un court de tennis et entouré de vitres. La balle peut rebondir sur les vitres : les échanges durent, même entre débutants. Les règles de base s'apprennent en quelques minutes.
+
+Pas besoin de matériel : le club loue des raquettes sur place. Venez à quatre et réservez un créneau de 90 minutes. C'est assez pour apprendre les gestes et jouer vos premiers points.
 
 **H2 :** En vacances dans le coin ?
 
@@ -583,10 +582,6 @@ Le logiciel de réservation arrive avec l'ouverture du club.
 Logiciel de réservation : [À compléter : Quel logiciel de réservation utiliserez-vous et quand sera-t-il en ligne ?]
 
 En attendant, écrivez-nous sur WhatsApp ou appelez le 06 14 97 97 49.
-
-**H2 :** Vous habitez à côté et comptez jouer souvent ?
-
-Pensez à la carte Membre fondateur. Elle coûte 49 € et comprend 64 € de crédit de jeu, soit 8 sessions. Ensuite, vous jouez à 7 € la session au lieu de 8 €, jusqu'au 31 août 2027. Seules 100 cartes sont en vente, jusqu'à l'inauguration ou jusqu'à épuisement. Voir l'offre fondateur.
 
 **H2 :** Les autres activités du club
 
@@ -606,17 +601,19 @@ Parking gratuit de 2 000 places.
 
 **H3 :** Temps de trajet en voiture
 
-- Pézenas : [À compléter : Temps de trajet en voiture depuis Pézenas jusqu'à l'entrée nord ?]
-- Mèze : [À compléter : Temps de trajet en voiture depuis Mèze jusqu'à l'entrée nord ?]
-- Sète : [À compléter : Temps de trajet en voiture depuis Sète jusqu'à l'entrée nord ?]
-- Agde : [À compléter : Temps de trajet en voiture depuis Agde jusqu'à l'entrée nord ?]
-- Béziers : [À compléter : Temps de trajet en voiture depuis Béziers jusqu'à l'entrée nord ?]
+- Pézenas : [À compléter : Temps de trajet en voiture depuis Pézenas jusqu'à l'entrée nord ? (Julien, mesure sur Google Maps)]
+- Mèze : [À compléter : Temps de trajet en voiture depuis Mèze jusqu'à l'entrée nord ? (Julien, mesure sur Google Maps)]
+- Sète : [À compléter : Temps de trajet en voiture depuis Sète jusqu'à l'entrée nord ? (Julien, mesure sur Google Maps)]
+- Agde : [À compléter : Temps de trajet en voiture depuis Agde jusqu'à l'entrée nord ? (Julien, mesure sur Google Maps)]
+- Béziers : [À compléter : Temps de trajet en voiture depuis Béziers jusqu'à l'entrée nord ? (Julien, mesure sur Google Maps)]
 
 **H2 :** Devenez membre fondateur
 
 100 cartes à 49 €, avec 64 € de crédit de jeu. En vente jusqu'à l'inauguration ou jusqu'à épuisement.
 
 **Bouton :** Je deviens membre fondateur
+
+Conditions de la carte
 
 [À compléter : Quel est le lien Stripe Payment Link de la carte fondateur (limité à 100 paiements) ?]
 
@@ -678,6 +675,59 @@ Le club ouvre début novembre 2026. Pour suivre les dernières nouvelles et pose
 
 Retour à l'accueil
 
+## /conditions-carte-fondateur (non indexée)
+
+**Title :** Conditions de la carte Membre fondateur, Pad'el Bosque
+
+**Meta description :** Conditions de vente de la carte Membre fondateur de Pad'el Bosque : rétractation, remboursement, crédit de jeu, tarif fondateur, identité du vendeur.
+
+**H1 :** Conditions de la carte Membre fondateur
+
+La carte Membre fondateur coûte 49 €. 100 cartes sont en vente, jusqu'à l'inauguration ou jusqu'à épuisement. Le paiement se fait sur une page de paiement sécurisée Stripe.
+
+**H2 :** Titulaire de la carte
+
+[À compléter : À valider avec William. Proposition : « La carte est nominative. Elle ne peut être ni cédée ni revendue. »]
+
+**H2 :** Droit de rétractation
+
+[À compléter : À valider avec William. Proposition : « Vous disposez d'un droit de rétractation de 14 jours à compter de l'achat. Pour l'exercer, écrivez à padelbosque@gmail.com : vous êtes remboursé intégralement. »]
+
+**H2 :** Si le club n'ouvre pas
+
+Le club prévoit d'ouvrir début novembre 2026, au plus tard fin novembre 2026.
+
+[À compléter : À valider avec William. Proposition : « Si le club n'ouvre pas avant le 31 janvier 2027, vous pouvez demander le remboursement intégral de la carte. »]
+
+**H2 :** Crédit de jeu
+
+La carte comprend 64 € de crédit de jeu, chargé dans le logiciel du club à l'ouverture et valable jusqu'au 31 mars 2027.
+
+[À compléter : À valider avec William. Proposition : « Le crédit de jeu non utilisé au 31 mars 2027 est perdu. Il n'est pas remboursable. »]
+
+**H2 :** Tarif fondateur
+
+Le titulaire de la carte joue à 7 € la session jusqu'au 31 août 2027.
+
+[À compléter : À valider avec William. Proposition : « Le tarif fondateur est personnel. Il ne s'applique qu'au titulaire de la carte et ne peut pas être transféré. »]
+
+**H2 :** Contact
+
+Pour toute question sur la carte, écrivez à padelbosque@gmail.com ou appelez le 06 14 97 97 49.
+
+**H2 :** Vendeur
+
+- Nom commercial : Pad'el Bosque
+- Raison sociale : [À compléter : Quelle est la raison sociale de la société qui exploite le club ? (Kbis)]
+- Forme juridique et capital : [À compléter : Quelle est la forme juridique et le capital social ? (Kbis)]
+- SIRET : [À compléter : Quel est le numéro SIRET ? (Kbis)]
+- Siège social : [À compléter : Quelle est l'adresse du siège social ? (Kbis)]
+- Adresse du club : Base départementale de Bessilles, 34530 Montagnac
+- Téléphone : 06 14 97 97 49
+- Email : padelbosque@gmail.com
+
+Voir aussi les mentions légales.
+
 ## /mentions-legales
 
 **Title :** Mentions légales, Pad'el Bosque
@@ -689,15 +739,15 @@ Retour à l'accueil
 **H2 :** Éditeur du site
 
 - Nom commercial : Pad'el Bosque
-- Raison sociale : [À compléter : Quelle est la raison sociale de la société qui exploite le club ?]
-- Forme juridique et capital : [À compléter : Quelle est la forme juridique et le capital social ?]
-- SIRET : [À compléter : Quel est le numéro SIRET ?]
+- Raison sociale : [À compléter : Quelle est la raison sociale de la société qui exploite le club ? (Kbis)]
+- Forme juridique et capital : [À compléter : Quelle est la forme juridique et le capital social ? (Kbis)]
+- SIRET : [À compléter : Quel est le numéro SIRET ? (Kbis)]
+- Siège social : [À compléter : Quelle est l'adresse du siège social ? (Kbis)]
 - TVA intracommunautaire : [À compléter : Quel est le numéro de TVA intracommunautaire, s'il existe ?]
-- Siège social : [À compléter : Quelle est l'adresse du siège social ?]
 - Adresse du club : Base départementale de Bessilles, 34530 Montagnac
 - Téléphone : 06 14 97 97 49
 - Email : padelbosque@gmail.com
-- Directeur de la publication : [À compléter : Qui est le directeur de la publication ?]
+- Directeur de la publication : [À compléter : Qui est le directeur de la publication ? Par défaut, le représentant légal inscrit au Kbis.]
 
 **H2 :** Hébergeur
 
@@ -708,17 +758,19 @@ Retour à l'accueil
 
 Les textes, le nom et le logo de Pad'el Bosque sont protégés. Toute reproduction sans autorisation est interdite.
 
-Si des photos de banque d'images libres de droits sont utilisées en attendant les photos du club, elles sont signalées comme provisoires.
-
 **H2 :** Données personnelles
 
 Ce site ne dépose pas de cookie et n'utilise pas d'outil de mesure d'audience.
 
-Le site ne collecte pas directement de données personnelles. Le paiement de la carte Membre fondateur se fait sur une page externe Stripe, qui recueille votre nom, votre email et votre téléphone pour traiter la commande. Ces données servent à gérer votre carte et à vous contacter au sujet du club.
+Le site ne collecte aucune donnée personnelle. Il n'a pas de formulaire et pas de compte utilisateur.
 
-Durée de conservation et usage des données : [À compléter : Combien de temps conservez-vous les données des membres fondateurs, et à quoi servent-elles exactement ?]
+Le paiement de la carte Membre fondateur se fait sur une page externe Stripe. Stripe recueille votre nom, votre email et votre téléphone pour traiter le paiement. Vos données bancaires restent chez Stripe : le club n'y a jamais accès.
 
-Les liens WhatsApp ouvrent une conversation dans l'application WhatsApp. Les messages que vous envoyez sont soumis aux conditions de WhatsApp.
+Le club reçoit votre nom, votre email et votre téléphone. Ils servent uniquement à gérer votre carte : charger votre crédit de jeu, appliquer le tarif fondateur, vous inviter à l'inauguration et au tournoi fondateurs. Ils ne sont ni vendus ni cédés.
+
+Ces données sont conservées jusqu'à la fin des avantages fondateurs, le 31 août 2027, puis supprimées. Les factures sont conservées 10 ans, comme la loi l'impose.
+
+Les liens WhatsApp ouvrent une conversation dans l'application WhatsApp. Les messages que vous envoyez sont soumis aux conditions de WhatsApp. Le club les utilise seulement pour vous répondre.
 
 Vous pouvez demander l'accès, la rectification ou la suppression de vos données en écrivant à padelbosque@gmail.com.
 

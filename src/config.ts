@@ -106,6 +106,10 @@ export const club = {
   ouverture: {
     texte: 'début novembre 2026',
     auPlusTard: 'fin novembre 2026',
+    /** Mois d'ouverture confirmé (AAAA-MM) : sert à choisir la première saison d'horaires. */
+    mois: '2026-11',
+    /** Format AAAA-MM-JJ. Premier jour de la première plage horaire du JSON-LD. */
+    date: 'TODO: Quelle est la date exacte d\'ouverture du club ?' as string | Todo,
   },
 
   inauguration: {
@@ -144,7 +148,7 @@ export const club = {
     devise: 'EUR',
     dureeCreneauMinutes: 90,
     joueursParTerrain: 4,
-    mention: 'Même prix à toute heure.',
+    mention: 'même prix à toute heure.',
   },
 
   terrains: {
@@ -236,11 +240,11 @@ export const liens = {
 export const acces = {
   repere: 'Entrée nord du domaine de Bessilles',
   villes: [
-    { nom: 'Pézenas', tempsDeTrajet: 'TODO: Temps de trajet en voiture depuis Pézenas jusqu\'à l\'entrée nord ?' },
-    { nom: 'Mèze', tempsDeTrajet: 'TODO: Temps de trajet en voiture depuis Mèze jusqu\'à l\'entrée nord ?' },
-    { nom: 'Sète', tempsDeTrajet: 'TODO: Temps de trajet en voiture depuis Sète jusqu\'à l\'entrée nord ?' },
-    { nom: 'Agde', tempsDeTrajet: 'TODO: Temps de trajet en voiture depuis Agde jusqu\'à l\'entrée nord ?' },
-    { nom: 'Béziers', tempsDeTrajet: 'TODO: Temps de trajet en voiture depuis Béziers jusqu\'à l\'entrée nord ?' },
+    { nom: 'Pézenas', tempsDeTrajet: 'TODO: Temps de trajet en voiture depuis Pézenas jusqu\'à l\'entrée nord ? (Julien, mesure sur Google Maps)' },
+    { nom: 'Mèze', tempsDeTrajet: 'TODO: Temps de trajet en voiture depuis Mèze jusqu\'à l\'entrée nord ? (Julien, mesure sur Google Maps)' },
+    { nom: 'Sète', tempsDeTrajet: 'TODO: Temps de trajet en voiture depuis Sète jusqu\'à l\'entrée nord ? (Julien, mesure sur Google Maps)' },
+    { nom: 'Agde', tempsDeTrajet: 'TODO: Temps de trajet en voiture depuis Agde jusqu\'à l\'entrée nord ? (Julien, mesure sur Google Maps)' },
+    { nom: 'Béziers', tempsDeTrajet: 'TODO: Temps de trajet en voiture depuis Béziers jusqu\'à l\'entrée nord ? (Julien, mesure sur Google Maps)' },
   ] as Ville[],
   itineraire: 'TODO: Quel itinéraire conseiller pour rejoindre l\'entrée nord (route, panneau, repère) ?' as
     | string
@@ -287,18 +291,50 @@ export const tournois = {
   niveaux: 'TODO: Les tournois et les ligues seront-ils ouverts à tous les niveaux ?' as string | Todo,
 };
 
+/**
+ * Conditions de la carte Membre fondateur (/conditions-carte-fondateur).
+ * Chaque point est une proposition de Julien, à valider avec William puis à faire relire
+ * par un comptable ou un juriste. Une fois validé, remplacer le TODO par la phrase entre guillemets.
+ */
+export const conditionsCarte = {
+  nominative:
+    'TODO: À valider avec William. Proposition : « La carte est nominative. Elle ne peut être ni cédée ni revendue. »' as
+      | string
+      | Todo,
+  retractation:
+    `TODO: À valider avec William. Proposition : « Vous disposez d'un droit de rétractation de 14 jours à compter de l'achat. Pour l'exercer, écrivez à ${club.email} : vous êtes remboursé intégralement. »` as
+      | string
+      | Todo,
+  nonOuverture:
+    'TODO: À valider avec William. Proposition : « Si le club n\'ouvre pas avant le 31 janvier 2027, vous pouvez demander le remboursement intégral de la carte. »' as
+      | string
+      | Todo,
+  creditPerdu:
+    'TODO: À valider avec William. Proposition : « Le crédit de jeu non utilisé au 31 mars 2027 est perdu. Il n\'est pas remboursable. »' as
+      | string
+      | Todo,
+  tarifPersonnel:
+    'TODO: À valider avec William. Proposition : « Le tarif fondateur est personnel. Il ne s\'applique qu\'au titulaire de la carte et ne peut pas être transféré. »' as
+      | string
+      | Todo,
+};
+
+/**
+ * Le bouton fondateur n'ouvre Stripe que si le lien existe ET que les conditions de la carte sont toutes validées.
+ * Sinon, il ouvre WhatsApp. Contrôlé par npm run verifier.
+ */
+export const stripeActif = () =>
+  !estTodo(liens.stripe) && Object.values(conditionsCarte).every((c) => !estTodo(c));
+
 export const anniversaires =
   'TODO: Quelle formule et quel prix pour un anniversaire ou une privatisation ?' as string | Todo;
 
 export const legal = {
-  raisonSociale: 'TODO: Quelle est la raison sociale de la société qui exploite le club ?' as string | Todo,
-  formeJuridique: 'TODO: Quelle est la forme juridique et le capital social ?' as string | Todo,
-  siret: 'TODO: Quel est le numéro SIRET ?' as string | Todo,
-  siege: 'TODO: Quelle est l\'adresse du siège social ?' as string | Todo,
-  directeurPublication: 'TODO: Qui est le directeur de la publication ?' as string | Todo,
-  donneesConservation: 'TODO: Combien de temps conservez-vous les données des membres fondateurs, et à quoi servent-elles exactement ?' as
-    | string
-    | Todo,
+  raisonSociale: 'TODO: Quelle est la raison sociale de la société qui exploite le club ? (Kbis)' as string | Todo,
+  formeJuridique: 'TODO: Quelle est la forme juridique et le capital social ? (Kbis)' as string | Todo,
+  siret: 'TODO: Quel est le numéro SIRET ? (Kbis)' as string | Todo,
+  siege: 'TODO: Quelle est l\'adresse du siège social ? (Kbis)' as string | Todo,
+  directeurPublication: 'TODO: Qui est le directeur de la publication ? Par défaut, le représentant légal inscrit au Kbis.' as string | Todo,
   tva: 'TODO: Quel est le numéro de TVA intracommunautaire, s\'il existe ?' as string | Todo,
   hebergeur: {
     nom: 'TODO: Hébergeur retenu, Netlify ou Vercel ?' as string | Todo,
@@ -311,6 +347,9 @@ export const legal = {
 export const provisoire = {
   imagePartage: 'Image de partage provisoire, texte seul, en attendant le logo et les photos.',
 };
+
+/** Prix d'un terrain pour un créneau : prix par joueur x joueurs par terrain. */
+export const prixTerrain = () => club.tarif.prixParJoueur * club.tarif.joueursParTerrain;
 
 /** Montant en euros, format français : "8 €", "49 €". */
 export const euros = (montant: number) =>
@@ -346,33 +385,44 @@ export function dateRegle(r: RegleDate, annee: number): Date {
 
 export interface Saison {
   plage: PlageHoraire;
-  du: Date;
+  /** Absent pour la première saison tant que la date exacte d'ouverture est inconnue. */
+  du?: Date;
   au: Date;
 }
 
-/** Saison en cours à la date donnée, puis la suivante. Le site doit être reconstruit au moins une fois par an. */
+/**
+ * Première saison d'ouverture, puis la suivante. La première commence à la date d'ouverture, pas au début
+ * de la saison calendaire. Après l'ouverture : saison en cours, puis la suivante.
+ * Le site doit être reconstruit au moins une fois par an.
+ */
 export function saisons(b: Bascule, aujourdhui = new Date()): [Saison, Saison] {
   const veille = (d: Date) => new Date(d.getTime() - 86_400_000);
-  const a = aujourdhui.getUTCFullYear();
+  const ouverture = estTodo(club.ouverture.date) ? null : new Date(`${club.ouverture.date}T00:00:00Z`);
+  const moisOuverture = new Date(`${club.ouverture.mois}-01T00:00:00Z`);
+  const ref = new Date(Math.max(aujourdhui.getTime(), (ouverture ?? moisOuverture).getTime()));
+  const a = ref.getUTCFullYear();
   const ete = (y: number) => dateRegle(b.debutEte, y);
   const hiver = (y: number) => dateRegle(b.debutHiver, y);
   const { hiver: h, ete: e } = club.horaires;
-  if (aujourdhui < ete(a)) {
-    return [
-      { plage: h, du: hiver(a - 1), au: veille(ete(a)) },
-      { plage: e, du: ete(a), au: veille(hiver(a)) },
-    ];
-  }
-  if (aujourdhui < hiver(a)) {
-    return [
-      { plage: e, du: ete(a), au: veille(hiver(a)) },
-      { plage: h, du: hiver(a), au: veille(ete(a + 1)) },
-    ];
-  }
-  return [
-    { plage: h, du: hiver(a), au: veille(ete(a + 1)) },
-    { plage: e, du: ete(a + 1), au: veille(hiver(a + 1)) },
-  ];
+  const [premiere, seconde]: [Saison, Saison] =
+    ref < ete(a)
+      ? [
+          { plage: h, du: hiver(a - 1), au: veille(ete(a)) },
+          { plage: e, du: ete(a), au: veille(hiver(a)) },
+        ]
+      : ref < hiver(a)
+        ? [
+            { plage: e, du: ete(a), au: veille(hiver(a)) },
+            { plage: h, du: hiver(a), au: veille(ete(a + 1)) },
+          ]
+        : [
+            { plage: h, du: hiver(a), au: veille(ete(a + 1)) },
+            { plage: e, du: ete(a + 1), au: veille(hiver(a + 1)) },
+          ];
+  // Aucune plage ne commence avant l'ouverture : la première part de la date d'ouverture,
+  // ou n'a pas de début tant que cette date est inconnue.
+  if (premiere.du && premiere.du < (ouverture ?? moisOuverture)) premiere.du = ouverture ?? undefined;
+  return [premiere, seconde];
 }
 
 export const isoDate = (d: Date) => d.toISOString().slice(0, 10);

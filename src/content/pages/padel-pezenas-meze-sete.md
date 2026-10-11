@@ -14,23 +14,15 @@ blocs: [acces]
 
 Vous habitez Pézenas, Mèze, Sète, Agde ou Béziers et vous cherchez où jouer au padel ? {{nom}} ouvre {{ouverture}} au domaine de Bessilles, à {{ville}}.
 
-Le club compte {{terrainsDetail}}. Un seul prix : {{prix}} par joueur pour un créneau de {{creneau}}, à toute heure.
+Le club compte {{terrainsDetail}}. Un seul prix : {{prix}} par joueur, soit {{prixTerrain}} le terrain pour {{creneau}}, à toute heure.
 
 ## Où se trouve le club ?
 
 Le club est installé à l'{{entree}} du domaine de Bessilles. L'adresse : {{adresse}}.
 
-Adresse postale exacte : {{adressePostale}}
-
-Le lien Google Maps et l'itinéraire sont plus bas sur cette page.
-
-## Combien de temps de trajet depuis chez vous ?
-
-Le tableau plus bas donne le temps de trajet en voiture depuis Pézenas, Mèze, Sète, Agde et Béziers. Vous venez à plusieurs ? Le padel se joue à quatre : une voiture suffit souvent pour toute l'équipe.
-
 ## Pourquoi venir jouer à Bessilles ?
 
-Pour le cadre, d'abord. Bosque veut dire forêt. Les terrains sont installés au cœur du domaine de Bessilles, dans un environnement naturel. Vous jouez dehors, loin du béton.
+Pour le cadre, d'abord. Bosque veut dire forêt. Les terrains sont installés au cœur du domaine de Bessilles, dans un environnement naturel. Vous jouez dehors.
 
 Pour les terrains, ensuite. Ils sont panoramiques et éclairés. Vous pouvez jouer le soir, jusqu'à {{fermetureHiver}} en hiver et {{fermetureEte}} en été.
 
@@ -42,7 +34,13 @@ Le parking est gratuit, avec {{parking}}. Le club est accessible aux personnes �
 
 ## Quand venir jouer ?
 
-Le club est ouvert 7 jours sur 7. En hiver, {{horairesHiver}}. En été, {{horairesEte}}. Le prix reste le même le matin, le midi et le soir.
+Le club est ouvert 7 jours sur 7. En hiver, {{horairesHiver}}. En été, {{horairesEte}}. Le prix reste le même le matin, le midi et le soir. L'été, les créneaux du matin et du soir évitent les heures les plus chaudes.
+
+## Première fois au padel ?
+
+Le padel se joue en double, sur un terrain plus petit qu'un court de tennis et entouré de vitres. La balle peut rebondir sur les vitres : les échanges durent, même entre débutants. Les règles de base s'apprennent en quelques minutes.
+
+Pas besoin de matériel : le club loue des raquettes sur place. Venez à quatre et réservez un créneau de {{creneau}}. C'est assez pour apprendre les gestes et jouer vos premiers points.
 
 ## En vacances dans le coin ?
 
@@ -55,10 +53,6 @@ Le logiciel de réservation arrive avec l'ouverture du club.
 Logiciel de réservation : {{reservationLogiciel}}
 
 En attendant, écrivez-nous sur WhatsApp ou appelez le {{telephone}}.
-
-## Vous habitez à côté et comptez jouer souvent ?
-
-Pensez à la carte Membre fondateur. Elle coûte {{fondateurPrix}} et comprend {{fondateurCredit}} de crédit de jeu, soit {{fondateurSessions}} sessions. Ensuite, vous jouez à {{fondateurTarif}} la session au lieu de {{prix}}, jusqu'au {{fondateurTarifJusquau}}. Seules {{fondateurCartes}} cartes sont en vente, jusqu'à {{fondateurVenteJusqua}}. [Voir l'offre fondateur](/#fondateur).
 
 ## Les autres activités du club
 

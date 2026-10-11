@@ -8,25 +8,9 @@ const b = club.bascule;
 
 <div class="horaires">
   <h3>Horaires</h3>
-  <p>Ouvert 7 jours sur 7.</p>
-  <table>
-    <thead>
-      <tr>
-        <th scope="col">Saison</th>
-        <th scope="col">Horaires</th>
-      </tr>
-    </thead>
-    <tbody>
-      {
-        plages.map((p) => (
-          <tr>
-            <th scope="row">{p.libelle}</th>
-            <td>{plageTexte(p)}</td>
-          </tr>
-        ))
-      }
-    </tbody>
-  </table>
+  <ul>
+    {plages.map((p) => <li>{p.libelle} : {plageTexte(p)}, 7 jours sur 7</li>)}
+  </ul>
   {
     estTodo(b) ? (
       <p><Info valeur={b} /></p>

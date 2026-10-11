@@ -117,6 +117,7 @@ Gabarit avec champs à compléter (raison sociale, SIRET, hébergeur).
 
 ## Règles
 
+- Réponds toujours en français.
 - N'invente aucun fait : pas de faux avis, pas de prix ou de nom de coach inventés, pas de photo présentée comme celle du club si elle ne l'est pas.
 - Une info manquante devient un `TODO` visible dans `src/config.ts`, jamais une valeur inventée.
 - Images de banque libres de droits en attendant le shooting, signalées comme provisoires.

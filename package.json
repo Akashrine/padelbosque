@@ -8,7 +8,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "verifier": "node scripts/verifier.mjs",
+    "verifier": "node --experimental-strip-types --no-warnings scripts/verifier.mjs",
     "contenus": "TODO_VISIBLES=1 astro build --outDir .build-contenus && node scripts/exporter-contenus.mjs"
   },
   "dependencies": {

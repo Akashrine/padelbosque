@@ -29,6 +29,7 @@ const annee = new Date().getFullYear();
     <ul>
       <li><a href="/">Accueil</a></li>
       {pagesSeo.map((p) => <li><a href={`/${p.data.slug}`}>{p.data.libelleLien ?? p.data.h1}</a></li>)}
+      <li><a href="/conditions-carte-fondateur">Conditions de la carte</a></li>
       <li><a href="/mentions-legales">Mentions légales</a></li>
     </ul>
   </nav>

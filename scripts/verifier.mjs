@@ -1,7 +1,8 @@
 // Vérifie le site construit (dist/) : JSON-LD, balises SEO, cohérence nom/adresse/téléphone, TODO masqués.
 // Usage : npm run build && npm run verifier
-import { existsSync, readFileSync, readdirSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { parseHTML } from 'linkedom';
+import { liens, stripeActif } from '../src/config.ts';
 
 const dist = 'dist';
 const fichiers = readdirSync(dist).filter((f) => f.endsWith('.html')).sort();
@@ -10,6 +11,18 @@ const rapport = existsSync('rapport-build/todo-masques.json')
   : null;
 const erreurs = [];
 const lignes = [];
+
+// Un texte ne renvoie jamais à un autre bloc de la page : ce bloc peut être masqué en production.
+const RENVOIS = /\b(plus bas|plus haut|ci-dessous|ci-dessus)\b/i;
+const MOTS_MIN_SEO = 380;
+const sources = (dir) =>
+  readdirSync(dir).flatMap((n) => (statSync(`${dir}/${n}`).isDirectory() ? sources(`${dir}/${n}`) : [`${dir}/${n}`]));
+for (const fichier of [...sources('src/content'), ...sources('src/components'), ...sources('src/pages')]) {
+  readFileSync(fichier, 'utf8').split('\n').forEach((ligne, i) => {
+    const m = ligne.match(RENVOIS);
+    if (m) erreurs.push(`${fichier}:${i + 1} : renvoi « ${m[0]} » vers un bloc qui peut être masqué`);
+  });
+}
 
 const propre = (t) => (t ?? '').replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim();
 const mots = (t) => propre(t).split(' ').filter((m) => /[\p{L}\p{N}]/u.test(m)).length;
@@ -38,6 +51,7 @@ for (const f of fichiers) {
   exiger(!/[—–]/.test(visible(main)), `${f} : tiret cadratin ou demi-cadratin`);
   exiger(!/Pad’el/.test(html), `${f} : apostrophe courbe dans le nom du club`);
   exiger(!/\{\{/.test(html), `${f} : variable {{ }} non remplacée`);
+  exiger(!RENVOIS.test(visible(main)), `${f} : renvoi « plus bas », « ci-dessous »… dans le texte affiché`);
   if (!noindex) {
     exiger(title.length <= 65, `${f} : title de ${title.length} caractères (> 65)`);
     exiger(description.length >= 110 && description.length <= 160, `${f} : description de ${description.length} caractères (hors 110-160)`);
@@ -45,6 +59,15 @@ for (const f of fichiers) {
   if (rapport && !rapport.todoVisibles) {
     exiger(!/TODO/.test(visible(document.body)) && todosAffiches === 0, `${f} : le mot TODO est affiché en production`);
     exiger(!/TODO/.test(title + description), `${f} : TODO dans le title ou la description`);
+  }
+
+  // Bouton fondateur : Stripe seulement si le lien existe et que les 5 conditions de la carte sont validées.
+  for (const a of document.querySelectorAll('.cta-fondateur a')) {
+    const href = a.getAttribute('href') ?? '';
+    exiger(
+      stripeActif() ? href === liens.stripe : href.startsWith('https://wa.me/'),
+      `${f} : bouton fondateur vers ${href}, attendu ${stripeActif() ? 'le lien Stripe' : 'WhatsApp (lien Stripe ou conditions de la carte non validés)'}`,
+    );
   }
 
   // Titres sans contenu après masquage.
@@ -63,6 +86,9 @@ for (const f of fichiers) {
 
   // FAQ visible
   const questionsVisibles = [...main.querySelectorAll('details summary')].map((s) => propre(s.textContent));
+  if (article && !noindex && f !== 'mentions-legales.html' && rapport && !rapport.todoVisibles) {
+    exiger(mots(visible(article)) >= MOTS_MIN_SEO, `${f} : ${mots(visible(article))} mots de texte rédigé en production (minimum ${MOTS_MIN_SEO})`);
+  }
   if (article && !noindex && f !== 'mentions-legales.html') {
     exiger(questionsVisibles.length >= 3 && questionsVisibles.length <= 5, `${f} : ${questionsVisibles.length} questions FAQ visibles (attendu 3 à 5)`);
   }
@@ -94,9 +120,13 @@ for (const f of fichiers) {
       const plages = d.openingHoursSpecification;
       for (const o of plages) {
         exiger(/^\d\d:\d\d$/.test(o.opens) && /^\d\d:\d\d$/.test(o.closes) && o.dayOfWeek.length, `${f} : horaires JSON-LD mal formés`);
-        if (o.validFrom) exiger(o.validFrom < o.validThrough, `${f} : validFrom après validThrough`);
+        if (o.validFrom && o.validThrough) exiger(o.validFrom < o.validThrough, `${f} : validFrom après validThrough`);
       }
-      exiger(plages.length === 1 || plages.every((o) => o.validFrom && o.validThrough), `${f} : plusieurs plages horaires sans dates de validité`);
+      // Plusieurs plages : toutes datées. Seule la première peut n'avoir que validThrough (date d'ouverture inconnue).
+      exiger(plages.length === 1 || plages.every((o, i) => o.validThrough && (o.validFrom || i === 0)), `${f} : plusieurs plages horaires sans dates de validité`);
+      for (let i = 1; i < plages.length; i++) {
+        exiger(!plages[i - 1].validThrough || plages[i - 1].validThrough < plages[i].validFrom, `${f} : plages horaires qui se chevauchent`);
+      }
     }
     if (d['@type'] === 'FAQPage') {
       exiger(d.mainEntity.length > 0, `${f} : FAQPage vide`);

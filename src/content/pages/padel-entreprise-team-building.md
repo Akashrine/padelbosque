@@ -52,7 +52,7 @@ Oui. Le club propose des privatisations pour les entreprises, les anniversaires 
 
 Tarif : {{entrepriseTarif}}
 
-Pour mémoire, le tarif public est de {{prix}} par joueur et par créneau de {{creneau}}, à toute heure.
+Pour mémoire, le tarif public est de {{prix}} par joueur, soit {{prixTerrain}} le terrain pour {{creneau}}, à toute heure.
 
 ## Que prévoir après le match ?
 
@@ -62,7 +62,7 @@ C'est souvent là que le team building fait son effet : autour d'un verre, en re
 
 ## Comment venir avec vos équipes ?
 
-Le club se trouve à l'{{entree}} du domaine de Bessilles, à {{ville}}. Le parking est gratuit, avec {{parking}}. Pas de souci si vos équipes arrivent en plusieurs voitures. Le site est accessible aux personnes à mobilité réduite.
+Le club se trouve à l'{{entree}} du domaine de Bessilles, à {{ville}}. Le parking est gratuit, avec {{parking}}. Le site est accessible aux personnes à mobilité réduite.
 
 Vous venez de Pézenas, Mèze, Sète, Agde ou Béziers ? [Consultez la page accès](/padel-pezenas-meze-sete).
 
