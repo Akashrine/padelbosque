@@ -1,8 +1,22 @@
-@import '@fontsource-variable/big-shoulders-display/wght';
 /*
  * Pad'el Bosque : la carte Membre fondateur comme système.
  * Fond vert forêt et orange du logo, craie pour le verso. Étiquettes de champ, chiffres embossés, talons perforés.
  */
+
+/*
+ * Repli de la police des titres, en attendant Big Shoulders. Calibré pour garder
+ * les mêmes coupures de ligne aux largeurs testées (320 à 1440 px) : la page ne
+ * saute pas quand la vraie police arrive. Plage sûre : 66 à 68 %.
+ * Roboto (Android) reprend les réglages d'Arial sans calibrage propre.
+ */
+@font-face {
+  font-family: 'Big Shoulders repli';
+  src: local('Arial'), local('Roboto');
+  size-adjust: 67%;
+  ascent-override: 146.9%;
+  descent-override: 31.8%;
+  line-gap-override: 0%;
+}
 
 :root {
   --foret: #1a2116;
@@ -17,9 +31,6 @@
   --craie-filet: #c5ceba;
   --mousse: #a9b59d;
   --encre-2: #4a5642;
-
-  --f-display: 'Big Shoulders Display Variable', 'Big Shoulders Display', 'Arial Narrow', sans-serif;
-  --f-texte: 'Barlow', 'Helvetica Neue', Arial, sans-serif;
 
   --gouttiere: clamp(1rem, 4vw, 2.5rem);
   --largeur: 76rem;
@@ -118,7 +129,7 @@ strong {
   color: var(--foret);
   padding: 0.6rem 1rem;
   border-radius: var(--rayon);
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
 }
 

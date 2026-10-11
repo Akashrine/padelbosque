@@ -33,7 +33,7 @@ const acces = await section('acces');
 const title = remplir(hero.data.title ?? hero.titre);
 const description = remplir(hero.data.description ?? '');
 
-// "Pad'el Bosque, le padel au cœur de Bessilles" : le nom en signature, la promesse en grand.
+// "Pad'el Bosque, le padel en pleine nature" : le nom en signature, la promesse en grand.
 const [nomHero, ...reste] = hero.titre.split(', ');
 const promesse = reste.join(', ');
 ---
@@ -73,7 +73,9 @@ const promesse = reste.join(', ');
       <figure class="club-photo">
         <Image
           src={photoChantier}
-          alt={`Les structures des terrains de ${club.nom} en cours de montage, entourées de pins, au domaine de Bessilles`}
+          alt={`Les structures des terrains de ${club.nom} en cours de montage, entourées de pins`}
+          width={1200}
+          height={900}
           widths={[480, 800, 1200]}
           sizes="(min-width: 64rem) 36rem, 100vw"
           format="webp"

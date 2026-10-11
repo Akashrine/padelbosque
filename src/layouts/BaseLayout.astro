@@ -1,10 +1,8 @@
 ---
-import '@fontsource/barlow/400.css';
-import '@fontsource/barlow/600.css';
-import '@fontsource/barlow/700.css';
 import '../styles/reset.css';
 import '../styles/global.css';
 import { site, type ContexteWhatsApp } from '../config';
+import { Font } from 'astro:assets';
 import Seo from '../components/Seo.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -28,6 +26,9 @@ const { title, description, noindex, jsonLd, contexteWhatsApp = 'general' } = As
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#1a2116" />
+    <!-- --f-display et --f-texte sont définies ici. Seule la police des titres est préchargée. -->
+    <Font cssVariable="--f-display" preload />
+    <Font cssVariable="--f-texte" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <Seo title={title} description={description} noindex={noindex} jsonLd={jsonLd} />
