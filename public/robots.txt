@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /bienvenue-fondateur
 
 Sitemap: https://padelbosque.fr/sitemap-index.xml

@@ -22,6 +22,15 @@ Budget serré (500 € pour landing, fiche Google et 3 à 4 pages SEO). Pas de s
 - Contact : lien WhatsApp `https://wa.me/33614979749` avec message prérempli.
 - Toutes les infos du club dans un seul fichier `src/config.ts` (nom, adresse, téléphone, horaires, prix, liens). Les pages lisent ce fichier, rien n'est dupliqué en dur.
 
+## Conventions du code
+
+- Astro 7, Markdown via Sätteri (`@astrojs/markdown-satteri`), apostrophes typographiques automatiques désactivées : le nom du club garde son apostrophe droite `'` partout.
+- Les textes vivent dans `src/content/` (pages, accueil, faq). Ils citent les infos de `src/config.ts` avec `{{cle}}` (liste dans `src/lib/gabarit.ts`). Une clé inconnue fait échouer le build. Une valeur `TODO: ...` s'affiche en `<mark class="todo">`.
+- `content/pages` : `type: seo` est généré par `src/pages/[slug].astro`, `type: systeme` a son propre fichier dans `src/pages/`.
+- Les champs TODO sont exclus du JSON-LD, et une question FAQ dont la réponse contient un TODO est exclue du FAQPage.
+- Contrôle après chaque changement : `npm run build && npm run verifier`.
+- Questions ouvertes pour William : `TODO.md`.
+
 ## Infos du club (source : questionnaire rempli par William)
 
 | Champ | Valeur |

@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CtaWhatsApp from '../components/CtaWhatsApp.astro';
+import Info from '../components/Info.astro';
+import { estTodo, liens } from '../config';
+import { pageSysteme } from '../lib/pages';
+
+const page = await pageSysteme('bienvenue-fondateur');
+const groupe = liens.groupeWhatsappFondateurs;
+---
+
+<BaseLayout title={page.title} description={page.description} noindex contexteWhatsApp="fondateur">
+  <article>
+    <h1>{page.h1}</h1>
+    <page.Contenu />
+    {
+      estTodo(groupe) ? (
+        <>
+          <CtaWhatsApp contexte="fondateur" libelle="Nous écrire sur WhatsApp" />
+          <p><Info valeur={groupe} /></p>
+        </>
+      ) : (
+        <p class="cta cta-whatsapp">
+          <a href={groupe} rel="noopener">Rejoindre le groupe WhatsApp des fondateurs</a>
+        </p>
+      )
+    }
+    <p><a href="/">Retour à l'accueil</a></p>
+  </article>
+</BaseLayout>

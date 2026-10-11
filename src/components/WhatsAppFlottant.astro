@@ -1,0 +1,14 @@
+---
+import type { ContexteWhatsApp } from '../config';
+import { lienWhatsApp } from '../lib/whatsapp';
+
+interface Props {
+  contexte?: ContexteWhatsApp;
+}
+
+const { contexte = 'general' } = Astro.props;
+---
+
+<a class="whatsapp-flottant" href={lienWhatsApp(contexte)} rel="noopener" aria-label="Nous écrire sur WhatsApp">
+  WhatsApp
+</a>

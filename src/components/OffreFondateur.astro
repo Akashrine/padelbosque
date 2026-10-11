@@ -1,0 +1,41 @@
+---
+import { club, euros, fondateur } from '../config';
+import CtaFondateur from './CtaFondateur.astro';
+import CtaWhatsApp from './CtaWhatsApp.astro';
+import Info from './Info.astro';
+
+interface Props {
+  titre: string;
+}
+
+const { titre } = Astro.props;
+const f = fondateur;
+---
+
+<section id="fondateur" aria-labelledby="titre-fondateur">
+  <h2 id="titre-fondateur">{titre}</h2>
+  {!f.validee && <p><Info valeur={f.validation} /></p>}
+  <slot />
+
+  <p><strong>{euros(f.prix)}</strong> la carte. {f.accroche}</p>
+
+  <h3>Ce que comprend la carte</h3>
+  <ul>
+    <li>
+      {euros(f.credit.montant)} de crédit de jeu, soit {f.credit.sessions} sessions à {euros(club.tarif.prixParJoueur)}.
+      Crédit {f.credit.chargement}, valable jusqu'au {f.credit.validiteJusquau}.
+    </li>
+    <li>
+      Tarif fondateur : {euros(f.tarifReduit.prixSession)} la session au lieu de {euros(club.tarif.prixParJoueur)},
+      jusqu'au {f.tarifReduit.jusquau}.
+    </li>
+    <li>{f.inauguration}.</li>
+    <li>{f.tournoi}.</li>
+    <li>{f.mur}.</li>
+  </ul>
+
+  <p>En vente jusqu'à {f.venteJusqua}. {f.nombreCartes} cartes au total.</p>
+
+  <CtaFondateur />
+  <CtaWhatsApp contexte="fondateur" />
+</section>

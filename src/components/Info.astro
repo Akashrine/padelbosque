@@ -1,0 +1,12 @@
+---
+/** Affiche une valeur de config.ts, ou un TODO visible si elle manque. */
+import { estTodo } from '../config';
+
+interface Props {
+  valeur: string;
+}
+
+const { valeur } = Astro.props;
+---
+
+{estTodo(valeur) ? <mark class="todo">{valeur}</mark> : <Fragment>{valeur}</Fragment>}

@@ -1,0 +1,15 @@
+---
+import type { ContexteWhatsApp } from '../config';
+import { libellesWhatsApp, lienWhatsApp } from '../lib/whatsapp';
+
+interface Props {
+  contexte?: ContexteWhatsApp;
+  libelle?: string;
+}
+
+const { contexte = 'general', libelle = libellesWhatsApp[contexte] } = Astro.props;
+---
+
+<p class="cta cta-whatsapp">
+  <a href={lienWhatsApp(contexte)} rel="noopener">{libelle}</a>
+</p>

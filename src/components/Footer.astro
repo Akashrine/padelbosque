@@ -1,0 +1,37 @@
+---
+import { getCollection } from 'astro:content';
+import { club, estTodo } from '../config';
+import Info from './Info.astro';
+
+const pagesSeo = (await getCollection('pages', (p) => p.data.type === 'seo')).sort(
+  (a, b) => a.data.ordre - b.data.ordre,
+);
+const annee = new Date().getFullYear();
+---
+
+<footer>
+  <section aria-labelledby="pied-coordonnees">
+    <h2 id="pied-coordonnees">{club.nom}</h2>
+    <address>
+      {club.adresse.rue}<br />
+      {club.adresse.complement}<br />
+      {club.adresse.codePostal} {club.adresse.ville}<br />
+      <a href={`tel:${club.telephone.international}`}>{club.telephone.affichage}</a><br />
+      <a href={`mailto:${club.email}`}>{club.email}</a>
+    </address>
+    <p>
+      Instagram :
+      {estTodo(club.instagram.url) ? <Info valeur={club.instagram.url} /> : <a href={club.instagram.url} rel="noopener">{club.instagram.nom}</a>}
+    </p>
+  </section>
+
+  <nav aria-label="Pages du club">
+    <ul>
+      <li><a href="/">Accueil</a></li>
+      {pagesSeo.map((p) => <li><a href={`/${p.data.slug}`}>{p.data.libelleLien ?? p.data.h1}</a></li>)}
+      <li><a href="/mentions-legales">Mentions légales</a></li>
+    </ul>
+  </nav>
+
+  <p><small>© {annee} {club.nom}</small></p>
+</footer>

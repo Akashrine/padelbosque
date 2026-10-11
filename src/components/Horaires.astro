@@ -1,0 +1,31 @@
+---
+import { club, heure } from '../config';
+import Info from './Info.astro';
+
+const plages = [club.horaires.hiver, club.horaires.ete];
+---
+
+<div class="horaires">
+  <h3>Horaires</h3>
+  <table>
+    <caption>Ouvert 7 jours sur 7</caption>
+    <thead>
+      <tr>
+        <th scope="col">Saison</th>
+        <th scope="col">Horaires</th>
+        <th scope="col">Période</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        plages.map((p) => (
+          <tr>
+            <th scope="row">{p.libelle}</th>
+            <td>{heure(p.ouverture)} à {heure(p.fermeture)}</td>
+            <td><Info valeur={p.periode} /></td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</div>

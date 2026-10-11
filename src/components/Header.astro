@@ -1,0 +1,23 @@
+---
+import { club } from '../config';
+import CtaFondateur from './CtaFondateur.astro';
+
+const liensAccueil = [
+  { href: '/#fondateur', libelle: 'Offre fondateur' },
+  { href: '/#club', libelle: 'Le club' },
+  { href: '/#tarifs', libelle: 'Tarifs et horaires' },
+  { href: '/#activites', libelle: 'Activités' },
+  { href: '/#acces', libelle: 'Accès' },
+  { href: '/#faq', libelle: 'FAQ' },
+];
+---
+
+<header>
+  <a href="/" aria-label={`${club.nom}, accueil`}>{club.nom}</a>
+  <nav aria-label="Navigation principale">
+    <ul>
+      {liensAccueil.map((l) => <li><a href={l.href}>{l.libelle}</a></li>)}
+    </ul>
+  </nav>
+  <CtaFondateur />
+</header>

@@ -1,0 +1,18 @@
+---
+import { estTodo, liens } from '../config';
+import { lienWhatsApp } from '../lib/whatsapp';
+
+interface Props {
+  libelle?: string;
+}
+
+const { libelle = 'Je deviens membre fondateur' } = Astro.props;
+const stripe = liens.stripe;
+// Tant que le lien Stripe n'existe pas, le bouton renvoie vers WhatsApp (contexte fondateur).
+const href = estTodo(stripe) ? lienWhatsApp('fondateur') : stripe;
+---
+
+<p class="cta cta-fondateur">
+  <a href={href} rel="noopener">{libelle}</a>
+  {estTodo(stripe) && <mark class="todo">{stripe}</mark>}
+</p>

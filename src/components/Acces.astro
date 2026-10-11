@@ -1,0 +1,46 @@
+---
+import { acces, club, liens } from '../config';
+import Info from './Info.astro';
+
+interface Props {
+  titre?: string;
+  id?: string;
+}
+
+const { titre = 'Accès', id = 'acces' } = Astro.props;
+---
+
+<section id={id} aria-labelledby={`titre-${id}`}>
+  <h2 id={`titre-${id}`}>{titre}</h2>
+  <address>
+    {club.nom}<br />
+    {club.adresse.rue}<br />
+    {club.adresse.complement}<br />
+    {club.adresse.codePostal} {club.adresse.ville}
+  </address>
+  <p><Info valeur={club.adresse.adressePostaleExacte} /></p>
+  <p><a href={liens.googleMaps} rel="noopener">Ouvrir dans Google Maps</a></p>
+  <p>Itinéraire : <Info valeur={acces.itineraire} /></p>
+  <p>Parking gratuit de {club.parking.places.toLocaleString('fr-FR')} places.</p>
+
+  <h3>Temps de trajet en voiture</h3>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Depuis</th>
+        <th scope="col">Temps de trajet</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        acces.villes.map((v) => (
+          <tr>
+            <th scope="row">{v.nom}</th>
+            <td><Info valeur={v.tempsDeTrajet} /></td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+  <slot />
+</section>

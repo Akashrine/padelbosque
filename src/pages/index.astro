@@ -1,0 +1,68 @@
+---
+import { getEntry, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CtaFondateur from '../components/CtaFondateur.astro';
+import CtaWhatsApp from '../components/CtaWhatsApp.astro';
+import OffreFondateur from '../components/OffreFondateur.astro';
+import Equipements from '../components/Equipements.astro';
+import Tarifs from '../components/Tarifs.astro';
+import Horaires from '../components/Horaires.astro';
+import Activites from '../components/Activites.astro';
+import Acces from '../components/Acces.astro';
+import Faq from '../components/Faq.astro';
+import { remplir } from '../lib/gabarit';
+import { sportsActivityLocation } from '../lib/jsonld';
+
+const section = async (id: string) => {
+  const entree = await getEntry('accueil', id);
+  if (!entree) throw new Error(`Texte d'accueil manquant : src/content/accueil/${id}.md`);
+  return { data: entree.data, titre: remplir(entree.data.titre), Contenu: (await render(entree)).Content };
+};
+
+const hero = await section('hero');
+const fondateur = await section('fondateur');
+const leClub = await section('club');
+const tarifs = await section('tarifs');
+const activites = await section('activites');
+const acces = await section('acces');
+
+const title = remplir(hero.data.title ?? hero.titre);
+const description = remplir(hero.data.description ?? '');
+---
+
+<BaseLayout title={title} description={description} jsonLd={[sportsActivityLocation(description)]}>
+  <section id="accueil" aria-labelledby="titre-accueil">
+    <h1 id="titre-accueil">{hero.titre}</h1>
+    {hero.data.sousTitre && <p>{remplir(hero.data.sousTitre)}</p>}
+    <hero.Contenu />
+    <CtaFondateur />
+    <CtaWhatsApp contexte="general" />
+  </section>
+
+  <OffreFondateur titre={fondateur.titre}>
+    <fondateur.Contenu />
+  </OffreFondateur>
+
+  <section id="club" aria-labelledby="titre-club">
+    <h2 id="titre-club">{leClub.titre}</h2>
+    <leClub.Contenu />
+    <Equipements />
+  </section>
+
+  <section id="tarifs" aria-labelledby="titre-tarifs">
+    <h2 id="titre-tarifs">{tarifs.titre}</h2>
+    <tarifs.Contenu />
+    <Tarifs />
+    <Horaires />
+  </section>
+
+  <Activites titre={activites.titre}>
+    <activites.Contenu />
+  </Activites>
+
+  <Acces titre={acces.titre}>
+    <acces.Contenu />
+  </Acces>
+
+  <Faq page="accueil" />
+</BaseLayout>

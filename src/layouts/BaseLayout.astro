@@ -1,0 +1,39 @@
+---
+import '../styles/reset.css';
+import { site, type ContexteWhatsApp } from '../config';
+import Seo from '../components/Seo.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFlottant from '../components/WhatsAppFlottant.astro';
+import type { JsonLd } from '../lib/jsonld';
+
+interface Props {
+  title: string;
+  description: string;
+  noindex?: boolean;
+  jsonLd?: JsonLd[];
+  contexteWhatsApp?: ContexteWhatsApp;
+}
+
+const { title, description, noindex, jsonLd, contexteWhatsApp = 'general' } = Astro.props;
+---
+
+<!doctype html>
+<html lang={site.langue}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <Seo title={title} description={description} noindex={noindex} jsonLd={jsonLd} />
+  </head>
+  <body>
+    <a href="#contenu">Aller au contenu</a>
+    <Header />
+    <main id="contenu">
+      <slot />
+    </main>
+    <Footer />
+    <WhatsAppFlottant contexte={contexteWhatsApp} />
+  </body>
+</html>

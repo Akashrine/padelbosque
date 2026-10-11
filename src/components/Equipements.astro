@@ -1,0 +1,20 @@
+---
+import { club } from '../config';
+
+const terrains = `${club.terrains.nombre} terrains ${club.terrains.caracteristiques.join(', ')}`;
+---
+
+<div class="equipements">
+  <h3>Sur place</h3>
+  <ul>
+    <li>{terrains}</li>
+    {club.equipements.map((e) => <li>{e}</li>)}
+    <li>Parking gratuit de {club.parking.places.toLocaleString('fr-FR')} places</li>
+    <li>{club.accessibilite}</li>
+  </ul>
+
+  <h3>Matériel</h3>
+  <ul>
+    {club.materiel.map((m) => <li>{m}</li>)}
+  </ul>
+</div>

@@ -7,11 +7,14 @@
     "dev": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "verifier": "node scripts/verifier.mjs"
   },
   "dependencies": {
+    "@astrojs/markdown-satteri": "^0.4.3",
     "@astrojs/sitemap": "^3.7.4",
-    "astro": "^7.3.8"
+    "astro": "^7.3.8",
+    "satteri": "^0.10.5"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",

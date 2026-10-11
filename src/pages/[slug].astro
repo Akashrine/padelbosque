@@ -1,0 +1,82 @@
+---
+import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CtaFondateur from '../components/CtaFondateur.astro';
+import CtaWhatsApp from '../components/CtaWhatsApp.astro';
+import Acces from '../components/Acces.astro';
+import Tarifs from '../components/Tarifs.astro';
+import Horaires from '../components/Horaires.astro';
+import Equipements from '../components/Equipements.astro';
+import Faq from '../components/Faq.astro';
+import { club } from '../config';
+import { remplir } from '../lib/gabarit';
+import { filAriane } from '../lib/jsonld';
+
+/** Seules les pages de type "seo" sont générées ici. Les pages "systeme" ont leur propre fichier. */
+export const getStaticPaths = (async () => {
+  const pages = (await getCollection('pages', (p) => p.data.type === 'seo')).sort(
+    (a, b) => a.data.ordre - b.data.ordre,
+  );
+  return pages.map((page) => ({
+    params: { slug: page.data.slug },
+    props: {
+      page,
+      autres: pages
+        .filter((p) => p.id !== page.id)
+        .map((p) => ({ slug: p.data.slug, libelle: p.data.libelleLien ?? p.data.h1 })),
+    },
+  }));
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { page, autres } = Astro.props;
+const d = page.data;
+const { Content } = await render(page);
+const h1 = remplir(d.h1);
+const title = remplir(d.title);
+const description = remplir(d.description);
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  contexteWhatsApp={d.contexteWhatsApp}
+  jsonLd={[filAriane([{ nom: club.nom, chemin: '/' }, { nom: h1, chemin: `/${d.slug}` }])]}
+>
+  <nav aria-label="Fil d'Ariane">
+    <ol>
+      <li><a href="/">Accueil</a></li>
+      <li aria-current="page">{h1}</li>
+    </ol>
+  </nav>
+
+  <article>
+    <h1>{h1}</h1>
+    <Content />
+
+    {d.blocs.includes('tarifs') && <Tarifs />}
+    {d.blocs.includes('horaires') && <Horaires />}
+    {d.blocs.includes('equipements') && <Equipements />}
+  </article>
+
+  {d.blocs.includes('acces') && <Acces titre="Adresse et temps de trajet" id="adresse" />}
+
+  <section aria-labelledby="titre-cta">
+    <h2 id="titre-cta">Devenez membre fondateur</h2>
+    <p>{remplir('{{fondateurCartes}} cartes à {{fondateurPrix}}, avec {{fondateurCredit}} de crédit de jeu. En vente jusqu\'à {{fondateurVenteJusqua}}.')}</p>
+    <CtaFondateur />
+    <CtaWhatsApp contexte={d.contexteWhatsApp} />
+  </section>
+
+  {d.faq && <Faq page={d.faq} />}
+
+  <nav aria-labelledby="titre-liens">
+    <h2 id="titre-liens">À découvrir aussi</h2>
+    <ul>
+      <li><a href="/">Accueil : {club.promesse}</a></li>
+      {autres.map((a) => <li><a href={`/${a.slug}`}>{a.libelle}</a></li>)}
+    </ul>
+  </nav>
+</BaseLayout>

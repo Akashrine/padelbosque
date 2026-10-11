@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CtaWhatsApp from '../components/CtaWhatsApp.astro';
+import { pageSysteme } from '../lib/pages';
+
+const page = await pageSysteme('404');
+---
+
+<BaseLayout title={page.title} description={page.description} noindex>
+  <article>
+    <h1>{page.h1}</h1>
+    <page.Contenu />
+    <CtaWhatsApp contexte="general" />
+  </article>
+</BaseLayout>

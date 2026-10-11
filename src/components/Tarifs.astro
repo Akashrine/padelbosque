@@ -1,0 +1,22 @@
+---
+import { club, euros } from '../config';
+import Info from './Info.astro';
+
+const t = club.tarif;
+---
+
+<div class="tarifs">
+  <h3>Tarifs</h3>
+  <dl>
+    <dt>Prix</dt>
+    <dd>{euros(t.prixParJoueur)} par joueur et par créneau</dd>
+    <dt>Durée d'un créneau</dt>
+    <dd>{t.dureeCreneauMinutes} minutes</dd>
+    <dt>Heures creuses, heures pleines</dt>
+    <dd>{t.mention}</dd>
+    <dt>Cours</dt>
+    <dd><Info valeur={club.cours} /></dd>
+    <dt>Abonnements et carnets</dt>
+    <dd><Info valeur={club.formules} /></dd>
+  </dl>
+</div>
