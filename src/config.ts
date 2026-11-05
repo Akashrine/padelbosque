@@ -338,10 +338,8 @@ export const legal = {
   directeurPublication: 'Fanny Ramos, gérante' as string | Todo,
   tva: 'FR10999918162' as string | Todo,
   hebergeur: {
-    nom: 'TODO: Hébergeur retenu, Netlify ou Vercel ?' as string | Todo,
-    adresse: 'TODO: Adresse de l\'hébergeur retenu (à recopier depuis ses mentions officielles).' as
-      | string
-      | Todo,
+    nom: 'Vercel Inc.' as string | Todo,
+    adresse: '440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis' as string | Todo,
   },
 };
 

@@ -732,8 +732,8 @@ Voir aussi les mentions légales.
 
 **H2 :** Hébergeur
 
-- Nom : [À compléter : Hébergeur retenu, Netlify ou Vercel ?]
-- Adresse : [À compléter : Adresse de l'hébergeur retenu (à recopier depuis ses mentions officielles).]
+- Nom : Vercel Inc.
+- Adresse : 440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis
 
 **H2 :** Propriété intellectuelle
 

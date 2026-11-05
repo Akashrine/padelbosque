@@ -17,7 +17,7 @@ Budget serré (500 € pour landing, fiche Google et 3 à 4 pages SEO). Pas de s
 
 - Astro, sortie 100 % statique. Aucun backend, aucune base de données.
 - CSS maison, pas de framework UI lourd.
-- Hébergement Netlify ou Vercel, branché sur padelbosque.fr.
+- Hébergement Vercel, domaine padelbosque.fr chez Gandi.
 - Paiement : un Stripe Payment Link externe (URL en variable dans `src/config.ts`). Pas d'intégration Stripe côté code.
 - Contact : lien WhatsApp `https://wa.me/33614979749` avec message prérempli.
 - Toutes les infos du club dans un seul fichier `src/config.ts` (nom, adresse, téléphone, horaires, prix, liens). Les pages lisent ce fichier, rien n'est dupliqué en dur.
