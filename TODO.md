@@ -9,28 +9,29 @@ En production, tout bloc qui dépend d'un TODO est masqué. Liste des blocs masq
 Salut William, il me manque 3 choses pour mettre le site en ligne.
 
 1. L'offre fondateur te va telle quelle (49 €, 64 € de crédit valable jusqu'au 31 mars 2027, 7 € la session jusqu'au 31 août 2027) ? Oui / non
-2. Tu peux m'envoyer une photo du Kbis de la société ?
-3. On cale 30 min ensemble pour créer le compte Stripe du club ? Donne-moi 2 ou 3 créneaux qui t'arrangent.
+2. Les conditions de la carte te vont (carte nominative, rétractation de 14 jours, remboursement si le club n'ouvre pas avant le 31 janvier 2027, crédit non utilisé au 31 mars 2027 perdu, tarif fondateur personnel) ? Oui / non
+3. On cale 30 min avec Fanny pour créer le compte Stripe du club ? Il faudra sa pièce d'identité et le RIB de la société. Donne-moi 2 ou 3 créneaux qui vous arrangent.
 
 Merci !
 ```
 
 ## 1. Bloquant mise en ligne
 
-Pour William (les 3 premiers points sont dans le message) :
+Pour William (les 3 points sont dans le message) :
 
 - [ ] Validation de l'offre fondateur telle que décrite : 49 €, 64 € de crédit valable jusqu'au 31 mars 2027, 7 € la session jusqu'au 31 août 2027, invitation à l'inauguration, tournoi fondateurs en décembre 2026, nom sur le mur. Si oui : `fondateur.validee = true`.
-- [ ] Photo du Kbis. Elle donne `legal.raisonSociale`, `legal.formeJuridique` (forme et capital), `legal.siret`, `legal.siege` et le représentant légal, qui devient `legal.directeurPublication`.
-- [ ] Créneau de 30 min pour créer ensemble le compte Stripe du club.
 - [ ] Valider les conditions de la carte (`conditionsCarte` dans `src/config.ts`, page `/conditions-carte-fondateur`) : carte nominative et non cessible, rétractation de 14 jours avec remboursement intégral, remboursement si le club n'ouvre pas avant le 31 janvier 2027, crédit non utilisé au 31 mars 2027 perdu, tarif fondateur personnel. Pour chaque point validé, remplacer le TODO par la phrase proposée.
+- [ ] Séance de 30 min pour créer le compte Stripe du club avec la gérante, Fanny Ramos. À prévoir : sa pièce d'identité et le RIB de la société.
 
 Côté Julien, pas de question à poser :
 
 - [ ] Faire relire les conditions de la carte par un comptable ou un juriste.
 - [ ] Relire la clause données personnelles des mentions légales (`src/content/pages/mentions-legales.md`) : aucune collecte sur le site, paiement via Stripe, contact via WhatsApp, pas de cookie de mesure, données des fondateurs conservées jusqu'au 31 août 2027, factures 10 ans.
-- [ ] Pendant le créneau avec William : créer le Payment Link Stripe (100 paiements, collecte nom, email, téléphone), régler son URL de retour sur `https://padelbosque.fr/bienvenue-fondateur`, reporter l'URL dans `liens.stripe`. Sans lui, le bouton fondateur ouvre WhatsApp.
+- [ ] Pendant la séance Stripe : créer le Payment Link Stripe (100 paiements, collecte nom, email, téléphone), régler son URL de retour sur `https://padelbosque.fr/bienvenue-fondateur`, reporter l'URL dans `liens.stripe`. Sans lui, le bouton fondateur ouvre WhatsApp.
 - [ ] Choisir l'hébergeur (Netlify ou Vercel), recopier son nom et son adresse officiels dans `legal.hebergeur`.
 - [ ] Brancher padelbosque.fr.
+
+Société : Kbis reçu, questions closes. Raison sociale, forme juridique, RCS, siège et directrice de la publication dans `legal` (`src/config.ts`). SIRET du siège et TVA recopiés depuis l'API officielle recherche-entreprises.api.gouv.fr. Nom commercial : Pad'el Bosque, partout (site, fiche Google, panneau).
 
 ## 2. Sous un mois (avant l'ouverture, début novembre 2026)
 
@@ -48,7 +49,6 @@ Côté Julien, pas de question à poser :
 - [ ] Logiciel de réservation : lequel, et date de mise en ligne.
 - [ ] Cours avec un coach : oui ou non ? Si oui, qui, quelles formules, quels prix.
 - [ ] Abonnements ou carnets de sessions : oui ou non ? Si oui, lesquels et à quel prix.
-- [ ] Numéro de TVA intracommunautaire, s'il existe.
 - [ ] Logo en vectoriel et couleurs de marque (nécessaires pour le design).
 - [ ] Photos du chantier, rendus 3D, photo de William.
 

@@ -696,10 +696,12 @@ Pour toute question sur la carte, écrivez à padelbosque@gmail.com ou appelez l
 **H2 :** Vendeur
 
 - Nom commercial : Pad'el Bosque
-- Raison sociale : [À compléter : Quelle est la raison sociale de la société qui exploite le club ? (Kbis)]
-- Forme juridique et capital : [À compléter : Quelle est la forme juridique et le capital social ? (Kbis)]
-- SIRET : [À compléter : Quel est le numéro SIRET ? (Kbis)]
-- Siège social : [À compléter : Quelle est l'adresse du siège social ? (Kbis)]
+- Raison sociale : PAD'EL BOSQUE
+- Forme juridique et capital : SARL au capital de 6 000 €
+- RCS : 999 918 162 R.C.S. Béziers
+- SIRET : 99991816200028
+- TVA intracommunautaire : FR10999918162
+- Siège social : Base départementale de Bessilles, 34530 Montagnac
 - Adresse du club : Base départementale de Bessilles, 34530 Montagnac
 - Téléphone : 06 14 97 97 49
 - Email : padelbosque@gmail.com
@@ -717,15 +719,16 @@ Voir aussi les mentions légales.
 **H2 :** Éditeur du site
 
 - Nom commercial : Pad'el Bosque
-- Raison sociale : [À compléter : Quelle est la raison sociale de la société qui exploite le club ? (Kbis)]
-- Forme juridique et capital : [À compléter : Quelle est la forme juridique et le capital social ? (Kbis)]
-- SIRET : [À compléter : Quel est le numéro SIRET ? (Kbis)]
-- Siège social : [À compléter : Quelle est l'adresse du siège social ? (Kbis)]
-- TVA intracommunautaire : [À compléter : Quel est le numéro de TVA intracommunautaire, s'il existe ?]
+- Raison sociale : PAD'EL BOSQUE
+- Forme juridique et capital : SARL au capital de 6 000 €
+- RCS : 999 918 162 R.C.S. Béziers
+- SIRET : 99991816200028
+- TVA intracommunautaire : FR10999918162
+- Siège social : Base départementale de Bessilles, 34530 Montagnac
 - Adresse du club : Base départementale de Bessilles, 34530 Montagnac
 - Téléphone : 06 14 97 97 49
 - Email : padelbosque@gmail.com
-- Directeur de la publication : [À compléter : Qui est le directeur de la publication ? Par défaut, le représentant légal inscrit au Kbis.]
+- Directrice de la publication : Fanny Ramos, gérante
 
 **H2 :** Hébergeur
 

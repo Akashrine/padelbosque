@@ -330,12 +330,13 @@ export const anniversaires =
   'TODO: Quelle formule et quel prix pour un anniversaire ou une privatisation ?' as string | Todo;
 
 export const legal = {
-  raisonSociale: 'TODO: Quelle est la raison sociale de la société qui exploite le club ? (Kbis)' as string | Todo,
-  formeJuridique: 'TODO: Quelle est la forme juridique et le capital social ? (Kbis)' as string | Todo,
-  siret: 'TODO: Quel est le numéro SIRET ? (Kbis)' as string | Todo,
-  siege: 'TODO: Quelle est l\'adresse du siège social ? (Kbis)' as string | Todo,
-  directeurPublication: 'TODO: Qui est le directeur de la publication ? Par défaut, le représentant légal inscrit au Kbis.' as string | Todo,
-  tva: 'TODO: Quel est le numéro de TVA intracommunautaire, s\'il existe ?' as string | Todo,
+  raisonSociale: "PAD'EL BOSQUE" as string | Todo,
+  formeJuridique: 'SARL au capital de 6 000 €' as string | Todo,
+  rcs: '999 918 162 R.C.S. Béziers' as string | Todo,
+  siret: '99991816200028' as string | Todo,
+  siege: 'Base départementale de Bessilles, 34530 Montagnac' as string | Todo,
+  directeurPublication: 'Fanny Ramos, gérante' as string | Todo,
+  tva: 'FR10999918162' as string | Todo,
   hebergeur: {
     nom: 'TODO: Hébergeur retenu, Netlify ou Vercel ?' as string | Todo,
     adresse: 'TODO: Adresse de l\'hébergeur retenu (à recopier depuis ses mentions officielles).' as
