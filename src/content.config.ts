@@ -3,7 +3,7 @@ import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 
 export const pagesFaq = ['accueil', 'entreprise', 'stages', 'tournois', 'acces'] as const;
-export const contextesWhatsApp = ['fondateur', 'entreprise', 'stage', 'tournoi', 'general'] as const;
+export const contextesWhatsApp = ['carte', 'entreprise', 'stage', 'tournoi', 'general'] as const;
 export const blocs = ['acces', 'tarifs', 'horaires', 'equipements'] as const;
 
 /** Pages éditables. type "seo" : générée par [slug].astro. type "systeme" : page dédiée. */

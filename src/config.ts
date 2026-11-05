@@ -46,7 +46,7 @@ export interface Ville {
   tempsDeTrajet: string | Todo;
 }
 
-export type ContexteWhatsApp = 'fondateur' | 'entreprise' | 'stage' | 'tournoi' | 'general';
+export type ContexteWhatsApp = 'carte' | 'entreprise' | 'stage' | 'tournoi' | 'general';
 
 const tousLesJours: Jour[] = [
   'Monday',
@@ -69,6 +69,8 @@ export const club = {
   nom: "Pad'el Bosque",
   promesse: 'Le padel en pleine nature',
   argument: 'Des terrains en pleine nature',
+  /** Seule formule, avec l'adresse, où le nom Bessilles est autorisé (accord de William). */
+  cadre: 'au cœur de la base départementale de Bessilles',
 
   adresse: {
     rue: 'Base départementale de Bessilles',
@@ -104,8 +106,7 @@ export const club = {
     | Todo,
 
   ouverture: {
-    texte: 'début novembre 2026',
-    auPlusTard: 'fin novembre 2026',
+    texte: 'fin novembre 2026',
     /** Mois d'ouverture confirmé (AAAA-MM) : sert à choisir la première saison d'horaires. */
     mois: '2026-11',
     /** Format AAAA-MM-JJ. Premier jour de la première plage horaire du JSON-LD. */
@@ -113,8 +114,7 @@ export const club = {
   },
 
   inauguration: {
-    texte: 'mi-novembre 2026',
-    date: 'TODO: Quelle est la date exacte de l\'inauguration ?' as string | Todo,
+    date: 'TODO: Quelle est la date de l\'inauguration, maintenant que l\'ouverture est fin novembre ?' as string | Todo,
   },
 
   horaires: {
@@ -188,7 +188,7 @@ export const club = {
     | Todo,
 
   formules:
-    'TODO: Proposerez-vous des abonnements ou des carnets de sessions ? Si oui, lesquels et à quel prix ?' as
+    'TODO: Proposerez-vous d\'autres abonnements ou carnets que la carte de 10 parties ? Si oui, lesquels et à quel prix ?' as
       | string
       | Todo,
 
@@ -200,38 +200,34 @@ export const club = {
   },
 };
 
-export const fondateur = {
-  validee: false as boolean,
-  validation: 'TODO: William valide-t-il l\'offre fondateur telle que décrite (prix, crédit, dates, avantages) ?',
-  nombreCartes: 100,
-  prix: 49,
+/** La carte de parties, seule offre en vente avant l'ouverture. Une partie : un créneau, pour un joueur. */
+export const carte = {
+  parties: 10,
+  prix: 70,
   devise: 'EUR',
-  venteJusqua: 'l\'inauguration ou jusqu\'à épuisement',
-  credit: {
-    montant: 64,
-    sessions: 8,
-    validiteJusquau: '31 mars 2027',
-    chargement: 'chargé dans le logiciel du club à l\'ouverture',
-  },
-  tarifReduit: {
-    prixSession: 7,
-    jusquau: '31 août 2027',
-  },
-  inauguration: 'Invitation à l\'inauguration',
-  tournoi: 'Tournoi fondateurs offert en décembre 2026',
-  tournoiDate: 'TODO: Quelle est la date du tournoi fondateurs de décembre 2026 ?' as string | Todo,
-  mur: 'Votre nom sur le mur des fondateurs au club',
+  nombreCartes: 100,
+  venteJusqua: 'épuisement',
+  validite: 'TODO: Jusqu\'à quelle date les parties de la carte sont-elles valables ?' as string | Todo,
   accroche: '100 cartes, pas une de plus.',
 };
 
+/** Prix d'une partie avec la carte. */
+export const prixPartieCarte = () => carte.prix / carte.parties;
+
+/** Prix des parties de la carte, jouées à l'unité. */
+export const valeurCarte = () => carte.parties * club.tarif.prixParJoueur;
+
+/** Ce que la carte fait gagner par rapport au prix à l'unité. */
+export const economieCarte = () => valeurCarte() - carte.prix;
+
 export const liens = {
-  stripe: 'TODO: Quel est le lien Stripe Payment Link de la carte fondateur (limité à 100 paiements) ?' as
+  stripe: 'TODO: Quel est le lien Stripe Payment Link de la carte de 10 parties (limité à 100 paiements) ?' as
     | string
     | Todo,
   /** Numéro au format wa.me, sans + ni espaces. */
   whatsappNumero: '33614979749',
-  groupeWhatsappFondateurs:
-    'TODO: Quel est le lien d\'invitation du groupe WhatsApp des membres fondateurs ?' as string | Todo,
+  groupeWhatsapp:
+    'TODO: Quel est le lien d\'invitation du groupe WhatsApp du club ?' as string | Todo,
   googleMaps:
     'https://www.google.com/maps/search/?api=1&query=' +
     encodeURIComponent('Base départementale de Bessilles, 34530 Montagnac'),
@@ -292,13 +288,13 @@ export const tournois = {
 };
 
 /**
- * Conditions de la carte Membre fondateur (/conditions-carte-fondateur).
+ * Conditions de la carte (/conditions-carte).
  * Chaque point est une proposition de Julien, à valider avec William puis à faire relire
  * par un comptable ou un juriste. Une fois validé, remplacer le TODO par la phrase entre guillemets.
  */
 export const conditionsCarte = {
   nominative:
-    'TODO: À valider avec William. Proposition : « La carte est nominative. Elle ne peut être ni cédée ni revendue. »' as
+    'TODO: À valider avec William. La carte peut-elle servir à plusieurs joueurs ? Proposition : « La carte est nominative. Elle ne peut être ni cédée ni revendue. »' as
       | string
       | Todo,
   retractation:
@@ -309,22 +305,18 @@ export const conditionsCarte = {
     'TODO: À valider avec William. Proposition : « Si le club n\'ouvre pas avant le 31 janvier 2027, vous pouvez demander le remboursement intégral de la carte. »' as
       | string
       | Todo,
-  creditPerdu:
-    'TODO: À valider avec William. Proposition : « Le crédit de jeu non utilisé au 31 mars 2027 est perdu. Il n\'est pas remboursable. »' as
-      | string
-      | Todo,
-  tarifPersonnel:
-    'TODO: À valider avec William. Proposition : « Le tarif fondateur est personnel. Il ne s\'applique qu\'au titulaire de la carte et ne peut pas être transféré. »' as
+  partiesPerdues:
+    'TODO: À valider avec William. Proposition : « Les parties non jouées à la fin de validité de la carte sont perdues. Elles ne sont pas remboursables. »' as
       | string
       | Todo,
 };
 
 /**
- * Le bouton fondateur n'ouvre Stripe que si le lien existe ET que les conditions de la carte sont toutes validées.
+ * Le bouton de la carte n'ouvre Stripe que si le lien existe, que la validité est connue et que les conditions sont toutes validées.
  * Sinon, il ouvre WhatsApp. Contrôlé par npm run verifier.
  */
 export const stripeActif = () =>
-  !estTodo(liens.stripe) && Object.values(conditionsCarte).every((c) => !estTodo(c));
+  !estTodo(liens.stripe) && !estTodo(carte.validite) && Object.values(conditionsCarte).every((c) => !estTodo(c));
 
 export const anniversaires =
   'TODO: Quelle formule et quel prix pour un anniversaire ou une privatisation ?' as string | Todo;

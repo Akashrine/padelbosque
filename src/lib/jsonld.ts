@@ -1,4 +1,4 @@
-import { club, estTodo, fondateur, isoDate, liens, saisons, site, type PlageHoraire } from '../config';
+import { carte, club, estTodo, isoDate, liens, saisons, site, stripeActif, type PlageHoraire } from '../config';
 
 export type JsonLd = Record<string, unknown>;
 
@@ -80,13 +80,13 @@ export function sportsActivityLocation(description: string): JsonLd {
         price: club.tarif.prixParJoueur,
         priceCurrency: club.tarif.devise,
       },
-      ...(fondateur.validee && !estTodo(liens.stripe)
+      ...(stripeActif()
         ? [
             {
               '@type': 'Offer',
-              name: 'Carte Membre fondateur',
-              price: fondateur.prix,
-              priceCurrency: fondateur.devise,
+              name: `Carte de ${carte.parties} parties`,
+              price: carte.prix,
+              priceCurrency: carte.devise,
               url: liens.stripe,
             },
           ]

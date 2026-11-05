@@ -22,7 +22,7 @@ Le club est installé à l'{{entree}} de la base départementale. L'adresse : {{
 
 ## Pourquoi venir jouer à Montagnac ?
 
-Pour le cadre, d'abord. Bosque veut dire forêt. Les terrains sont installés au cœur de la base départementale, dans un environnement naturel. Vous jouez dehors.
+Pour le cadre, d'abord. Bosque veut dire forêt. Les terrains sont installés {{cadre}}, dans un environnement naturel. Vous jouez dehors.
 
 Pour les terrains, ensuite. Ils sont panoramiques et éclairés. Vous pouvez jouer le soir, jusqu'à {{fermetureHiver}} en hiver et {{fermetureEte}} en été.
 

@@ -16,11 +16,11 @@ Ce site ne dépose pas de cookie et n'utilise pas d'outil de mesure d'audience.
 
 Le site ne collecte aucune donnée personnelle. Il n'a pas de formulaire et pas de compte utilisateur.
 
-Le paiement de la carte Membre fondateur se fait sur une page externe Stripe. Stripe recueille votre nom, votre email et votre téléphone pour traiter le paiement. Vos données bancaires restent chez Stripe : le club n'y a jamais accès.
+Le paiement de la carte de {{carteParties}} parties se fait sur une page externe Stripe. Stripe recueille votre nom, votre email et votre téléphone pour traiter le paiement. Vos données bancaires restent chez Stripe : le club n'y a jamais accès.
 
-Le club reçoit votre nom, votre email et votre téléphone. Ils servent uniquement à gérer votre carte : charger votre crédit de jeu, appliquer le tarif fondateur, vous inviter à l'inauguration et au tournoi fondateurs. Ils ne sont ni vendus ni cédés.
+Le club reçoit votre nom, votre email et votre téléphone. Ils servent uniquement à gérer votre carte et vos parties. Ils ne sont ni vendus ni cédés.
 
-Ces données sont conservées jusqu'à la fin des avantages fondateurs, le {{fondateurTarifJusquau}}, puis supprimées. Les factures sont conservées 10 ans, comme la loi l'impose.
+Ces données sont conservées jusqu'à la fin de validité de votre carte, puis supprimées. Les factures sont conservées 10 ans, comme la loi l'impose.
 
 Les liens WhatsApp ouvrent une conversation dans l'application WhatsApp. Les messages que vous envoyez sont soumis aux conditions de WhatsApp. Le club les utilise seulement pour vous répondre.
 

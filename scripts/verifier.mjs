@@ -37,9 +37,9 @@ for (const f of fichiers) {
   const html = readFileSync(`${dist}/${f}`, 'utf8');
   const { document } = parseHTML(html);
 
-  // Nom protégé : « Bessilles » n'apparaît que dans l'adresse.
-  const horsAdresse = html.replaceAll('Base départementale de Bessilles', '').replaceAll(encodeURIComponent('Base départementale de Bessilles'), '');
-  exiger(!/Bessilles/i.test(horsAdresse), `${f} : « Bessilles » hors de l'adresse`);
+  // Nom protégé : « Bessilles » n'apparaît que dans l'adresse et dans la formule validée par William.
+  const horsAdresse = html.replaceAll('Base départementale de Bessilles', '').replaceAll('au cœur de la base départementale de Bessilles', '').replaceAll(encodeURIComponent('Base départementale de Bessilles'), '');
+  exiger(!/Bessilles/i.test(horsAdresse), `${f} : « Bessilles » hors de l'adresse et de la formule autorisée`);
   const url = '/' + f.replace(/\.html$/, '').replace(/^index$/, '');
   const title = propre(document.querySelector('title')?.textContent);
   const description = document.querySelector('meta[name="description"]')?.getAttribute('content') ?? '';
@@ -65,12 +65,13 @@ for (const f of fichiers) {
     exiger(!/TODO/.test(title + description), `${f} : TODO dans le title ou la description`);
   }
 
-  // Bouton fondateur : Stripe seulement si le lien existe et que les 5 conditions de la carte sont validées.
-  for (const a of document.querySelectorAll('.cta-fondateur a')) {
+  // Bouton de la carte : Stripe seulement si le lien existe et que la validité et les conditions de la carte sont validées.
+  exiger(!/fondateur/i.test(html), `${f} : l'ancienne offre fondateur est encore mentionnée`);
+  for (const a of document.querySelectorAll('.cta-carte a')) {
     const href = a.getAttribute('href') ?? '';
     exiger(
       stripeActif() ? href === liens.stripe : href.startsWith('https://wa.me/'),
-      `${f} : bouton fondateur vers ${href}, attendu ${stripeActif() ? 'le lien Stripe' : 'WhatsApp (lien Stripe ou conditions de la carte non validés)'}`,
+      `${f} : bouton de la carte vers ${href}, attendu ${stripeActif() ? 'le lien Stripe' : 'WhatsApp (lien Stripe ou conditions de la carte non validés)'}`,
     );
   }
 

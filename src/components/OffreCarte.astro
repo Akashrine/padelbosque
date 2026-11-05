@@ -1,6 +1,6 @@
 ---
-import { club, euros, fondateur } from '../config';
-import CtaFondateur from './CtaFondateur.astro';
+import { carte, club, economieCarte, euros, prixPartieCarte, valeurCarte } from '../config';
+import CtaCarte from './CtaCarte.astro';
 import CtaWhatsApp from './CtaWhatsApp.astro';
 import Info from './Info.astro';
 
@@ -9,15 +9,14 @@ interface Props {
 }
 
 const { titre } = Astro.props;
-const f = fondateur;
+const c = carte;
 const prix = euros(club.tarif.prixParJoueur);
 ---
 
-<section id="fondateur" class="offre" aria-labelledby="titre-fondateur">
+<section id="carte" class="offre" aria-labelledby="titre-carte">
   <div class="bloc offre-grille">
     <div class="offre-texte">
-      <h2 id="titre-fondateur">{titre}</h2>
-      {!f.validee && <p><Info valeur={f.validation} /></p>}
+      <h2 id="titre-carte">{titre}</h2>
       <slot />
     </div>
 
@@ -28,37 +27,33 @@ const prix = euros(club.tarif.prixParJoueur);
         <dl>
           <div class="champ-prix">
             <dt>Prix de la carte</dt>
-            <dd><strong>{euros(f.prix)}</strong> <span>{f.accroche}</span></dd>
+            <dd><strong>{euros(c.prix)}</strong> <span>{c.accroche}</span></dd>
           </div>
           <div>
-            <dt>Crédit de jeu</dt>
+            <dt>Parties</dt>
             <dd>
-              <strong>{euros(f.credit.montant)}</strong>
-              <span>soit {f.credit.sessions} sessions à {prix}, {f.credit.chargement}, valable jusqu'au {f.credit.validiteJusquau}</span>
+              <strong>{c.parties}</strong>
+              <span>Une partie : un créneau de {club.tarif.dureeCreneauMinutes} minutes, pour un joueur</span>
             </dd>
           </div>
-          <div>
-            <dt>Tarif session</dt>
-            <dd>
-              <strong>{euros(f.tarifReduit.prixSession)}</strong>
-              <span>au lieu de {prix}, jusqu'au {f.tarifReduit.jusquau}</span>
-            </dd>
+          <div class="champ-demi">
+            <dt>La partie</dt>
+            <dd><strong>{euros(prixPartieCarte())}</strong> <span>au lieu de {prix}</span></dd>
+          </div>
+          <div class="champ-demi">
+            <dt>Économie</dt>
+            <dd><strong>{euros(economieCarte())}</strong> <span>{euros(valeurCarte())} de jeu pour {euros(c.prix)}</span></dd>
           </div>
           <div>
-            <dt>Inauguration</dt>
-            <dd>{f.inauguration}</dd>
-          </div>
-          <div>
-            <dt>Tournoi</dt>
-            <dd>{f.tournoi}</dd>
+            <dt>Validité</dt>
+            <dd><Info valeur={c.validite} /></dd>
           </div>
         </dl>
-        <p class="carte-plate-signature">{f.mur}</p>
       </div>
-      <p class="offre-vente">En vente jusqu'à {f.venteJusqua}. {f.nombreCartes} cartes au total.</p>
+      <p class="offre-vente">En vente jusqu'à {c.venteJusqua}.</p>
       <div class="actions">
-        <CtaFondateur />
-        <CtaWhatsApp contexte="fondateur" />
+        <CtaCarte />
+        <CtaWhatsApp contexte="carte" />
       </div>
     </div>
   </div>
@@ -79,7 +74,7 @@ const prix = euros(club.tarif.prixParJoueur);
     font-size: 1.1rem;
   }
 
-  /* Carte à plat : coins ISO, champs étiquetés, panneau de signature */
+  /* Carte à plat : coins ISO, champs étiquetés */
   .carte-plate {
     background: var(--foret-3);
     border-radius: var(--rayon-carte);
@@ -99,12 +94,12 @@ const prix = euros(club.tarif.prixParJoueur);
     grid-column: 1 / -1;
   }
 
-  /* Inauguration et tournoi côte à côte */
-  dl > div:nth-child(n + 4) {
+  /* Prix de la partie et économie côte à côte */
+  dl > .champ-demi {
     grid-column: auto;
   }
 
-  dl > div:nth-child(5) {
+  dl > .champ-demi + .champ-demi {
     padding-left: 1rem;
     border-left: 1px solid var(--filet);
   }
@@ -129,7 +124,7 @@ const prix = euros(club.tarif.prixParJoueur);
   }
 
   dd span {
-    flex: 1 1 14rem;
+    flex: 1 1 9rem;
     font-weight: 500;
     color: var(--mousse);
   }
@@ -141,16 +136,6 @@ const prix = euros(club.tarif.prixParJoueur);
 
   .champ-prix dd span {
     color: var(--craie);
-    font-weight: 600;
-  }
-
-  .carte-plate-signature {
-    margin: 1.25rem 0 0;
-    max-width: none;
-    background: var(--craie);
-    color: var(--foret);
-    border-radius: 6px;
-    padding: 0.8rem 1rem;
     font-weight: 600;
   }
 

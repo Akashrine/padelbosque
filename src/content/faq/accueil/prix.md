@@ -4,4 +4,4 @@ page: accueil
 ordre: 1
 ---
 
-{{prix}} par joueur, soit {{prixTerrain}} le terrain pour {{creneau}}. Le prix est le même à toute heure.
+{{prix}} par joueur, soit {{prixTerrain}} le terrain pour {{creneau}}. Le prix est le même à toute heure. Avec la carte de {{carteParties}} parties, la partie revient à {{cartePrixPartie}}.

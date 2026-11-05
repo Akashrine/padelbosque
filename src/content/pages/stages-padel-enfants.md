@@ -57,7 +57,7 @@ Les familles font partie des publics que le club veut accueillir. Pendant que le
 
 Le club dispose de vestiaires et de douches. Le parking est gratuit, avec {{parking}}. Le site est accessible aux personnes à mobilité réduite.
 
-Et le cadre fait la différence. Les terrains sont installés au cœur de la base départementale, dans un environnement naturel.
+Et le cadre fait la différence. Les terrains sont installés {{cadre}}, dans un environnement naturel.
 
 ## Et après le stage ?
 

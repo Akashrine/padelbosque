@@ -2,7 +2,7 @@
 import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import CtaFondateur from '../components/CtaFondateur.astro';
+import CtaCarte from '../components/CtaCarte.astro';
 import CtaWhatsApp from '../components/CtaWhatsApp.astro';
 import Acces from '../components/Acces.astro';
 import Tarifs from '../components/Tarifs.astro';
@@ -65,9 +65,9 @@ const description = remplir(d.description);
 
   <section aria-labelledby="titre-cta">
     <div class="bloc">
-    <h2 id="titre-cta">Devenez membre fondateur</h2>
-    <p>{remplir('{{fondateurCartes}} cartes à {{fondateurPrix}}, avec {{fondateurCredit}} de crédit de jeu. En vente jusqu\'à {{fondateurVenteJusqua}}.')}</p>
-    <CtaFondateur />
+    <h2 id="titre-cta">{remplir('Jouez à {{cartePrixPartie}} la partie')}</h2>
+    <p>{remplir('La carte de {{carteParties}} parties à {{cartePrix}}. {{carteNombre}} cartes, pas une de plus.')}</p>
+    <CtaCarte />
     <CtaWhatsApp contexte={d.contexteWhatsApp} />
     </div>
   </section>

@@ -10,8 +10,8 @@ const pages = [
   'stages-padel-enfants',
   'tournois-ligues-padel',
   'padel-pezenas-meze-sete',
-  'bienvenue-fondateur',
-  'conditions-carte-fondateur',
+  'bienvenue-carte',
+  'conditions-carte',
   'mentions-legales',
   '404',
 ];

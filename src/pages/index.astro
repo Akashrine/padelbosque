@@ -2,10 +2,10 @@
 import { getEntry, render } from 'astro:content';
 import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import CtaFondateur from '../components/CtaFondateur.astro';
+import CtaCarte from '../components/CtaCarte.astro';
 import CtaWhatsApp from '../components/CtaWhatsApp.astro';
-import CarteFondateur from '../components/CarteFondateur.astro';
-import OffreFondateur from '../components/OffreFondateur.astro';
+import CarteParties from '../components/CarteParties.astro';
+import OffreCarte from '../components/OffreCarte.astro';
 import Equipements from '../components/Equipements.astro';
 import Tarifs from '../components/Tarifs.astro';
 import Horaires from '../components/Horaires.astro';
@@ -24,7 +24,7 @@ const section = async (id: string) => {
 };
 
 const hero = await section('hero');
-const fondateur = await section('fondateur');
+const offre = await section('carte');
 const leClub = await section('club');
 const tarifs = await section('tarifs');
 const activites = await section('activites');
@@ -48,21 +48,21 @@ const promesse = reste.join(', ');
         {hero.data.sousTitre && <p class="hero-ouverture">{remplir(hero.data.sousTitre)}</p>}
       </div>
       <div class="hero-carte">
-        <CarteFondateur annotations />
+        <CarteParties annotations />
       </div>
       <div class="hero-suite">
         <div class="hero-contenu"><hero.Contenu /></div>
         <div class="actions">
-          <CtaFondateur />
+          <CtaCarte />
           <CtaWhatsApp contexte="general" />
         </div>
       </div>
     </div>
   </section>
 
-  <OffreFondateur titre={fondateur.titre}>
-    <fondateur.Contenu />
-  </OffreFondateur>
+  <OffreCarte titre={offre.titre}>
+    <offre.Contenu />
+  </OffreCarte>
 
   <section id="club" class="club" aria-labelledby="titre-club">
     <div class="bloc club-grille">
@@ -154,7 +154,7 @@ const promesse = reste.join(', ');
     color: var(--mousse);
   }
 
-  /* Sur mobile, la carte prend toute la largeur : le libellé « Membre fondateur » reste lisible. */
+  /* Sur mobile, la carte prend toute la largeur : les chiffres restent lisibles. */
   .hero-carte :global(.carte-scene) {
     --largeur-carte: 100%;
   }

@@ -1,0 +1,25 @@
+---
+import { carte, conditionsCarte, estTodo, liens, stripeActif } from '../config';
+import { lienWhatsApp } from '../lib/whatsapp';
+
+interface Props {
+  libelle?: string;
+}
+
+const { libelle = 'Je prends ma carte' } = Astro.props;
+const stripe = liens.stripe;
+// Stripe seulement si le lien existe et que les conditions de la carte sont validées. Sinon, WhatsApp (contexte carte).
+const href = stripeActif() ? stripe : lienWhatsApp('carte');
+const conditionsEnAttente = estTodo(carte.validite) || Object.values(conditionsCarte).some(estTodo);
+---
+
+<p class="cta cta-carte">
+  <a href={href} rel="noopener">{libelle}</a>
+</p>
+<p class="cta-conditions"><a href="/conditions-carte">Conditions de la carte</a></p>
+{estTodo(stripe) && <p><mark class="todo">{stripe}</mark></p>}
+{
+  !estTodo(stripe) && conditionsEnAttente && (
+    <p><mark class="todo">TODO: Le bouton ouvre WhatsApp tant que les conditions de la carte ne sont pas toutes validées.</mark></p>
+  )
+}

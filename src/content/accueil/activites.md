@@ -10,7 +10,7 @@ Des stages de padel pendant les vacances scolaires. [Voir les stages enfants](/s
 
 ### Tournois et ligues internes
 
-Des tournois et des ligues entre joueurs du club, pour progresser et se mesurer aux autres. Premier rendez-vous : le tournoi fondateurs, en décembre 2026. [Voir les tournois et les ligues](/tournois-ligues-padel).
+Des tournois et des ligues entre joueurs du club, pour progresser et se mesurer aux autres. [Voir les tournois et les ligues](/tournois-ligues-padel).
 
 ### Soirées
 

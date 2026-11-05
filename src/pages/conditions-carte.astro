@@ -4,10 +4,10 @@ import Societe from '../components/Societe.astro';
 import { adresseTexte, club } from '../config';
 import { pageSysteme } from '../lib/pages';
 
-const page = await pageSysteme('conditions-carte-fondateur');
+const page = await pageSysteme('conditions-carte');
 ---
 
-<BaseLayout title={page.title} description={page.description} noindex contexteWhatsApp="fondateur">
+<BaseLayout title={page.title} description={page.description} noindex contexteWhatsApp="carte">
   <article class="bloc">
     <h1>{page.h1}</h1>
     <page.Contenu />

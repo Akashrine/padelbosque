@@ -1,9 +1,9 @@
 ---
 /**
- * La carte Membre fondateur, recto et verso. Elle se retourne au toucher ou au bouton.
+ * La carte de parties, recto et verso. Elle se retourne au toucher ou au bouton.
  * Tous les chiffres viennent de config.ts.
  */
-import { club, euros, fondateur } from '../config';
+import { adresseTexte, carte, club, economieCarte, euros, prixPartieCarte } from '../config';
 import Embleme from './Embleme.astro';
 
 interface Props {
@@ -12,7 +12,10 @@ interface Props {
 }
 
 const { annotations = false } = Astro.props;
-const f = fondateur;
+const c = carte;
+const prixPartie = euros(prixPartieCarte());
+const prixUnite = euros(club.tarif.prixParJoueur);
+const creneau = `${club.tarif.dureeCreneauMinutes} minutes`;
 ---
 
 <figure class:list={['carte-scene', { 'carte-annotee': annotations }]} data-carte>
@@ -22,26 +25,27 @@ const f = fondateur;
       <div class="carte-tete">
         <Embleme class="carte-embleme" />
         <p class="carte-club">{club.nom}</p>
-        <p class="carte-type">Membre<br />fondateur</p>
+        <p class="carte-type">Série<br />limitée</p>
       </div>
-      <p class="carte-numero">
-        <span class="visuellement-cache">Numéro sur {f.nombreCartes}, à attribuer</span>
-        <span class="carte-no" aria-hidden="true">Nº</span>
-        <span class="carte-blanc" aria-hidden="true"></span>
-        <span class="carte-sur" aria-hidden="true">/ {f.nombreCartes}</span>
-      </p>
+      <div class="carte-milieu">
+        <p class="carte-parties"><strong>{c.parties}</strong> <span>parties</span></p>
+        {/* Une case à poinçonner par partie. */}
+        <ol class="carte-cases" aria-hidden="true">
+          {Array.from({ length: c.parties }, (_, i) => <li>{i + 1}</li>)}
+        </ol>
+      </div>
       <dl class="carte-champs">
         <div>
           <dt>Prix</dt>
-          <dd>{euros(f.prix)}</dd>
+          <dd>{euros(c.prix)}</dd>
         </div>
         <div>
-          <dt>Crédit de jeu</dt>
-          <dd>{euros(f.credit.montant)}</dd>
+          <dt>La partie</dt>
+          <dd>{prixPartie}</dd>
         </div>
         <div>
-          <dt>Tarif session</dt>
-          <dd>{euros(f.tarifReduit.prixSession)}</dd>
+          <dt>Tirage</dt>
+          <dd>{c.nombreCartes}</dd>
         </div>
       </dl>
     </div>
@@ -49,24 +53,22 @@ const f = fondateur;
     <div class="carte-face carte-verso">
       <div class="carte-piste" aria-hidden="true"></div>
       <ul class="carte-avantages">
-        <li>{euros(f.credit.montant)} de crédit, valable jusqu'au {f.credit.validiteJusquau}</li>
-        <li>{euros(f.tarifReduit.prixSession)} la session jusqu'au {f.tarifReduit.jusquau}</li>
-        <li>{f.inauguration}</li>
-        <li>{f.tournoi}</li>
+        <li>{c.parties} parties de {creneau}</li>
+        <li>{prixPartie} la partie au lieu de {prixUnite}</li>
+        <li>{euros(economieCarte())} d'économie sur la carte</li>
+        <li>{c.accroche}</li>
       </ul>
-      <p class="carte-signature"><span>{f.mur}</span></p>
+      <p class="carte-signature"><span>{adresseTexte()}</span></p>
     </div>
   </div>
 
   {
     annotations && (
       <ul class="carte-rappels" aria-hidden="true">
-        <li class="rappel rappel-numero">{f.accroche}</li>
-        <li class="rappel rappel-credit">
-          {euros(f.credit.montant)} de jeu, soit {f.credit.sessions} sessions
-        </li>
-        <li class="rappel rappel-tarif">
-          {euros(f.tarifReduit.prixSession)} la session au lieu de {euros(club.tarif.prixParJoueur)}
+        <li class="rappel rappel-cases">Une case par partie, {creneau} à chaque fois</li>
+        <li class="rappel rappel-tirage">{c.accroche}</li>
+        <li class="rappel rappel-partie">
+          {prixPartie} la partie au lieu de {prixUnite}
         </li>
       </ul>
     )
@@ -197,35 +199,58 @@ const f = fondateur;
     line-height: 1.25;
   }
 
-  .carte-numero {
-    margin: 0;
+  .carte-milieu {
     align-self: center;
     display: flex;
-    align-items: baseline;
-    gap: 2.5cqi;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4cqi;
+  }
+
+  .carte-parties {
+    margin: 0;
     font-family: var(--f-display);
-    font-weight: 700;
+    font-weight: 800;
     font-variant-numeric: tabular-nums;
     line-height: 1;
+    text-transform: uppercase;
   }
 
-  .carte-no {
-    font-size: 9cqi;
-  }
-
-  .carte-blanc {
-    display: inline-block;
-    width: 24cqi;
-    height: 1.2cqi;
-    background: var(--foret);
-    opacity: 0.8;
-    border-radius: 1px;
-    transform: translateY(-0.6cqi);
-  }
-
-  .carte-sur {
-    font-size: 14cqi;
+  .carte-parties strong {
+    display: block;
+    font-size: 17cqi;
     font-weight: 800;
+    line-height: 0.82;
+  }
+
+  .carte-parties span {
+    display: block;
+    margin-top: 1cqi;
+    font-size: 4.2cqi;
+    letter-spacing: 0.06em;
+  }
+
+  .carte-cases {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 8cqi);
+    gap: 1.6cqi;
+  }
+
+  .carte-cases li {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1;
+    margin: 0;
+    border: 0.45cqi solid var(--foret);
+    border-radius: 50%;
+    font-family: var(--f-display);
+    font-size: 3.2cqi;
+    font-weight: 700;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
   }
 
   .carte-champs {
@@ -403,20 +428,20 @@ const f = fondateur;
       box-shadow: 0 0 0 2px var(--craie);
     }
 
-    .rappel-numero {
-      --x: 0.86;
-      --y: 44%;
+    .rappel-cases {
+      --x: 0.94;
+      --y: 35%;
     }
 
-    .rappel-tarif {
-      --x: 0.8;
-      --y: 84%;
+    .rappel-tirage {
+      --x: 0.64;
+      --y: 80%;
       animation-delay: 1.1s;
     }
 
-    .rappel-credit {
-      --x: 0.47;
-      --y: 96%;
+    .rappel-partie {
+      --x: 0.39;
+      --y: 94%;
       animation-delay: 1.2s;
     }
 

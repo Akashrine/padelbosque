@@ -1,5 +1,5 @@
 /*
- * Pad'el Bosque : la carte Membre fondateur comme système.
+ * Pad'el Bosque : la carte de jeu comme système.
  * Fond vert forêt et orange du logo, craie pour le verso. Étiquettes de champ, chiffres embossés, talons perforés.
  */
 
@@ -234,14 +234,14 @@ main > section:not(.verso) + section.verso::before {
     box-shadow 0.2s;
 }
 
-.cta-fondateur a {
+.cta-carte a {
   width: 100%;
   background: var(--orange);
   color: var(--foret);
   box-shadow: 0 10px 22px -12px rgb(0 0 0 / 0.6);
 }
 
-.cta-fondateur a::after {
+.cta-carte a::after {
   content: '';
   width: 1.1em;
   height: 1.1em;
@@ -251,16 +251,16 @@ main > section:not(.verso) + section.verso::before {
   transition: transform 0.25s var(--sortie);
 }
 
-.cta-fondateur a:hover {
+.cta-carte a:hover {
   background: var(--orange-vif);
   transform: translateY(-1px);
 }
 
-.cta-fondateur a:hover::after {
+.cta-carte a:hover::after {
   transform: translateX(3px);
 }
 
-.cta-fondateur a:active {
+.cta-carte a:active {
   background: var(--orange-presse);
   transform: translateY(1px);
   box-shadow: none;
@@ -624,7 +624,7 @@ main > section[aria-labelledby='titre-cta'] {
   border-top: 0;
 }
 
-main > section[aria-labelledby='titre-cta'] .cta-fondateur a {
+main > section[aria-labelledby='titre-cta'] .cta-carte a {
   background: var(--foret);
   color: var(--craie);
   box-shadow: none;

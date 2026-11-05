@@ -3,7 +3,7 @@ type: seo
 slug: tournois-ligues-padel
 ordre: 3
 title: "Tournois et ligues de padel dans l'Hérault, {{nom}}"
-description: "Tournois, ligues internes et soirées padel à Montagnac. Premier rendez-vous : le tournoi fondateurs en décembre 2026."
+description: "Tournois, ligues internes et soirées padel à Montagnac. Le club ouvre {{ouverture}} : soyez prévenu des premières dates."
 h1: "Tournois et ligues de padel dans l'Hérault"
 requete: "tournoi padel Hérault, ligue padel"
 libelleLien: "Tournois et ligues de padel"
@@ -14,14 +14,6 @@ faq: tournois
 Vous aimez la compétition ? Ou simplement jouer contre de nouvelles têtes ? {{nom}} organisera des tournois, des ligues internes et des soirées padel à {{ville}}.
 
 Le club ouvre {{ouverture}}. Le calendrier se construit maintenant. Laissez votre contact sur WhatsApp pour être prévenu des premières dates.
-
-## Quel est le premier tournoi ?
-
-Le premier rendez-vous est le tournoi fondateurs, en décembre 2026. Il réunit les membres fondateurs du club.
-
-Date du tournoi fondateurs : {{tournoiFondateursDate}}
-
-C'est le premier tournoi du club. Il réunira ceux qui ont cru au projet avant l'ouverture.
 
 ## Quels tournois seront organisés ensuite ?
 
@@ -49,6 +41,8 @@ Un tournoi se joue en double. Le plus important est de trouver votre partenaire 
 
 Un créneau dure {{creneau}}. Assez pour s'échauffer et jouer un vrai match.
 
+Pour jouer souvent sans y laisser le budget, la carte de {{carteParties}} parties ramène la partie à {{cartePrixPartie}} au lieu de {{prix}}. {{carteNombre}} cartes sont en vente, pas une de plus.
+
 Le jour du tournoi, arrivez en avance pour vous échauffer. Les terrains sont en extérieur : prévoyez de l'eau et une tenue adaptée à la saison. Les vestiaires et les douches sont sur place.
 
 ## Comment s'inscrire ?
@@ -59,7 +53,7 @@ Pour être prévenu dès qu'un tournoi, une ligue ou une soirée ouvre ses inscr
 
 ## Pourquoi jouer vos tournois à Montagnac ?
 
-D'abord pour le cadre. Les terrains sont installés au cœur de la base départementale. Vous jouez dehors, dans un environnement naturel.
+D'abord pour le cadre. Les terrains sont installés {{cadre}}. Vous jouez dehors, dans un environnement naturel.
 
 Ensuite pour les conditions. {{terrainsDetail}}. Des vestiaires et des douches. Un bar, de la restauration et un espace détente pour attendre son prochain match ou fêter une victoire.
 

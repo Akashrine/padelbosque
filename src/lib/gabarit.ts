@@ -2,17 +2,20 @@ import {
   acces,
   adresseTexte,
   anniversaires,
+  carte,
   club,
   conditionsCarte,
+  economieCarte,
   entreprise,
   estTodo,
   euros,
-  fondateur,
   heure,
+  prixPartieCarte,
   prixTerrain,
   regleTexte,
   stagesEnfants,
   tournois,
+  valeurCarte,
 } from '../config';
 
 /**
@@ -23,6 +26,7 @@ export const variables: Record<string, string> = {
   nom: club.nom,
   promesse: club.promesse,
   lieu: club.adresse.rue,
+  cadre: club.cadre,
   entree: club.adresse.complement.toLowerCase(),
   ville: club.adresse.ville,
   codePostal: club.adresse.codePostal,
@@ -31,8 +35,6 @@ export const variables: Record<string, string> = {
   telephone: club.telephone.affichage,
   email: club.email,
   ouverture: club.ouverture.texte,
-  ouvertureAuPlusTard: club.ouverture.auPlusTard,
-  inauguration: club.inauguration.texte,
   prix: euros(club.tarif.prixParJoueur),
   prixTerrain: euros(prixTerrain()),
   creneau: `${club.tarif.dureeCreneauMinutes} minutes`,
@@ -43,21 +45,19 @@ export const variables: Record<string, string> = {
   horairesEte: `de ${heure(club.horaires.ete.ouverture)} à ${heure(club.horaires.ete.fermeture)}`,
   fermetureHiver: heure(club.horaires.hiver.fermeture),
   fermetureEte: heure(club.horaires.ete.fermeture),
-  fondateurCartes: String(fondateur.nombreCartes),
-  fondateurPrix: euros(fondateur.prix),
-  fondateurCredit: euros(fondateur.credit.montant),
-  fondateurSessions: String(fondateur.credit.sessions),
-  fondateurCreditValidite: fondateur.credit.validiteJusquau,
-  fondateurTarif: euros(fondateur.tarifReduit.prixSession),
-  fondateurTarifJusquau: fondateur.tarifReduit.jusquau,
-  fondateurVenteJusqua: fondateur.venteJusqua,
-  tournoiFondateurs: fondateur.tournoi,
+  carteParties: String(carte.parties),
+  cartePrix: euros(carte.prix),
+  carteNombre: String(carte.nombreCartes),
+  cartePrixPartie: euros(prixPartieCarte()),
+  carteValeur: euros(valeurCarte()),
+  carteEconomie: euros(economieCarte()),
+  carteVenteJusqua: carte.venteJusqua,
   repere: acces.repere,
 
   // Infos encore manquantes : elles s'affichent comme TODO visibles tant qu'elles valent "TODO: ...".
   adressePostale: club.adresse.adressePostaleExacte,
   inaugurationDate: club.inauguration.date,
-  tournoiFondateursDate: fondateur.tournoiDate,
+  carteValidite: carte.validite,
   bascule: estTodo(club.bascule)
     ? club.bascule
     : `Horaires d'été à partir du ${regleTexte(club.bascule.debutEte)}, horaires d'hiver à partir du ${regleTexte(club.bascule.debutHiver)}.`,
@@ -86,8 +86,7 @@ export const variables: Record<string, string> = {
   conditionsNominative: conditionsCarte.nominative,
   conditionsRetractation: conditionsCarte.retractation,
   conditionsNonOuverture: conditionsCarte.nonOuverture,
-  conditionsCreditPerdu: conditionsCarte.creditPerdu,
-  conditionsTarifPersonnel: conditionsCarte.tarifPersonnel,
+  conditionsPartiesPerdues: conditionsCarte.partiesPerdues,
 };
 
 export const motif = /\{\{\s*([a-zA-Z]+)\s*\}\}/g;

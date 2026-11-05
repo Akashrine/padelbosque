@@ -17,7 +17,7 @@ Les passages **[À compléter : …]** sont des infos manquantes. En production,
 - Accès
 - FAQ
 
-**Lien :** Carte fondateur
+**Lien :** Carte 10 parties
 
 ### Bouton flottant
 
@@ -45,68 +45,75 @@ Instagram : [À compléter : Quel est l'identifiant Instagram exact du club ?]
 
 **Title :** Pad'el Bosque, club de padel à Montagnac près de Pézenas (34)
 
-**Meta description :** 4 terrains extérieurs, panoramiques et éclairés au cœur de la base départementale, à Montagnac. 8 € par joueur. Ouverture début novembre 2026.
+**Meta description :** 4 terrains extérieurs, panoramiques et éclairés au cœur de la base départementale de Bessilles, à Montagnac. 8 € par joueur. Ouverture fin novembre 2026.
 
 **H1 :** Pad'el Bosque, le padel en pleine nature
 
-Ouverture début novembre 2026.
+Ouverture fin novembre 2026.
 
 Pad'el Bosque
 
-Membre, fondateur
+Série, limitée
 
-Numéro sur 100, à attribuerNº/ 100
+10 parties
 
-- 64 € de crédit, valable jusqu'au 31 mars 2027
-- 7 € la session jusqu'au 31 août 2027
-- Invitation à l'inauguration
-- Tournoi fondateurs offert en décembre 2026
+- 1
+- 2
+- 3
+- 4
+- 5
+- 6
+- 7
+- 8
+- 9
+- 10
 
-Votre nom sur le mur des fondateurs au club
-
+- 10 parties de 90 minutes
+- 7 € la partie au lieu de 8 €
+- 10 € d'économie sur la carte
 - 100 cartes, pas une de plus.
-- 64 € de jeu, soit 8 sessions
-- 7 € la session au lieu de 8 €
 
-4 terrains extérieurs, panoramiques et éclairés, au cœur de la base départementale. À Montagnac, dans l'Hérault, près de Pézenas, Mèze et Sète.
+Base départementale de Bessilles, 34530 Montagnac
 
-100 cartes Membre fondateur sont en vente avant l'ouverture. 49 € la carte, 64 € de jeu inclus.
+- Une case par partie, 90 minutes à chaque fois
+- 100 cartes, pas une de plus.
+- 7 € la partie au lieu de 8 €
 
-**Bouton :** Je deviens membre fondateur
+4 terrains extérieurs, panoramiques et éclairés, au cœur de la base départementale de Bessilles. À Montagnac, dans l'Hérault, près de Pézenas, Mèze et Sète.
+
+La carte de 10 parties est en vente avant l'ouverture : 70 €, soit 7 € la partie au lieu de 8 €. 100 cartes, pas une de plus.
+
+**Bouton :** Je prends ma carte
 
 Conditions de la carte
 
-[À compléter : Quel est le lien Stripe Payment Link de la carte fondateur (limité à 100 paiements) ?]
+[À compléter : Quel est le lien Stripe Payment Link de la carte de 10 parties (limité à 100 paiements) ?]
 
 **Bouton :** Nous écrire sur WhatsApp
 
-**H2 :** Devenez membre fondateur
+**H2 :** 10 parties, 70 €
 
-[À compléter : William valide-t-il l'offre fondateur telle que décrite (prix, crédit, dates, avantages) ?]
+Le club n'est pas encore ouvert. Vous pouvez déjà prendre vos parties.
 
-Le club n'est pas encore ouvert. Vous pouvez déjà en faire partie.
+À l'unité, une partie coûte 8 €. Avec la carte, elle revient à 7 €. Sur 10 parties, vous gardez 10 € en poche.
 
-La carte Membre fondateur vous donne du jeu et un tarif réduit. Elle est réservée aux 100 premiers.
-
-Le paiement se fait en ligne, sur une page de paiement sécurisée Stripe.
+Il n'y aura que 100 cartes. Le paiement se fait en ligne, sur une page de paiement sécurisée Stripe.
 
 **H3 :** Ce que comprend la carte
 
-Votre nom sur le mur des fondateurs au club
+En vente jusqu'à épuisement.
 
-En vente jusqu'à l'inauguration ou jusqu'à épuisement. 100 cartes au total.
-
-**Bouton :** Je deviens membre fondateur
+**Bouton :** Je prends ma carte
 
 Conditions de la carte
 
-[À compléter : Quel est le lien Stripe Payment Link de la carte fondateur (limité à 100 paiements) ?]
+[À compléter : Quel est le lien Stripe Payment Link de la carte de 10 parties (limité à 100 paiements) ?]
 
 **Bouton :** Une question ? Écrivez-nous sur WhatsApp
 
 **H2 :** Le club
 
-Bosque veut dire forêt : chez Pad'el Bosque, vous jouez au padel dans le cadre naturel de la base départementale.
+Bosque veut dire forêt : chez Pad'el Bosque, vous jouez au padel au cœur de la base départementale de Bessilles.
 
 **H2 :** Tarifs et horaires
 
@@ -126,7 +133,7 @@ Des stages de padel pendant les vacances scolaires. Voir les stages enfants.
 
 **H3 :** Tournois et ligues internes
 
-Des tournois et des ligues entre joueurs du club, pour progresser et se mesurer aux autres. Premier rendez-vous : le tournoi fondateurs, en décembre 2026. Voir les tournois et les ligues.
+Des tournois et des ligues entre joueurs du club, pour progresser et se mesurer aux autres. Voir les tournois et les ligues.
 
 **H3 :** Soirées
 
@@ -171,7 +178,7 @@ Parking gratuit de 2 000 places.
 **H2 :** Questions fréquentes
 
 **Question :** Combien coûte une partie de padel ?
-Réponse : 8 € par joueur, soit 32 € le terrain pour 90 minutes. Le prix est le même à toute heure.
+Réponse : 8 € par joueur, soit 32 € le terrain pour 90 minutes. Le prix est le même à toute heure. Avec la carte de 10 parties, la partie revient à 7 €.
 
 **Question :** Combien de temps dure un créneau ?
 Réponse : Un créneau dure 90 minutes.
@@ -192,13 +199,13 @@ Réponse : Le parking est gratuit, avec 2 000 places. Le club se trouve à l'ent
 Réponse : En attendant l'ouverture du logiciel de réservation, écrivez-nous sur WhatsApp. Logiciel de réservation : [À compléter : Quel logiciel de réservation utiliserez-vous et quand sera-t-il en ligne ?]
 
 **Question :** Quand ouvre le club ?
-Réponse : Le club ouvre début novembre 2026, au plus tard fin novembre 2026. L'inauguration aura lieu mi-novembre 2026.
+Réponse : Le club ouvre fin novembre 2026. Inauguration : [À compléter : Quelle est la date de l'inauguration, maintenant que l'ouverture est fin novembre ?]
 
 ## /padel-entreprise-team-building
 
 **Title :** Padel entreprise et team building dans l'Hérault, Pad'el Bosque
 
-**Meta description :** Team building padel dans l'Hérault, au cœur de la base départementale : 4 terrains éclairés, bar et restauration sur place, parking gratuit.
+**Meta description :** Team building padel dans l'Hérault, au cœur de la base départementale de Bessilles : 4 terrains éclairés, bar et restauration sur place, parking gratuit.
 
 Fil d'Ariane : Accueil > Padel entreprise et team building dans l'Hérault
 
@@ -206,7 +213,7 @@ Fil d'Ariane : Accueil > Padel entreprise et team building dans l'Hérault
 
 Vous cherchez une activité pour réunir vos équipes ? Le padel coche beaucoup de cases. Il se joue à quatre. Les bases s'apprennent vite. Et il fait autant rire que courir.
 
-Pad'el Bosque vous accueille au cœur de la base départementale, à Montagnac, dans l'Hérault. Sur place : 4 terrains extérieurs, panoramiques et éclairés, un bar, de la restauration et un espace détente. Votre événement se déroule au même endroit, du premier échange au dernier verre.
+Pad'el Bosque vous accueille au cœur de la base départementale de Bessilles, à Montagnac, dans l'Hérault. Sur place : 4 terrains extérieurs, panoramiques et éclairés, un bar, de la restauration et un espace détente. Votre événement se déroule au même endroit, du premier échange au dernier verre.
 
 **H2 :** Pourquoi choisir le padel pour un team building ?
 
@@ -214,7 +221,7 @@ Le padel met tout le monde sur un pied d'égalité. Pas besoin d'avoir déjà jo
 
 Il se joue en double. Vous gagnez ou vous perdez à deux. Il faut se parler, se placer, s'encourager. C'est exactement ce que vous cherchez dans un team building.
 
-Enfin, le cadre change du bureau. Les terrains sont installés au cœur de la base départementale. Vos équipes jouent dehors, dans un cadre naturel.
+Enfin, le cadre change du bureau. Les terrains sont installés au cœur de la base départementale de Bessilles. Vos équipes jouent dehors, dans un cadre naturel.
 
 **H2 :** Combien de personnes peuvent jouer ?
 
@@ -263,15 +270,15 @@ Vous venez de Pézenas, Mèze, Sète, Agde ou Béziers ? Consultez la page accè
 
 Le plus simple est WhatsApp. Vous pouvez aussi appeler le 06 14 97 97 49 ou écrire à padelbosque@gmail.com.
 
-**H2 :** Devenez membre fondateur
+**H2 :** Jouez à 7 € la partie
 
-100 cartes à 49 €, avec 64 € de crédit de jeu. En vente jusqu'à l'inauguration ou jusqu'à épuisement.
+La carte de 10 parties à 70 €. 100 cartes, pas une de plus.
 
-**Bouton :** Je deviens membre fondateur
+**Bouton :** Je prends ma carte
 
 Conditions de la carte
 
-[À compléter : Quel est le lien Stripe Payment Link de la carte fondateur (limité à 100 paiements) ?]
+[À compléter : Quel est le lien Stripe Payment Link de la carte de 10 parties (limité à 100 paiements) ?]
 
 **Bouton :** Parlons de votre événement sur WhatsApp
 
@@ -303,13 +310,13 @@ Réponse : [À compléter : Quel tarif pour une privatisation ou un événement 
 
 **Title :** Stages de padel enfants près de Pézenas, Pad'el Bosque
 
-**Meta description :** Stages de padel enfants pendant les vacances scolaires, à Montagnac, près de Pézenas. Le club ouvre début novembre 2026. Soyez prévenu en premier.
+**Meta description :** Stages de padel enfants pendant les vacances scolaires, à Montagnac, près de Pézenas. Le club ouvre fin novembre 2026. Soyez prévenu en premier.
 
 Fil d'Ariane : Accueil > Stages de padel pour enfants à Montagnac, près de Pézenas
 
 **H1 :** Stages de padel pour enfants à Montagnac, près de Pézenas
 
-Pad'el Bosque prépare des stages de padel pour les enfants, pendant les vacances scolaires. Le club ouvre début novembre 2026 à Montagnac, près de Pézenas.
+Pad'el Bosque prépare des stages de padel pour les enfants, pendant les vacances scolaires. Le club ouvre fin novembre 2026 à Montagnac, près de Pézenas.
 
 Le programme détaillé arrive. Laissez-nous votre contact sur WhatsApp : vous serez prévenu dès l'ouverture des inscriptions.
 
@@ -355,7 +362,7 @@ Les familles font partie des publics que le club veut accueillir. Pendant que le
 
 Le club dispose de vestiaires et de douches. Le parking est gratuit, avec 2 000 places. Le site est accessible aux personnes à mobilité réduite.
 
-Et le cadre fait la différence. Les terrains sont installés au cœur de la base départementale, dans un environnement naturel.
+Et le cadre fait la différence. Les terrains sont installés au cœur de la base départementale de Bessilles, dans un environnement naturel.
 
 **H2 :** Et après le stage ?
 
@@ -373,15 +380,15 @@ Prix d'un stage : [À compléter : Quel est le prix d'un stage ?]
 
 En attendant, écrivez-nous sur WhatsApp pour être prévenu. Vous pouvez aussi appeler le 06 14 97 97 49.
 
-**H2 :** Devenez membre fondateur
+**H2 :** Jouez à 7 € la partie
 
-100 cartes à 49 €, avec 64 € de crédit de jeu. En vente jusqu'à l'inauguration ou jusqu'à épuisement.
+La carte de 10 parties à 70 €. 100 cartes, pas une de plus.
 
-**Bouton :** Je deviens membre fondateur
+**Bouton :** Je prends ma carte
 
 Conditions de la carte
 
-[À compléter : Quel est le lien Stripe Payment Link de la carte fondateur (limité à 100 paiements) ?]
+[À compléter : Quel est le lien Stripe Payment Link de la carte de 10 parties (limité à 100 paiements) ?]
 
 **Bouton :** Être prévenu des stages sur WhatsApp
 
@@ -413,7 +420,7 @@ Réponse : Une tenue de sport, des chaussures de sport et une gourde. Le club lo
 
 **Title :** Tournois et ligues de padel dans l'Hérault, Pad'el Bosque
 
-**Meta description :** Tournois, ligues internes et soirées padel à Montagnac. Premier rendez-vous : le tournoi fondateurs en décembre 2026.
+**Meta description :** Tournois, ligues internes et soirées padel à Montagnac. Le club ouvre fin novembre 2026 : soyez prévenu des premières dates.
 
 Fil d'Ariane : Accueil > Tournois et ligues de padel dans l'Hérault
 
@@ -421,15 +428,7 @@ Fil d'Ariane : Accueil > Tournois et ligues de padel dans l'Hérault
 
 Vous aimez la compétition ? Ou simplement jouer contre de nouvelles têtes ? Pad'el Bosque organisera des tournois, des ligues internes et des soirées padel à Montagnac.
 
-Le club ouvre début novembre 2026. Le calendrier se construit maintenant. Laissez votre contact sur WhatsApp pour être prévenu des premières dates.
-
-**H2 :** Quel est le premier tournoi ?
-
-Le premier rendez-vous est le tournoi fondateurs, en décembre 2026. Il réunit les membres fondateurs du club.
-
-Date du tournoi fondateurs : [À compléter : Quelle est la date du tournoi fondateurs de décembre 2026 ?]
-
-C'est le premier tournoi du club. Il réunira ceux qui ont cru au projet avant l'ouverture.
+Le club ouvre fin novembre 2026. Le calendrier se construit maintenant. Laissez votre contact sur WhatsApp pour être prévenu des premières dates.
 
 **H2 :** Quels tournois seront organisés ensuite ?
 
@@ -457,6 +456,8 @@ Un tournoi se joue en double. Le plus important est de trouver votre partenaire 
 
 Un créneau dure 90 minutes. Assez pour s'échauffer et jouer un vrai match.
 
+Pour jouer souvent sans y laisser le budget, la carte de 10 parties ramène la partie à 7 € au lieu de 8 €. 100 cartes sont en vente, pas une de plus.
+
 Le jour du tournoi, arrivez en avance pour vous échauffer. Les terrains sont en extérieur : prévoyez de l'eau et une tenue adaptée à la saison. Les vestiaires et les douches sont sur place.
 
 **H2 :** Comment s'inscrire ?
@@ -467,28 +468,28 @@ Pour être prévenu dès qu'un tournoi, une ligue ou une soirée ouvre ses inscr
 
 **H2 :** Pourquoi jouer vos tournois à Montagnac ?
 
-D'abord pour le cadre. Les terrains sont installés au cœur de la base départementale. Vous jouez dehors, dans un environnement naturel.
+D'abord pour le cadre. Les terrains sont installés au cœur de la base départementale de Bessilles. Vous jouez dehors, dans un environnement naturel.
 
 Ensuite pour les conditions. 4 terrains extérieurs, panoramiques et éclairés. Des vestiaires et des douches. Un bar, de la restauration et un espace détente pour attendre son prochain match ou fêter une victoire.
 
 Enfin pour l'accès. Le parking est gratuit, avec 2 000 places. Le club est accessible aux personnes à mobilité réduite. Vous venez de Pézenas, Mèze, Sète, Agde ou Béziers ? Consultez la page accès.
 
-**H2 :** Devenez membre fondateur
+**H2 :** Jouez à 7 € la partie
 
-100 cartes à 49 €, avec 64 € de crédit de jeu. En vente jusqu'à l'inauguration ou jusqu'à épuisement.
+La carte de 10 parties à 70 €. 100 cartes, pas une de plus.
 
-**Bouton :** Je deviens membre fondateur
+**Bouton :** Je prends ma carte
 
 Conditions de la carte
 
-[À compléter : Quel est le lien Stripe Payment Link de la carte fondateur (limité à 100 paiements) ?]
+[À compléter : Quel est le lien Stripe Payment Link de la carte de 10 parties (limité à 100 paiements) ?]
 
 **Bouton :** Être prévenu des tournois sur WhatsApp
 
 **H2 :** Questions fréquentes
 
-**Question :** Qui peut jouer le tournoi fondateurs ?
-Réponse : Les membres fondateurs : le tournoi est compris dans leur carte.
+**Question :** Peut-on s'entraîner au club avant un tournoi ?
+Réponse : Oui, dès l'ouverture. Un créneau de 90 minutes coûte 8 € par joueur, ou 7 € avec la carte de 10 parties.
 
 **Question :** Les tournois sont-ils ouverts à tous les niveaux ?
 Réponse : [À compléter : Les tournois et les ligues seront-ils ouverts à tous les niveaux ?]
@@ -519,7 +520,7 @@ Fil d'Ariane : Accueil > Padel près de Pézenas, Mèze et Sète : venez jouer �
 
 **H1 :** Padel près de Pézenas, Mèze et Sète : venez jouer à Montagnac
 
-Vous habitez Pézenas, Mèze, Sète, Agde ou Béziers et vous cherchez où jouer au padel ? Pad'el Bosque ouvre début novembre 2026 à Montagnac.
+Vous habitez Pézenas, Mèze, Sète, Agde ou Béziers et vous cherchez où jouer au padel ? Pad'el Bosque ouvre fin novembre 2026 à Montagnac.
 
 Le club compte 4 terrains extérieurs, panoramiques et éclairés. Un seul prix : 8 € par joueur, soit 32 € le terrain pour 90 minutes, à toute heure.
 
@@ -529,7 +530,7 @@ Le club est installé à l'entrée nord de la base départementale. L'adresse : 
 
 **H2 :** Pourquoi venir jouer à Montagnac ?
 
-Pour le cadre, d'abord. Bosque veut dire forêt. Les terrains sont installés au cœur de la base départementale, dans un environnement naturel. Vous jouez dehors.
+Pour le cadre, d'abord. Bosque veut dire forêt. Les terrains sont installés au cœur de la base départementale de Bessilles, dans un environnement naturel. Vous jouez dehors.
 
 Pour les terrains, ensuite. Ils sont panoramiques et éclairés. Vous pouvez jouer le soir, jusqu'à 21h en hiver et 22h30 en été.
 
@@ -585,15 +586,15 @@ Parking gratuit de 2 000 places.
 - Agde : [À compléter : Temps de trajet en voiture depuis Agde jusqu'à l'entrée nord ? (Julien, mesure sur Google Maps)]
 - Béziers : [À compléter : Temps de trajet en voiture depuis Béziers jusqu'à l'entrée nord ? (Julien, mesure sur Google Maps)]
 
-**H2 :** Devenez membre fondateur
+**H2 :** Jouez à 7 € la partie
 
-100 cartes à 49 €, avec 64 € de crédit de jeu. En vente jusqu'à l'inauguration ou jusqu'à épuisement.
+La carte de 10 parties à 70 €. 100 cartes, pas une de plus.
 
-**Bouton :** Je deviens membre fondateur
+**Bouton :** Je prends ma carte
 
 Conditions de la carte
 
-[À compléter : Quel est le lien Stripe Payment Link de la carte fondateur (limité à 100 paiements) ?]
+[À compléter : Quel est le lien Stripe Payment Link de la carte de 10 parties (limité à 100 paiements) ?]
 
 **Bouton :** Nous écrire sur WhatsApp
 
@@ -621,51 +622,52 @@ Réponse : Par l'entrée nord de la base départementale, à Montagnac.
 - Stages de padel enfants
 - Tournois et ligues de padel
 
-## /bienvenue-fondateur (non indexée)
+## /bienvenue-carte (non indexée)
 
-**Title :** Bienvenue parmi les membres fondateurs, Pad'el Bosque
+**Title :** Votre carte de 10 parties, Pad'el Bosque
 
-**Meta description :** Merci d'avoir rejoint les membres fondateurs de Pad'el Bosque. Voici la suite : crédit de jeu, inauguration, tournoi fondateurs.
+**Meta description :** Merci d'avoir pris votre carte de 10 parties chez Pad'el Bosque. Voici la suite.
 
-**H1 :** Bienvenue parmi les membres fondateurs
+**H1 :** Merci, votre carte est à vous
 
-Merci. Vous faites partie des 100 membres fondateurs de Pad'el Bosque.
+Vous avez une des 100 cartes de 10 parties de Pad'el Bosque.
 
 **H2 :** La suite
 
-- Votre crédit de jeu. 64 €, soit 8 sessions, chargés dans le logiciel du club à l'ouverture. Valable jusqu'au 31 mars 2027.
-- Votre tarif fondateur. 7 € la session jusqu'au 31 août 2027.
-- L'inauguration. Vous êtes invité. Elle aura lieu mi-novembre 2026.
-- Le tournoi fondateurs. Offert, en décembre 2026.
-- Le mur des fondateurs. Votre nom y sera inscrit, au club.
+- Vos parties. 10 créneaux de 90 minutes, à 7 € la partie au lieu de 8 €.
+- L'ouverture. Le club ouvre fin novembre 2026. Vos parties commencent à ce moment-là.
 
-Date de l'inauguration : [À compléter : Quelle est la date exacte de l'inauguration ?]
+Validité de la carte : [À compléter : Jusqu'à quelle date les parties de la carte sont-elles valables ?]
 
-Date du tournoi fondateurs : [À compléter : Quelle est la date du tournoi fondateurs de décembre 2026 ?]
+Date de l'inauguration : [À compléter : Quelle est la date de l'inauguration, maintenant que l'ouverture est fin novembre ?]
 
 **H2 :** Restons en contact
 
-Le club ouvre début novembre 2026. Pour suivre les dernières nouvelles et poser vos questions, rejoignez-nous sur WhatsApp.
+Pour suivre les dernières nouvelles et poser vos questions, rejoignez-nous sur WhatsApp.
 
 **Bouton :** Nous écrire sur WhatsApp
 
-[À compléter : Quel est le lien d'invitation du groupe WhatsApp des membres fondateurs ?]
+[À compléter : Quel est le lien d'invitation du groupe WhatsApp du club ?]
 
 Retour à l'accueil
 
-## /conditions-carte-fondateur (non indexée)
+## /conditions-carte (non indexée)
 
-**Title :** Conditions de la carte Membre fondateur, Pad'el Bosque
+**Title :** Conditions de la carte de 10 parties, Pad'el Bosque
 
-**Meta description :** Conditions de vente de la carte Membre fondateur de Pad'el Bosque : rétractation, remboursement, crédit de jeu, tarif fondateur, identité du vendeur.
+**Meta description :** Conditions de vente de la carte de 10 parties de Pad'el Bosque : rétractation, remboursement, validité, identité du vendeur.
 
-**H1 :** Conditions de la carte Membre fondateur
+**H1 :** Conditions de la carte de 10 parties
 
-La carte Membre fondateur coûte 49 €. 100 cartes sont en vente, jusqu'à l'inauguration ou jusqu'à épuisement. Le paiement se fait sur une page de paiement sécurisée Stripe.
+La carte de 10 parties coûte 70 €. 100 cartes sont en vente, jusqu'à épuisement. Le paiement se fait sur une page de paiement sécurisée Stripe.
+
+**H2 :** Ce que comprend la carte
+
+La carte comprend 10 parties. Une partie correspond à un créneau de 90 minutes, pour un joueur.
 
 **H2 :** Titulaire de la carte
 
-[À compléter : À valider avec William. Proposition : « La carte est nominative. Elle ne peut être ni cédée ni revendue. »]
+[À compléter : À valider avec William. La carte peut-elle servir à plusieurs joueurs ? Proposition : « La carte est nominative. Elle ne peut être ni cédée ni revendue. »]
 
 **H2 :** Droit de rétractation
 
@@ -673,21 +675,15 @@ La carte Membre fondateur coûte 49 €. 100 cartes sont en vente, jusqu'à l'in
 
 **H2 :** Si le club n'ouvre pas
 
-Le club prévoit d'ouvrir début novembre 2026, au plus tard fin novembre 2026.
+Le club prévoit d'ouvrir fin novembre 2026.
 
 [À compléter : À valider avec William. Proposition : « Si le club n'ouvre pas avant le 31 janvier 2027, vous pouvez demander le remboursement intégral de la carte. »]
 
-**H2 :** Crédit de jeu
+**H2 :** Validité
 
-La carte comprend 64 € de crédit de jeu, chargé dans le logiciel du club à l'ouverture et valable jusqu'au 31 mars 2027.
+[À compléter : Jusqu'à quelle date les parties de la carte sont-elles valables ?]
 
-[À compléter : À valider avec William. Proposition : « Le crédit de jeu non utilisé au 31 mars 2027 est perdu. Il n'est pas remboursable. »]
-
-**H2 :** Tarif fondateur
-
-Le titulaire de la carte joue à 7 € la session jusqu'au 31 août 2027.
-
-[À compléter : À valider avec William. Proposition : « Le tarif fondateur est personnel. Il ne s'applique qu'au titulaire de la carte et ne peut pas être transféré. »]
+[À compléter : À valider avec William. Proposition : « Les parties non jouées à la fin de validité de la carte sont perdues. Elles ne sont pas remboursables. »]
 
 **H2 :** Contact
 
@@ -745,11 +741,11 @@ Ce site ne dépose pas de cookie et n'utilise pas d'outil de mesure d'audience.
 
 Le site ne collecte aucune donnée personnelle. Il n'a pas de formulaire et pas de compte utilisateur.
 
-Le paiement de la carte Membre fondateur se fait sur une page externe Stripe. Stripe recueille votre nom, votre email et votre téléphone pour traiter le paiement. Vos données bancaires restent chez Stripe : le club n'y a jamais accès.
+Le paiement de la carte de 10 parties se fait sur une page externe Stripe. Stripe recueille votre nom, votre email et votre téléphone pour traiter le paiement. Vos données bancaires restent chez Stripe : le club n'y a jamais accès.
 
-Le club reçoit votre nom, votre email et votre téléphone. Ils servent uniquement à gérer votre carte : charger votre crédit de jeu, appliquer le tarif fondateur, vous inviter à l'inauguration et au tournoi fondateurs. Ils ne sont ni vendus ni cédés.
+Le club reçoit votre nom, votre email et votre téléphone. Ils servent uniquement à gérer votre carte et vos parties. Ils ne sont ni vendus ni cédés.
 
-Ces données sont conservées jusqu'à la fin des avantages fondateurs, le 31 août 2027, puis supprimées. Les factures sont conservées 10 ans, comme la loi l'impose.
+Ces données sont conservées jusqu'à la fin de validité de votre carte, puis supprimées. Les factures sont conservées 10 ans, comme la loi l'impose.
 
 Les liens WhatsApp ouvrent une conversation dans l'application WhatsApp. Les messages que vous envoyez sont soumis aux conditions de WhatsApp. Le club les utilise seulement pour vous répondre.
 
@@ -763,13 +759,13 @@ Pad'el Bosque, Base départementale de Bessilles, 34530 Montagnac. Téléphone :
 
 **Title :** Page introuvable, Pad'el Bosque
 
-**Meta description :** Cette page n'existe pas ou a été déplacée. Retrouvez Pad'el Bosque, le padel au cœur de la base départementale, à Montagnac.
+**Meta description :** Cette page n'existe pas ou a été déplacée. Retrouvez Pad'el Bosque, le padel au cœur de la base départementale de Bessilles, à Montagnac.
 
 **H1 :** Page introuvable
 
 Cette page n'existe pas ou a été déplacée.
 
 - Retour à l'accueil
-- Devenir membre fondateur
+- Voir la carte de 10 parties
 
 **Bouton :** Nous écrire sur WhatsApp

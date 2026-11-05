@@ -57,7 +57,7 @@ export default defineConfig({
   integrations: [
     masquerTodo(),
     sitemap({
-      filter: (page) => !['/bienvenue-fondateur', '/conditions-carte-fondateur', '/404'].some((p) => page.includes(p)),
+      filter: (page) => !['/bienvenue-carte', '/conditions-carte', '/404'].some((p) => page.includes(p)),
     }),
   ],
 });

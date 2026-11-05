@@ -7,7 +7,7 @@ Domaine visé : padelbosque.fr
 ## Objectif
 
 1. Présenter le club avant son ouverture (début novembre 2026).
-2. Vendre 100 cartes Membre fondateur.
+2. Vendre 100 cartes de 10 parties.
 3. Récolter des contacts WhatsApp en attendant le logiciel de réservation.
 4. Se positionner sur Google pour "padel" autour de Montagnac, Pézenas, Mèze et Sète.
 
@@ -42,8 +42,8 @@ Budget serré (500 € pour landing, fiche Google et 3 à 4 pages SEO). Pas de s
 | Téléphone | 06 14 97 97 49 |
 | Email | padelbosque@gmail.com |
 | Instagram | Pad'el Bosque (identifiant exact à créer) |
-| Ouverture | Début novembre 2026, au plus tard fin novembre |
-| Inauguration | Mi-novembre 2026, date exacte à venir |
+| Ouverture | Fin novembre 2026 |
+| Inauguration | Date à venir |
 | Horaires hiver | 9h à 21h, 7 jours sur 7 |
 | Horaires été | 8h à 22h30, 7 jours sur 7 |
 | Terrains | 4, extérieurs, panoramiques, éclairés |
@@ -59,15 +59,13 @@ Budget serré (500 € pour landing, fiche Google et 3 à 4 pages SEO). Pas de s
 | Ton | Sportif |
 | Référence de com | Puntaco |
 
-## Offre Membre fondateur (à faire valider par William avant mise en ligne)
+## Carte de 10 parties (décision de William, 5 novembre 2026)
 
-- 100 cartes, en vente jusqu'à l'inauguration ou jusqu'à épuisement.
-- Prix : 49 €.
-- 64 € de crédit de jeu, chargé dans le logiciel du club à l'ouverture, valable jusqu'au 31 mars 2027. Soit 8 sessions à 8 €.
-- Tarif fondateur : 7 € la session au lieu de 8 €, jusqu'au 31 août 2027.
-- Invitation à l'inauguration.
-- Tournoi fondateurs offert en décembre 2026.
-- Nom sur le mur des fondateurs au club.
+Remplace l'ancienne carte Membre fondateur, abandonnée : plus de crédit, de tarif réduit, de tournoi ni de mur des fondateurs.
+
+- 10 parties à 70 €, limitée à 100 cartes, en vente jusqu'à épuisement.
+- Une partie : un créneau de 90 min pour un joueur, soit 7 € au lieu de 8 € et 10 € d'économie (déduction, à confirmer par William).
+- Validité : à venir.
 
 Paiement par Stripe Payment Link limité à 100 paiements. Le checkout Stripe collecte nom, email, téléphone. Pas de compteur dynamique de cartes restantes : afficher "100 cartes, pas une de plus".
 
@@ -76,8 +74,8 @@ Paiement par Stripe Payment Link limité à 100 paiements. Le checkout Stripe co
 ### 1. Accueil (`/`)
 
 Sections dans cet ordre :
-1. Hero : nom, promesse liée au cadre ("Le padel en pleine nature"), date d'ouverture, bouton principal "Je deviens membre fondateur", bouton secondaire WhatsApp.
-2. L'offre fondateur : contenu complet, prix, bouton Stripe.
+1. Hero : nom, promesse liée au cadre ("Le padel en pleine nature"), date d'ouverture, bouton principal "Je prends ma carte", bouton secondaire WhatsApp.
+2. La carte de 10 parties : contenu complet, prix, bouton Stripe.
 3. Le club : 4 terrains panoramiques éclairés, cadre, équipements, parking gratuit.
 4. Tarifs et horaires : 8 € par joueur, créneau de 90 min, horaires hiver et été.
 5. Activités : stages enfants, tournois et ligues, soirées, entreprises, anniversaires.
@@ -93,7 +91,7 @@ Une page par intention réelle, chacune avec du contenu propre, jamais de pages 
 | --- | --- | --- |
 | `/padel-entreprise-team-building` | padel entreprise Hérault, team building padel | Format, déroulé, privatisation, bar et restauration sur place, contact |
 | `/stages-padel-enfants` | stage padel enfant, padel enfant Pézenas | Stages vacances scolaires, âges, déroulé. Infos détaillées à venir |
-| `/tournois-ligues-padel` | tournoi padel Hérault, ligue padel | Tournois, ligues internes, soirées, tournoi fondateurs |
+| `/tournois-ligues-padel` | tournoi padel Hérault, ligue padel | Tournois, ligues internes, soirées |
 | `/padel-pezenas-meze-sete` | padel Pézenas, padel Mèze, padel près de Sète | Page accès : trajet et temps depuis chaque ville, parking, pourquoi venir jouer ici |
 
 ### 3. Mentions légales (`/mentions-legales`)
@@ -122,12 +120,12 @@ Gabarit avec champs à compléter (raison sociale, SIRET, hébergeur).
 - Une info manquante devient un `TODO` visible dans `src/config.ts`, jamais une valeur inventée.
 - Images de banque libres de droits en attendant le shooting, signalées comme provisoires.
 - Textes en français, phrases courtes, tutoiement à éviter sur le site (vouvoiement).
-- Le nom « Bessilles » est protégé par le propriétaire du domaine. Il n'apparaît que dans l'adresse « Base départementale de Bessilles ». Ailleurs : « la base départementale », « Montagnac » ou « en pleine nature ». Le verifier fait échouer le build sinon.
+- Le nom « Bessilles » est protégé par le propriétaire du domaine. Il n'apparaît que dans l'adresse « Base départementale de Bessilles » et dans la formule « au cœur de la base départementale de Bessilles » (accord de William). Ailleurs : « la base départementale », « Montagnac » ou « en pleine nature ». Le verifier fait échouer le build sinon.
 
 ## Infos manquantes
 
 - [ ] Adresse postale exacte ou coordonnées GPS de l'entrée nord
-- [ ] Validation de l'offre fondateur par William
+- [ ] Validité de la carte de 10 parties et confirmation du calcul par William
 - [ ] Lien Stripe Payment Link
 - [ ] Logo en vectoriel et couleurs de marque
 - [ ] Coach, cours, abonnements ou carnets : formules et prix
