@@ -314,12 +314,8 @@ main > section:not(.verso) + section.verso::before {
 
 .embleme {
   display: inline-block;
-  line-height: 0;
-}
-
-.embleme svg {
-  width: 100%;
-  height: auto;
+  background: currentColor;
+  mask: var(--embleme-image) center / contain no-repeat;
 }
 
 /* ---------- En-tête ---------- */
@@ -342,11 +338,7 @@ main > section:not(.verso) + section.verso::before {
 
 .marque .embleme {
   flex-shrink: 0;
-}
-
-.marque svg {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.75rem;
 }
 
 .marque-nom {
@@ -520,7 +512,8 @@ footer nav a:hover {
 }
 
 footer .pied-embleme {
-  width: 4.5rem;
+  display: block;
+  width: 10rem;
   color: var(--orange);
   margin-bottom: 1rem;
 }

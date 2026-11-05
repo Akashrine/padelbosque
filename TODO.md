@@ -88,4 +88,4 @@ Autres :
 - [ ] Formule et prix d'un anniversaire ou d'une privatisation.
 - [ ] Date du shooting photo et vidéo sur place.
 - [ ] Téléphone de l'hébergeur dans les mentions légales (`legal.hebergeur`) : Vercel ne publie qu'un numéro de contact DMCA, à décider.
-- [ ] Remplacer l'image de partage provisoire (`public/og-default.png`, texte seul) et le favicon provisoire par le logo et les photos.
+- [ ] Remplacer l'image de partage provisoire (`public/og-default.png`, texte seul) par le logo et les photos.

@@ -1,17 +1,24 @@
 ---
-/** Emblème vectoriel du logo (src/assets/logo/embleme.svg), coloré par currentColor. */
-import embleme from '../assets/logo/embleme.svg?raw';
+/** Logo détouré (scripts/generer-logo.mjs), coloré par currentColor. Emblème seul par défaut, logo entier avec `complet`. */
+import embleme from '../assets/logo/embleme.webp';
+import logo from '../assets/logo/logo.webp';
 
 interface Props {
   class?: string;
-  /** Texte alternatif ; vide si l'emblème est décoratif. */
+  /** Logo entier avec le nom et le téléphone, pour les grandes tailles. */
+  complet?: boolean;
+  /** Texte alternatif ; vide si le logo est décoratif. */
   titre?: string;
 }
 
-const { class: classe, titre } = Astro.props;
-const svg = titre
-  ? embleme.replace(/aria-label="[^"]*"/, `aria-label="${titre}"`)
-  : embleme.replace(/role="img" aria-label="[^"]*"/, 'aria-hidden="true" focusable="false"');
+const { class: classe, complet = false, titre } = Astro.props;
+const image = complet ? logo : embleme;
 ---
 
-<span class:list={['embleme', classe]} set:html={svg} />
+<span
+  class:list={['embleme', classe]}
+  style={`--embleme-image:url(${image.src});aspect-ratio:${image.width}/${image.height}`}
+  role={titre ? 'img' : undefined}
+  aria-label={titre}
+  aria-hidden={titre ? undefined : 'true'}
+></span>
