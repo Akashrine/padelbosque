@@ -338,7 +338,7 @@ main > section:not(.verso) + section.verso::before {
 
 .marque .embleme {
   flex-shrink: 0;
-  width: 2.75rem;
+  width: 4.5rem;
 }
 
 .marque-nom {
