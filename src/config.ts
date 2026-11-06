@@ -94,7 +94,7 @@ export const club = {
     jsonLd: '+33 6 14 97 97 49',
   },
 
-  email: 'padelbosque@gmail.com',
+  email: 'padelbosque34@gmail.com',
 
   instagram: {
     nom: "Pad'el Bosque",

@@ -27,7 +27,7 @@ Les passages **[À compléter : …]** sont des infos manquantes. En production,
 
 **H2 :** Pad'el Bosque
 
-Base départementale de Bessilles, Entrée nord, 34530 Montagnac, 06 14 97 97 49, padelbosque@gmail.com
+Base départementale de Bessilles, Entrée nord, 34530 Montagnac, 06 14 97 97 49, padelbosque34@gmail.com
 
 Instagram : [À compléter : Quel est l'identifiant Instagram exact du club ?]
 
@@ -700,7 +700,7 @@ Pour toute question sur la carte, écrivez à padelbosque@gmail.com ou appelez l
 - Siège social : Base départementale de Bessilles, 34530 Montagnac
 - Adresse du club : Base départementale de Bessilles, 34530 Montagnac
 - Téléphone : 06 14 97 97 49
-- Email : padelbosque@gmail.com
+- Email : padelbosque34@gmail.com
 
 Voir aussi les mentions légales.
 
@@ -723,7 +723,7 @@ Voir aussi les mentions légales.
 - Siège social : Base départementale de Bessilles, 34530 Montagnac
 - Adresse du club : Base départementale de Bessilles, 34530 Montagnac
 - Téléphone : 06 14 97 97 49
-- Email : padelbosque@gmail.com
+- Email : padelbosque34@gmail.com
 - Directrice de la publication : Fanny Ramos, gérante
 
 **H2 :** Hébergeur

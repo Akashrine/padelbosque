@@ -40,7 +40,7 @@ Budget serré (500 € pour landing, fiche Google et 3 à 4 pages SEO). Pas de s
 | Nom | Pad'el Bosque |
 | Adresse | Base départementale de Bessilles, 34530 Montagnac (entrée nord). Adresse postale exacte à venir |
 | Téléphone | 06 14 97 97 49 |
-| Email | padelbosque@gmail.com |
+| Email | padelbosque34@gmail.com |
 | Instagram | Pad'el Bosque (identifiant exact à créer) |
 | Ouverture | Fin novembre 2026 |
 | Inauguration | Date à venir |
