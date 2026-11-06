@@ -6,14 +6,13 @@ En production, tout bloc qui dépend d'un TODO est masqué. Liste des blocs masq
 ## Message WhatsApp à envoyer à William
 
 ```
-Salut William, c'est noté pour la carte de 10 parties à 70 €, limitée à 100, et pour l'ouverture fin novembre. Il me manque 6 réponses.
+Salut William, c'est noté pour la carte de 10 parties à 70 €, limitée à 100, et pour l'ouverture fin novembre. Il me manque 5 réponses.
 
 1. Une partie = un créneau de 90 min pour un joueur, donc 7 € la partie au lieu de 8 € ? Oui / non
 2. La carte est valable jusqu'à quelle date ?
-3. Elle est personnelle, ou on peut l'utiliser pour ses partenaires de jeu ?
-4. Les conditions te vont (rétractation de 14 jours, remboursement si le club n'ouvre pas avant le 31 janvier 2027, parties non jouées perdues en fin de validité) ? Oui / non
-5. L'inauguration était prévue mi-novembre, avant l'ouverture. Quelle nouvelle date ?
-6. On cale 30 min avec Fanny pour créer le compte Stripe du club ? Il faudra sa pièce d'identité et le RIB de la société. Donne-moi 2 ou 3 créneaux qui vous arrangent.
+3. Les conditions te vont (rétractation de 14 jours, remboursement si le club n'ouvre pas avant le 31 janvier 2027, parties non jouées perdues en fin de validité) ? Oui / non
+4. L'inauguration était prévue mi-novembre, avant l'ouverture. Quelle nouvelle date ?
+5. On cale 30 min avec Fanny pour créer le compte Stripe du club ? Il faudra sa pièce d'identité et le RIB de la société. Donne-moi 2 ou 3 créneaux qui vous arrangent.
 
 Merci !
 ```
@@ -24,7 +23,6 @@ Pour William (les points sont dans le message) :
 
 - [ ] Confirmer le calcul de la carte : une partie = un créneau de 90 min pour un joueur, soit 7 € au lieu de 8 € et 10 € d'économie. William a donné « 10 parties à 70 €, limité à 100 » : le reste est une déduction de Julien, affichée sur le site.
 - [ ] Date de fin de validité de la carte (`carte.validite` dans `src/config.ts`). Sans elle, le bouton de la carte ouvre WhatsApp.
-- [ ] Carte personnelle ou utilisable pour ses partenaires de jeu (`conditionsCarte.nominative`).
 - [ ] Valider les conditions de la carte (`conditionsCarte` dans `src/config.ts`, page `/conditions-carte`) : rétractation de 14 jours avec remboursement intégral, remboursement si le club n'ouvre pas avant le 31 janvier 2027, parties non jouées perdues en fin de validité. Pour chaque point validé, remplacer le TODO par la phrase proposée.
 - [ ] Séance de 30 min pour créer le compte Stripe du club avec la gérante, Fanny Ramos. À prévoir : sa pièce d'identité et le RIB de la société.
 

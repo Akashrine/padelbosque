@@ -5,6 +5,6 @@ description: "{{terrainsDetail}} {{cadre}}, à Montagnac. {{prix}} par joueur. O
 sousTitre: "Ouverture {{ouverture}}."
 ---
 
-{{terrainsDetail}}, {{cadre}}. À Montagnac, dans l'Hérault, près de Pézenas, Mèze et Sète.
+{{terrainsDetail}}, situés dans un écrin de verdure, {{proximite}}.
 
 La carte de {{carteParties}} parties est en vente avant l'ouverture : {{cartePrix}}, soit {{cartePrixPartie}} la partie au lieu de {{prix}}. {{carteNombre}} cartes, pas une de plus.

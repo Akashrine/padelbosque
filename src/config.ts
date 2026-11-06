@@ -209,6 +209,7 @@ export const carte = {
   venteJusqua: 'épuisement',
   validite: 'TODO: Jusqu\'à quelle date les parties de la carte sont-elles valables ?' as string | Todo,
   accroche: '100 cartes, pas une de plus.',
+  limite: 'Une seule carte par personne, nominative.',
 };
 
 /** Prix d'une partie avec la carte. */
@@ -235,6 +236,7 @@ export const liens = {
 
 export const acces = {
   repere: 'Entrée nord de la base départementale',
+  proximite: 'à seulement 8 min de Montagnac, Mèze, Villeveyrac et Saint-Pargoire',
   villes: [
     { nom: 'Pézenas', tempsDeTrajet: 'TODO: Temps de trajet en voiture depuis Pézenas jusqu\'à l\'entrée nord ? (Julien, mesure sur Google Maps)' },
     { nom: 'Mèze', tempsDeTrajet: 'TODO: Temps de trajet en voiture depuis Mèze jusqu\'à l\'entrée nord ? (Julien, mesure sur Google Maps)' },
@@ -293,10 +295,7 @@ export const tournois = {
  * par un comptable ou un juriste. Une fois validé, remplacer le TODO par la phrase entre guillemets.
  */
 export const conditionsCarte = {
-  nominative:
-    'TODO: À valider avec William. La carte peut-elle servir à plusieurs joueurs ? Proposition : « La carte est nominative. Elle ne peut être ni cédée ni revendue. »' as
-      | string
-      | Todo,
+  nominative: carte.limite as string | Todo,
   retractation:
     `TODO: À valider avec William. Proposition : « Vous disposez d'un droit de rétractation de 14 jours à compter de l'achat. Pour l'exercer, écrivez à ${club.email} : vous êtes remboursé intégralement. »` as
       | string

@@ -52,7 +52,9 @@ export const variables: Record<string, string> = {
   carteValeur: euros(valeurCarte()),
   carteEconomie: euros(economieCarte()),
   carteVenteJusqua: carte.venteJusqua,
+  carteLimite: carte.limite,
   repere: acces.repere,
+  proximite: acces.proximite,
 
   // Infos encore manquantes : elles s'affichent comme TODO visibles tant qu'elles valent "TODO: ...".
   adressePostale: club.adresse.adressePostaleExacte,

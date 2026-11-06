@@ -65,6 +65,7 @@ Remplace l'ancienne carte Membre fondateur, abandonnée : plus de crédit, de ta
 
 - 10 parties à 70 €, limitée à 100 cartes, en vente jusqu'à épuisement.
 - Une partie : un créneau de 90 min pour un joueur, soit 7 € au lieu de 8 € et 10 € d'économie (déduction, à confirmer par William).
+- Une seule carte par personne, nominative.
 - Validité : à venir.
 
 Paiement par Stripe Payment Link limité à 100 paiements. Le checkout Stripe collecte nom, email, téléphone. Pas de compteur dynamique de cartes restantes : afficher "100 cartes, pas une de plus".

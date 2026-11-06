@@ -79,7 +79,7 @@ Base départementale de Bessilles, 34530 Montagnac
 - 100 cartes, pas une de plus.
 - 7 € la partie au lieu de 8 €
 
-4 terrains extérieurs, panoramiques et éclairés, au cœur de la base départementale de Bessilles. À Montagnac, dans l'Hérault, près de Pézenas, Mèze et Sète.
+4 terrains extérieurs, panoramiques et éclairés, situés dans un écrin de verdure, à seulement 8 min de Montagnac, Mèze, Villeveyrac et Saint-Pargoire.
 
 La carte de 10 parties est en vente avant l'ouverture : 70 €, soit 7 € la partie au lieu de 8 €. 100 cartes, pas une de plus.
 
@@ -97,7 +97,7 @@ Le club n'est pas encore ouvert. Vous pouvez déjà prendre vos parties.
 
 À l'unité, une partie coûte 8 €. Avec la carte, elle revient à 7 €. Sur 10 parties, vous gardez 10 € en poche.
 
-Il n'y aura que 100 cartes. Le paiement se fait en ligne, sur une page de paiement sécurisée Stripe.
+Il n'y aura que 100 cartes. Une seule carte par personne, nominative. Le paiement se fait en ligne, sur une page de paiement sécurisée Stripe.
 
 **H3 :** Ce que comprend la carte
 
@@ -667,7 +667,7 @@ La carte comprend 10 parties. Une partie correspond à un créneau de 90 minutes
 
 **H2 :** Titulaire de la carte
 
-[À compléter : À valider avec William. La carte peut-elle servir à plusieurs joueurs ? Proposition : « La carte est nominative. Elle ne peut être ni cédée ni revendue. »]
+Une seule carte par personne, nominative.
 
 **H2 :** Droit de rétractation
 
