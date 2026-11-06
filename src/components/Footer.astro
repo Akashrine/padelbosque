@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import { club, estTodo } from '../config';
+import { club, estTodo, legal } from '../config';
 import Info from './Info.astro';
 import Embleme from './Embleme.astro';
 
@@ -37,6 +37,11 @@ const annee = new Date().getFullYear();
     </ul>
   </nav>
 
-  <p><small>© {annee} {club.nom}</small></p>
+  <p>
+    <small>
+      © {annee} {club.nom}<br />
+      Site réalisé par <a href={legal.realisation.url} rel="noopener">{legal.realisation.nom}</a>
+    </small>
+  </p>
   </div>
 </footer>

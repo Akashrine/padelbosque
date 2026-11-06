@@ -39,7 +39,7 @@ Instagram : [À compléter : Quel est l'identifiant Instagram exact du club ?]
 - Conditions de la carte
 - Mentions légales
 
-© 2026 Pad'el Bosque
+© 2026 Pad'el Bosque, Site réalisé par Julien Brionne
 
 ## /
 
@@ -730,6 +730,10 @@ Voir aussi les mentions légales.
 
 - Nom : Vercel Inc.
 - Adresse : 440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis
+
+**H2 :** Réalisation du site
+
+Site conçu et développé par Julien Brionne.
 
 **H2 :** Propriété intellectuelle
 

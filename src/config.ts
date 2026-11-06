@@ -329,6 +329,10 @@ export const legal = {
   siege: 'Base départementale de Bessilles, 34530 Montagnac' as string | Todo,
   directeurPublication: 'Fanny Ramos, gérante' as string | Todo,
   tva: 'FR10999918162' as string | Todo,
+  realisation: {
+    nom: 'Julien Brionne',
+    url: 'https://www.julien-brionne.fr',
+  },
   hebergeur: {
     nom: 'Vercel Inc.' as string | Todo,
     adresse: '440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis' as string | Todo,

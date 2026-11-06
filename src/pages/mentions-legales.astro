@@ -33,6 +33,9 @@ const page = await pageSysteme('mentions-legales');
       <dd><Info valeur={legal.hebergeur.adresse} /></dd>
     </dl>
 
+    <h2>Réalisation du site</h2>
+    <p>Site conçu et développé par <a href={legal.realisation.url} rel="noopener">{legal.realisation.nom}</a>.</p>
+
     <page.Contenu />
   </article>
 </BaseLayout>
