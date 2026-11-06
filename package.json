@@ -5,11 +5,11 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro check && astro build --force",
     "preview": "astro preview",
     "astro": "astro",
     "verifier": "node --experimental-strip-types --no-warnings scripts/verifier.mjs",
-    "contenus": "TODO_VISIBLES=1 astro build --outDir .build-contenus && node scripts/exporter-contenus.mjs"
+    "contenus": "TODO_VISIBLES=1 astro build --force --outDir .build-contenus && node scripts/exporter-contenus.mjs"
   },
   "dependencies": {
     "@astrojs/markdown-satteri": "^0.4.3",

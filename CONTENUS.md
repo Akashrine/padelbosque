@@ -268,7 +268,7 @@ Vous venez de Pézenas, Mèze, Sète, Agde ou Béziers ? Consultez la page accè
 
 **H2 :** Comment nous contacter ?
 
-Le plus simple est WhatsApp. Vous pouvez aussi appeler le 06 14 97 97 49 ou écrire à padelbosque@gmail.com.
+Le plus simple est WhatsApp. Vous pouvez aussi appeler le 06 14 97 97 49 ou écrire à padelbosque34@gmail.com.
 
 **H2 :** Jouez à 7 € la partie
 
@@ -671,7 +671,7 @@ La carte comprend 10 parties. Une partie correspond à un créneau de 90 minutes
 
 **H2 :** Droit de rétractation
 
-[À compléter : À valider avec William. Proposition : « Vous disposez d'un droit de rétractation de 14 jours à compter de l'achat. Pour l'exercer, écrivez à padelbosque@gmail.com : vous êtes remboursé intégralement. »]
+[À compléter : À valider avec William. Proposition : « Vous disposez d'un droit de rétractation de 14 jours à compter de l'achat. Pour l'exercer, écrivez à padelbosque34@gmail.com : vous êtes remboursé intégralement. »]
 
 **H2 :** Si le club n'ouvre pas
 
@@ -687,7 +687,7 @@ Le club prévoit d'ouvrir fin novembre 2026.
 
 **H2 :** Contact
 
-Pour toute question sur la carte, écrivez à padelbosque@gmail.com ou appelez le 06 14 97 97 49.
+Pour toute question sur la carte, écrivez à padelbosque34@gmail.com ou appelez le 06 14 97 97 49.
 
 **H2 :** Vendeur
 
@@ -753,11 +753,11 @@ Ces données sont conservées jusqu'à la fin de validité de votre carte, puis 
 
 Les liens WhatsApp ouvrent une conversation dans l'application WhatsApp. Les messages que vous envoyez sont soumis aux conditions de WhatsApp. Le club les utilise seulement pour vous répondre.
 
-Vous pouvez demander l'accès, la rectification ou la suppression de vos données en écrivant à padelbosque@gmail.com.
+Vous pouvez demander l'accès, la rectification ou la suppression de vos données en écrivant à padelbosque34@gmail.com.
 
 **H2 :** Contact
 
-Pad'el Bosque, Base départementale de Bessilles, 34530 Montagnac. Téléphone : 06 14 97 97 49. Email : padelbosque@gmail.com.
+Pad'el Bosque, Base départementale de Bessilles, 34530 Montagnac. Téléphone : 06 14 97 97 49. Email : padelbosque34@gmail.com.
 
 ## /404 (non indexée)
 
