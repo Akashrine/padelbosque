@@ -33,7 +33,7 @@ Côté Julien, pas de question à poser :
 - [ ] Faire relire les conditions de la carte par un comptable ou un juriste.
 - [ ] Relire la clause données personnelles des mentions légales (`src/content/pages/mentions-legales.md`) : aucune collecte sur le site, paiement via Stripe, contact via WhatsApp, pas de cookie de mesure, données des acheteurs conservées jusqu'à la fin de validité de la carte, factures 10 ans.
 - [ ] Pendant la séance Stripe : créer le Payment Link Stripe (100 paiements, collecte nom, email, téléphone), régler son URL de retour sur `https://padelbosque.fr/bienvenue-carte`, reporter l'URL dans `liens.stripe`. Sans lui, le bouton de la carte ouvre WhatsApp.
-- [ ] Brancher padelbosque.fr : le domaine est chez Gandi, le site chez Vercel.
+- [x] Brancher padelbosque.fr : le domaine est chez Gandi, le site chez Vercel.
 
 Société : Kbis reçu, questions closes. Raison sociale, forme juridique, RCS, siège et directrice de la publication dans `legal` (`src/config.ts`). SIRET du siège et TVA recopiés depuis l'API officielle recherche-entreprises.api.gouv.fr. Nom commercial : Pad'el Bosque, partout (site, fiche Google, panneau).
 
@@ -92,4 +92,4 @@ Autres :
 - [ ] Formule et prix d'un anniversaire ou d'une privatisation.
 - [ ] Date du shooting photo et vidéo sur place.
 - [ ] Téléphone de l'hébergeur dans les mentions légales (`legal.hebergeur`) : Vercel ne publie qu'un numéro de contact DMCA, à décider.
-- [ ] Remplacer l'image de partage provisoire (`public/og-default.png`, texte seul) par le logo et les photos.
+- [ ] Ajouter une vraie photo du club aux images de partage (`src/lib/image-partage.ts`) après le shooting.

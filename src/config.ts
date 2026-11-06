@@ -61,8 +61,8 @@ const tousLesJours: Jour[] = [
 export const site = {
   url: 'https://padelbosque.fr',
   langue: 'fr',
-  /** Image de partage provisoire, texte seul, en attendant logo et photos. */
-  imagePartage: '/og-default.png',
+  /** Image de partage par défaut, générée par src/pages/og/[image].png.ts. */
+  imagePartage: '/og/accueil.png',
 } as const;
 
 export const club = {

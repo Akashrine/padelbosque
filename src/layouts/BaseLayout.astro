@@ -15,9 +15,10 @@ interface Props {
   noindex?: boolean;
   jsonLd?: JsonLd[];
   contexteWhatsApp?: ContexteWhatsApp;
+  imagePartage?: string;
 }
 
-const { title, description, noindex, jsonLd, contexteWhatsApp = 'general' } = Astro.props;
+const { title, description, noindex, jsonLd, contexteWhatsApp = 'general', imagePartage } = Astro.props;
 ---
 
 <!doctype html>
@@ -32,7 +33,7 @@ const { title, description, noindex, jsonLd, contexteWhatsApp = 'general' } = As
     <link rel="icon" href="/favicon.png" type="image/png" sizes="96x96" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <Seo title={title} description={description} noindex={noindex} jsonLd={jsonLd} />
+    <Seo title={title} description={description} noindex={noindex} jsonLd={jsonLd} imagePartage={imagePartage} />
   </head>
   <body>
     <a class="evitement" href="#contenu">Aller au contenu</a>

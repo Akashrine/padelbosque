@@ -49,6 +49,7 @@ export function sportsActivityLocation(description: string): JsonLd {
     description,
     url: `${site.url}/`,
     image: urlAbsolue(site.imagePartage),
+    logo: urlAbsolue('/apple-touch-icon.png'),
     telephone: club.telephone.jsonLd,
     email: club.email,
     address: adressePostale(),
