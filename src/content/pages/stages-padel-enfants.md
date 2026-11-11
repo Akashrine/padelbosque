@@ -65,7 +65,7 @@ Un enfant qui a aimé son stage peut continuer à jouer en famille. Le padel se 
 
 ## Où se trouve le club ?
 
-À l'{{entree}} de la base départementale, à {{ville}}. Vous venez de Pézenas, Mèze ou Sète ? [Consultez la page accès](/padel-pezenas-meze-sete).
+À l'{{entree}} de la base départementale, à {{ville}}. Vous venez de Mèze, Pézenas ou Sète ? [Consultez la page accès](/padel-pezenas-meze-sete).
 
 ## Comment inscrire votre enfant ?
 

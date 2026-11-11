@@ -14,7 +14,7 @@ import Acces from '../components/Acces.astro';
 import Faq from '../components/Faq.astro';
 import { club } from '../config';
 import { remplir } from '../lib/gabarit';
-import { sportsActivityLocation } from '../lib/jsonld';
+import { siteWeb, sportsActivityLocation } from '../lib/jsonld';
 import photoChantier from '../assets/chantier/chantier-9.jpg';
 
 const section = async (id: string) => {
@@ -38,7 +38,7 @@ const [nomHero, ...reste] = hero.titre.split(', ');
 const promesse = reste.join(', ');
 ---
 
-<BaseLayout title={title} description={description} jsonLd={[sportsActivityLocation(description)]}>
+<BaseLayout title={title} description={description} jsonLd={[siteWeb(), sportsActivityLocation(description)]}>
   <section id="accueil" class="hero" aria-labelledby="titre-accueil">
     <div class="bloc hero-grille">
       <div class="hero-texte">

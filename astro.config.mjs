@@ -57,6 +57,7 @@ export default defineConfig({
   integrations: [
     masquerTodo(),
     sitemap({
+      lastmod: new Date(),
       filter: (page) => !['/bienvenue-carte', '/conditions-carte', '/404'].some((p) => page.includes(p)),
     }),
   ],

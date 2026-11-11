@@ -55,6 +55,7 @@ export const variables: Record<string, string> = {
   carteLimite: carte.limite,
   repere: acces.repere,
   proximite: acces.proximite,
+  tempsProche: acces.tempsProche,
 
   // Infos encore manquantes : elles s'affichent comme TODO visibles tant qu'elles valent "TODO: ...".
   adressePostale: club.adresse.adressePostaleExacte,

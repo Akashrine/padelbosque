@@ -67,6 +67,8 @@ export const site = {
 
 export const club = {
   nom: "Pad'el Bosque",
+  /** Graphie tapée dans Google : sert de nom alternatif dans le JSON-LD, jamais à l'affichage. */
+  nomSansApostrophe: 'Padel Bosque',
   promesse: 'Le padel en pleine nature',
   argument: 'Des terrains en pleine nature',
   /** Seule formule, avec l'adresse, où le nom Bessilles est autorisé (accord de William). */
@@ -234,12 +236,16 @@ export const liens = {
     encodeURIComponent('Base départementale de Bessilles, 34530 Montagnac'),
 };
 
+/** Villes à moins de 10 minutes, avec le temps de trajet annoncé par le club. */
+const proches = { temps: '8 min', villes: ['Montagnac', 'Mèze', 'Villeveyrac', 'Saint-Pargoire'] };
+
 export const acces = {
   repere: 'Entrée nord de la base départementale',
-  proximite: 'à seulement 8 min de Montagnac, Mèze, Villeveyrac et Saint-Pargoire',
+  tempsProche: proches.temps,
+  proximite: `à seulement ${proches.temps} de ${proches.villes.join(', ').replace(/, ([^,]*)$/, ' et $1')}`,
   villes: [
+    ...proches.villes.map((nom) => ({ nom, tempsDeTrajet: proches.temps })),
     { nom: 'Pézenas', tempsDeTrajet: 'TODO: Temps de trajet en voiture depuis Pézenas jusqu\'à l\'entrée nord ? (Julien, mesure sur Google Maps)' },
-    { nom: 'Mèze', tempsDeTrajet: 'TODO: Temps de trajet en voiture depuis Mèze jusqu\'à l\'entrée nord ? (Julien, mesure sur Google Maps)' },
     { nom: 'Sète', tempsDeTrajet: 'TODO: Temps de trajet en voiture depuis Sète jusqu\'à l\'entrée nord ? (Julien, mesure sur Google Maps)' },
     { nom: 'Agde', tempsDeTrajet: 'TODO: Temps de trajet en voiture depuis Agde jusqu\'à l\'entrée nord ? (Julien, mesure sur Google Maps)' },
     { nom: 'Béziers', tempsDeTrajet: 'TODO: Temps de trajet en voiture depuis Béziers jusqu\'à l\'entrée nord ? (Julien, mesure sur Google Maps)' },

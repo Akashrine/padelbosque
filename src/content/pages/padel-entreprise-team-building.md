@@ -64,7 +64,7 @@ C'est souvent là que le team building fait son effet : autour d'un verre, en re
 
 Le club se trouve à l'{{entree}} de la base départementale, à {{ville}}. Le parking est gratuit, avec {{parking}}. Le site est accessible aux personnes à mobilité réduite.
 
-Vous venez de Pézenas, Mèze, Sète, Agde ou Béziers ? [Consultez la page accès](/padel-pezenas-meze-sete).
+Vous venez de Mèze, Pézenas, Sète, Agde ou Béziers ? [Consultez la page accès](/padel-pezenas-meze-sete).
 
 ## Comment nous contacter ?
 

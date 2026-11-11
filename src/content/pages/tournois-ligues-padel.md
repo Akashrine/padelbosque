@@ -57,4 +57,4 @@ D'abord pour le cadre. Les terrains sont installés {{cadre}}. Vous jouez dehors
 
 Ensuite pour les conditions. {{terrainsDetail}}. Des vestiaires et des douches. Un bar, de la restauration et un espace détente pour attendre son prochain match ou fêter une victoire.
 
-Enfin pour l'accès. Le parking est gratuit, avec {{parking}}. Le club est accessible aux personnes à mobilité réduite. Vous venez de Pézenas, Mèze, Sète, Agde ou Béziers ? [Consultez la page accès](/padel-pezenas-meze-sete).
+Enfin pour l'accès. Le parking est gratuit, avec {{parking}}. Le club est accessible aux personnes à mobilité réduite. Vous venez de Mèze, Pézenas, Sète, Agde ou Béziers ? [Consultez la page accès](/padel-pezenas-meze-sete).

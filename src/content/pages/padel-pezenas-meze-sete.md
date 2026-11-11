@@ -2,19 +2,25 @@
 type: seo
 slug: padel-pezenas-meze-sete
 ordre: 4
-title: "Padel près de Pézenas, Mèze et Sète, {{nom}}"
-description: "Club de padel près de Pézenas, Mèze et Sète : {{terrains}} terrains panoramiques et éclairés à Montagnac. Parking gratuit, {{prix}} par joueur."
-h1: "Padel près de Pézenas, Mèze et Sète : venez jouer à Montagnac"
-requete: "padel Pézenas, padel Mèze, padel près de Sète"
-libelleLien: "Padel près de Pézenas, Mèze et Sète"
+title: "Padel près de Mèze, Pézenas et Sète, {{nom}}"
+description: "Club de padel à {{tempsProche}} de Mèze, près de Pézenas et Sète : {{terrains}} terrains panoramiques et éclairés à Montagnac. Parking gratuit, {{prix}} par joueur."
+h1: "Padel près de Mèze, Pézenas et Sète : venez jouer à Montagnac"
+requete: "padel Mèze, padel Montagnac, padel Pézenas, padel près de Sète"
+libelleLien: "Padel près de Mèze, Pézenas et Sète"
 contexteWhatsApp: general
 faq: acces
 blocs: [acces]
 ---
 
-Vous habitez Pézenas, Mèze, Sète, Agde ou Béziers et vous cherchez où jouer au padel ? {{nom}} ouvre {{ouverture}} à {{ville}}.
+Vous habitez Mèze, Pézenas, Sète, Agde ou Béziers et vous cherchez où jouer au padel ? {{nom}} ouvre {{ouverture}} à {{ville}}, dans l'{{departement}}.
 
 Le club compte {{terrainsDetail}}. Un seul prix : {{prix}} par joueur, soit {{prixTerrain}} le terrain pour {{creneau}}, à toute heure.
+
+## Un club de padel à {{tempsProche}} de Mèze
+
+Depuis Mèze, comptez {{tempsProche}} en voiture jusqu'au club. Le trajet est le même depuis Villeveyrac, Saint-Pargoire et le centre de Montagnac.
+
+Sur place, vous trouvez {{terrainsDetail}}, ouverts 7 jours sur 7, et un parking gratuit de {{parking}}.
 
 ## Où se trouve le club ?
 

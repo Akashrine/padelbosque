@@ -35,7 +35,7 @@ Instagram : [À compléter : Quel est l'identifiant Instagram exact du club ?]
 - Padel entreprise et team building
 - Stages de padel enfants
 - Tournois et ligues de padel
-- Padel près de Pézenas, Mèze et Sète
+- Padel près de Mèze, Pézenas et Sète
 - Conditions de la carte
 - Mentions légales
 
@@ -43,9 +43,9 @@ Instagram : [À compléter : Quel est l'identifiant Instagram exact du club ?]
 
 ## /
 
-**Title :** Pad'el Bosque, club de padel à Montagnac près de Pézenas (34)
+**Title :** Pad'el Bosque, padel à Montagnac près de Mèze (Hérault)
 
-**Meta description :** 4 terrains extérieurs, panoramiques et éclairés au cœur de la base départementale de Bessilles, à Montagnac. 8 € par joueur. Ouverture fin novembre 2026.
+**Meta description :** Club de padel à Montagnac, dans l'Hérault, à 8 min de Mèze. 4 terrains extérieurs, panoramiques et éclairés. 8 € par joueur. Ouverture fin novembre 2026.
 
 **H1 :** Pad'el Bosque, le padel en pleine nature
 
@@ -79,7 +79,7 @@ Base départementale de Bessilles, 34530 Montagnac
 - 100 cartes, pas une de plus.
 - 7 € la partie au lieu de 8 €
 
-4 terrains extérieurs, panoramiques et éclairés, situés dans un écrin de verdure, à seulement 8 min de Montagnac, Mèze, Villeveyrac et Saint-Pargoire.
+4 terrains extérieurs, panoramiques et éclairés, situés dans un écrin de verdure, à seulement 8 min de Montagnac, Mèze, Villeveyrac et Saint-Pargoire, dans l'Hérault.
 
 La carte de 10 parties est en vente avant l'ouverture : 70 €, soit 7 € la partie au lieu de 8 €. 100 cartes, pas une de plus.
 
@@ -153,9 +153,9 @@ Formule et prix : [À compléter : Quelle formule et quel prix pour un anniversa
 
 **H2 :** Accès
 
-Le club se trouve à l'entrée nord de la base départementale, à Montagnac. Le parking est gratuit.
+Le club se trouve à l'entrée nord de la base départementale, à Montagnac, dans l'Hérault (34). Le parking est gratuit.
 
-Vous venez de Pézenas, Mèze, Sète, Agde ou Béziers ? Consultez la page accès détaillée.
+Vous venez de Mèze, Pézenas, Sète, Agde ou Béziers ? Consultez la page accès détaillée.
 
 Ouvrir dans Google Maps
 
@@ -169,8 +169,11 @@ Parking gratuit de 2 000 places.
 
 **H3 :** Temps de trajet en voiture
 
+- Montagnac : 8 min
+- Mèze : 8 min
+- Villeveyrac : 8 min
+- Saint-Pargoire : 8 min
 - Pézenas : [À compléter : Temps de trajet en voiture depuis Pézenas jusqu'à l'entrée nord ? (Julien, mesure sur Google Maps)]
-- Mèze : [À compléter : Temps de trajet en voiture depuis Mèze jusqu'à l'entrée nord ? (Julien, mesure sur Google Maps)]
 - Sète : [À compléter : Temps de trajet en voiture depuis Sète jusqu'à l'entrée nord ? (Julien, mesure sur Google Maps)]
 - Agde : [À compléter : Temps de trajet en voiture depuis Agde jusqu'à l'entrée nord ? (Julien, mesure sur Google Maps)]
 - Béziers : [À compléter : Temps de trajet en voiture depuis Béziers jusqu'à l'entrée nord ? (Julien, mesure sur Google Maps)]
@@ -264,7 +267,7 @@ C'est souvent là que le team building fait son effet : autour d'un verre, en re
 
 Le club se trouve à l'entrée nord de la base départementale, à Montagnac. Le parking est gratuit, avec 2 000 places. Le site est accessible aux personnes à mobilité réduite.
 
-Vous venez de Pézenas, Mèze, Sète, Agde ou Béziers ? Consultez la page accès.
+Vous venez de Mèze, Pézenas, Sète, Agde ou Béziers ? Consultez la page accès.
 
 **H2 :** Comment nous contacter ?
 
@@ -304,7 +307,7 @@ Réponse : [À compléter : Quel tarif pour une privatisation ou un événement 
 - Accueil : Le padel en pleine nature
 - Stages de padel enfants
 - Tournois et ligues de padel
-- Padel près de Pézenas, Mèze et Sète
+- Padel près de Mèze, Pézenas et Sète
 
 ## /stages-padel-enfants
 
@@ -370,7 +373,7 @@ Un enfant qui a aimé son stage peut continuer à jouer en famille. Le padel se 
 
 **H2 :** Où se trouve le club ?
 
-À l'entrée nord de la base départementale, à Montagnac. Vous venez de Pézenas, Mèze ou Sète ? Consultez la page accès.
+À l'entrée nord de la base départementale, à Montagnac. Vous venez de Mèze, Pézenas ou Sète ? Consultez la page accès.
 
 **H2 :** Comment inscrire votre enfant ?
 
@@ -414,7 +417,7 @@ Réponse : Une tenue de sport, des chaussures de sport et une gourde. Le club lo
 - Accueil : Le padel en pleine nature
 - Padel entreprise et team building
 - Tournois et ligues de padel
-- Padel près de Pézenas, Mèze et Sète
+- Padel près de Mèze, Pézenas et Sète
 
 ## /tournois-ligues-padel
 
@@ -472,7 +475,7 @@ D'abord pour le cadre. Les terrains sont installés au cœur de la base départe
 
 Ensuite pour les conditions. 4 terrains extérieurs, panoramiques et éclairés. Des vestiaires et des douches. Un bar, de la restauration et un espace détente pour attendre son prochain match ou fêter une victoire.
 
-Enfin pour l'accès. Le parking est gratuit, avec 2 000 places. Le club est accessible aux personnes à mobilité réduite. Vous venez de Pézenas, Mèze, Sète, Agde ou Béziers ? Consultez la page accès.
+Enfin pour l'accès. Le parking est gratuit, avec 2 000 places. Le club est accessible aux personnes à mobilité réduite. Vous venez de Mèze, Pézenas, Sète, Agde ou Béziers ? Consultez la page accès.
 
 **H2 :** Jouez à 7 € la partie
 
@@ -508,21 +511,27 @@ Réponse : Sur les 4 terrains extérieurs, panoramiques et éclairés du club, �
 - Accueil : Le padel en pleine nature
 - Padel entreprise et team building
 - Stages de padel enfants
-- Padel près de Pézenas, Mèze et Sète
+- Padel près de Mèze, Pézenas et Sète
 
 ## /padel-pezenas-meze-sete
 
-**Title :** Padel près de Pézenas, Mèze et Sète, Pad'el Bosque
+**Title :** Padel près de Mèze, Pézenas et Sète, Pad'el Bosque
 
-**Meta description :** Club de padel près de Pézenas, Mèze et Sète : 4 terrains panoramiques et éclairés à Montagnac. Parking gratuit, 8 € par joueur.
+**Meta description :** Club de padel à 8 min de Mèze, près de Pézenas et Sète : 4 terrains panoramiques et éclairés à Montagnac. Parking gratuit, 8 € par joueur.
 
-Fil d'Ariane : Accueil > Padel près de Pézenas, Mèze et Sète : venez jouer à Montagnac
+Fil d'Ariane : Accueil > Padel près de Mèze, Pézenas et Sète : venez jouer à Montagnac
 
-**H1 :** Padel près de Pézenas, Mèze et Sète : venez jouer à Montagnac
+**H1 :** Padel près de Mèze, Pézenas et Sète : venez jouer à Montagnac
 
-Vous habitez Pézenas, Mèze, Sète, Agde ou Béziers et vous cherchez où jouer au padel ? Pad'el Bosque ouvre fin novembre 2026 à Montagnac.
+Vous habitez Mèze, Pézenas, Sète, Agde ou Béziers et vous cherchez où jouer au padel ? Pad'el Bosque ouvre fin novembre 2026 à Montagnac, dans l'Hérault.
 
 Le club compte 4 terrains extérieurs, panoramiques et éclairés. Un seul prix : 8 € par joueur, soit 32 € le terrain pour 90 minutes, à toute heure.
+
+**H2 :** Un club de padel à 8 min de Mèze
+
+Depuis Mèze, comptez 8 min en voiture jusqu'au club. Le trajet est le même depuis Villeveyrac, Saint-Pargoire et le centre de Montagnac.
+
+Sur place, vous trouvez 4 terrains extérieurs, panoramiques et éclairés, ouverts 7 jours sur 7, et un parking gratuit de 2 000 places.
 
 **H2 :** Où se trouve le club ?
 
@@ -580,8 +589,11 @@ Parking gratuit de 2 000 places.
 
 **H3 :** Temps de trajet en voiture
 
+- Montagnac : 8 min
+- Mèze : 8 min
+- Villeveyrac : 8 min
+- Saint-Pargoire : 8 min
 - Pézenas : [À compléter : Temps de trajet en voiture depuis Pézenas jusqu'à l'entrée nord ? (Julien, mesure sur Google Maps)]
-- Mèze : [À compléter : Temps de trajet en voiture depuis Mèze jusqu'à l'entrée nord ? (Julien, mesure sur Google Maps)]
 - Sète : [À compléter : Temps de trajet en voiture depuis Sète jusqu'à l'entrée nord ? (Julien, mesure sur Google Maps)]
 - Agde : [À compléter : Temps de trajet en voiture depuis Agde jusqu'à l'entrée nord ? (Julien, mesure sur Google Maps)]
 - Béziers : [À compléter : Temps de trajet en voiture depuis Béziers jusqu'à l'entrée nord ? (Julien, mesure sur Google Maps)]

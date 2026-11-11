@@ -55,7 +55,7 @@ Société : Kbis reçu, questions closes. Raison sociale, forme juridique, RCS, 
 
 Côté Julien :
 
-- [ ] Mesurer sur Google Maps le temps de trajet en voiture depuis Pézenas, Mèze, Sète, Agde et Béziers jusqu'à l'entrée nord (`acces.villes`), une fois le point GPS connu.
+- [ ] Mesurer sur Google Maps le temps de trajet en voiture depuis Pézenas, Sète, Agde et Béziers jusqu'à l'entrée nord (`acces.villes`), une fois le point GPS connu. Montagnac, Mèze, Villeveyrac et Saint-Pargoire : 8 min, chiffre donné par le club, à contrôler.
 
 ## 3. Plus tard
 

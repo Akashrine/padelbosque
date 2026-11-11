@@ -1,10 +1,11 @@
-import { carte, club, estTodo, isoDate, liens, saisons, site, stripeActif, type PlageHoraire } from '../config';
+import { acces, carte, club, estTodo, isoDate, liens, saisons, site, stripeActif, type PlageHoraire } from '../config';
 
 export type JsonLd = Record<string, unknown>;
 
 const urlAbsolue = (chemin: string) => new URL(chemin, site.url).href;
 
 const idClub = `${site.url}/#club`;
+const idSite = `${site.url}/#site`;
 
 export const adressePostale = () => ({
   '@type': 'PostalAddress',
@@ -46,6 +47,7 @@ export function sportsActivityLocation(description: string): JsonLd {
     '@type': 'SportsActivityLocation',
     '@id': idClub,
     name: club.nom,
+    alternateName: club.nomSansApostrophe,
     description,
     url: `${site.url}/`,
     image: urlAbsolue(site.imagePartage),
@@ -63,6 +65,8 @@ export function sportsActivityLocation(description: string): JsonLd {
           },
         }),
     hasMap: liens.googleMaps,
+    sport: 'Padel',
+    areaServed: acces.villes.map((v) => ({ '@type': 'City', name: v.nom })),
     openingHoursSpecification: horaires(),
     priceRange: `${club.tarif.prixParJoueur} € par joueur`,
     currenciesAccepted: club.tarif.devise,
@@ -94,6 +98,20 @@ export function sportsActivityLocation(description: string): JsonLd {
         : []),
     ],
     ...(sameAs.length ? { sameAs } : {}),
+  };
+}
+
+/** Nom du site affiché par Google au-dessus des résultats, à la place du nom de domaine. */
+export function siteWeb(): JsonLd {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': idSite,
+    name: club.nom,
+    alternateName: club.nomSansApostrophe,
+    url: `${site.url}/`,
+    inLanguage: site.langue,
+    publisher: { '@id': idClub },
   };
 }
 
