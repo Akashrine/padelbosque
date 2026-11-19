@@ -1,7 +1,7 @@
 ---
 import '../styles/reset.css';
 import '../styles/global.css';
-import { site, type ContexteWhatsApp } from '../config';
+import { application, site, type ContexteWhatsApp } from '../config';
 import { Font } from 'astro:assets';
 import Seo from '../components/Seo.astro';
 import Header from '../components/Header.astro';
@@ -33,6 +33,8 @@ const { title, description, noindex, jsonLd, contexteWhatsApp = 'general', image
     <link rel="icon" href="/favicon.png" type="image/png" sizes="96x96" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <!-- Bandeau Safari sur iPhone : « Ouvrir dans l'App Store ». -->
+    <meta name="apple-itunes-app" content={`app-id=${application.idAppStore}`} />
     <Seo title={title} description={description} noindex={noindex} jsonLd={jsonLd} imagePartage={imagePartage} />
   </head>
   <body>

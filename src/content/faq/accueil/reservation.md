@@ -4,6 +4,6 @@ page: accueil
 ordre: 7
 ---
 
-En attendant l'ouverture du logiciel de réservation, écrivez-nous sur WhatsApp.
+La réservation se fait dans l'application {{appNom}}, disponible sur iPhone et sur Android. [Télécharger l'application](/app).
 
-Logiciel de réservation : {{reservationLogiciel}}
+Pour une question, écrivez-nous sur WhatsApp ou appelez le {{telephone}}.

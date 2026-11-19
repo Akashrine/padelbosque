@@ -12,7 +12,7 @@ import Horaires from '../components/Horaires.astro';
 import Activites from '../components/Activites.astro';
 import Acces from '../components/Acces.astro';
 import Faq from '../components/Faq.astro';
-import { club } from '../config';
+import { application, club } from '../config';
 import { remplir } from '../lib/gabarit';
 import { siteWeb, sportsActivityLocation } from '../lib/jsonld';
 import photoChantier from '../assets/chantier/chantier-9.jpg';
@@ -94,6 +94,9 @@ const promesse = reste.join(', ');
       <div class="tarifs-grille">
         <Tarifs />
         <Horaires />
+      </div>
+      <div class="actions tarifs-actions">
+        <CtaCarte libelle="Réserver un terrain" note={`Réservation dans l'application ${application.nom}, sur iPhone et Android.`} />
       </div>
     </div>
   </section>
@@ -297,6 +300,10 @@ const promesse = reste.join(', ');
   .tarifs-grille {
     display: grid;
     gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .tarifs-actions {
     margin-top: 2rem;
   }
 

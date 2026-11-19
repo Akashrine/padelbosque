@@ -36,7 +36,7 @@ Instagram : [À compléter : Quel est l'identifiant Instagram exact du club ?]
 - Stages de padel enfants
 - Tournois et ligues de padel
 - Padel près de Mèze, Pézenas et Sète
-- Conditions de la carte
+- Application Pad'elbosque
 - Mentions légales
 
 © 2026 Pad'el Bosque, Site réalisé par Julien Brionne
@@ -45,11 +45,11 @@ Instagram : [À compléter : Quel est l'identifiant Instagram exact du club ?]
 
 **Title :** Pad'el Bosque, padel à Montagnac près de Mèze (Hérault)
 
-**Meta description :** Club de padel à Montagnac, dans l'Hérault, à 8 min de Mèze. 4 terrains extérieurs, panoramiques et éclairés. 8 € par joueur. Ouverture fin novembre 2026.
+**Meta description :** Club de padel à Montagnac, dans l'Hérault, à 8 min de Mèze. 4 terrains extérieurs, panoramiques et éclairés. 8 € par joueur. Ouverture le 23 novembre 2026.
 
 **H1 :** Pad'el Bosque, le padel en pleine nature
 
-Ouverture fin novembre 2026.
+Ouverture le 23 novembre 2026.
 
 Pad'el Bosque
 
@@ -85,9 +85,7 @@ La carte de 10 parties est en vente avant l'ouverture : 70 €, soit 7 € la pa
 
 **Bouton :** Je prends ma carte
 
-Conditions de la carte
-
-[À compléter : Quel est le lien Stripe Payment Link de la carte de 10 parties (limité à 100 paiements) ?]
+Achat dans l'application Pad'elbosque, sur iPhone et Android.
 
 **Bouton :** Nous écrire sur WhatsApp
 
@@ -97,7 +95,7 @@ Le club n'est pas encore ouvert. Vous pouvez déjà prendre vos parties.
 
 À l'unité, une partie coûte 8 €. Avec la carte, elle revient à 7 €. Sur 10 parties, vous gardez 10 € en poche.
 
-Il n'y aura que 100 cartes. Une seule carte par personne, nominative. Le paiement se fait en ligne, sur une page de paiement sécurisée Stripe.
+Il n'y aura que 100 cartes. Une seule carte par personne, nominative. L'achat se fait dans l'application Pad'elbosque, celle qui sert aussi à réserver vos terrains.
 
 **H3 :** Ce que comprend la carte
 
@@ -105,9 +103,7 @@ En vente jusqu'à épuisement.
 
 **Bouton :** Je prends ma carte
 
-Conditions de la carte
-
-[À compléter : Quel est le lien Stripe Payment Link de la carte de 10 parties (limité à 100 paiements) ?]
+Achat dans l'application Pad'elbosque, sur iPhone et Android.
 
 **Bouton :** Une question ? Écrivez-nous sur WhatsApp
 
@@ -122,6 +118,10 @@ Un seul prix, quelle que soit l'heure, et des horaires qui suivent les saisons.
 Ouvert 7 jours sur 7.
 
 [À compléter : À quelles dates passez-vous aux horaires d'été et d'hiver ? Proposition : dernier dimanche de mars / dernier dimanche d'octobre, à valider avec William.]
+
+**Bouton :** Réserver un terrain
+
+Réservation dans l'application Pad'elbosque, sur iPhone et Android.
 
 **H2 :** Activités
 
@@ -199,10 +199,10 @@ Réponse : Oui, les 4 terrains sont éclairés. Le club ferme à 21h en hiver et
 Réponse : Le parking est gratuit, avec 2 000 places. Le club se trouve à l'entrée nord de la base départementale.
 
 **Question :** Comment réserver un terrain ?
-Réponse : En attendant l'ouverture du logiciel de réservation, écrivez-nous sur WhatsApp. Logiciel de réservation : [À compléter : Quel logiciel de réservation utiliserez-vous et quand sera-t-il en ligne ?]
+Réponse : La réservation se fait dans l'application Pad'elbosque, disponible sur iPhone et sur Android. Télécharger l'application. Pour une question, écrivez-nous sur WhatsApp ou appelez le 06 14 97 97 49.
 
 **Question :** Quand ouvre le club ?
-Réponse : Le club ouvre fin novembre 2026. Inauguration : [À compléter : Quelle est la date de l'inauguration, maintenant que l'ouverture est fin novembre ?]
+Réponse : Le club ouvre le 23 novembre 2026. Inauguration : [À compléter : Quelle est la date de l'inauguration, maintenant que l'ouverture est le 23 novembre ?]
 
 ## /padel-entreprise-team-building
 
@@ -279,9 +279,7 @@ La carte de 10 parties à 70 €. 100 cartes, pas une de plus.
 
 **Bouton :** Je prends ma carte
 
-Conditions de la carte
-
-[À compléter : Quel est le lien Stripe Payment Link de la carte de 10 parties (limité à 100 paiements) ?]
+Achat dans l'application Pad'elbosque, sur iPhone et Android.
 
 **Bouton :** Parlons de votre événement sur WhatsApp
 
@@ -313,13 +311,13 @@ Réponse : [À compléter : Quel tarif pour une privatisation ou un événement 
 
 **Title :** Stages de padel enfants près de Pézenas, Pad'el Bosque
 
-**Meta description :** Stages de padel enfants pendant les vacances scolaires, à Montagnac, près de Pézenas. Le club ouvre fin novembre 2026. Soyez prévenu en premier.
+**Meta description :** Stages de padel enfants pendant les vacances scolaires, à Montagnac, près de Pézenas. Le club ouvre le 23 novembre 2026. Soyez prévenu en premier.
 
 Fil d'Ariane : Accueil > Stages de padel pour enfants à Montagnac, près de Pézenas
 
 **H1 :** Stages de padel pour enfants à Montagnac, près de Pézenas
 
-Pad'el Bosque prépare des stages de padel pour les enfants, pendant les vacances scolaires. Le club ouvre fin novembre 2026 à Montagnac, près de Pézenas.
+Pad'el Bosque prépare des stages de padel pour les enfants, pendant les vacances scolaires. Le club ouvre le 23 novembre 2026 à Montagnac, près de Pézenas.
 
 Le programme détaillé arrive. Laissez-nous votre contact sur WhatsApp : vous serez prévenu dès l'ouverture des inscriptions.
 
@@ -389,9 +387,7 @@ La carte de 10 parties à 70 €. 100 cartes, pas une de plus.
 
 **Bouton :** Je prends ma carte
 
-Conditions de la carte
-
-[À compléter : Quel est le lien Stripe Payment Link de la carte de 10 parties (limité à 100 paiements) ?]
+Achat dans l'application Pad'elbosque, sur iPhone et Android.
 
 **Bouton :** Être prévenu des stages sur WhatsApp
 
@@ -423,7 +419,7 @@ Réponse : Une tenue de sport, des chaussures de sport et une gourde. Le club lo
 
 **Title :** Tournois et ligues de padel dans l'Hérault, Pad'el Bosque
 
-**Meta description :** Tournois, ligues internes et soirées padel à Montagnac. Le club ouvre fin novembre 2026 : soyez prévenu des premières dates.
+**Meta description :** Tournois, ligues internes et soirées padel à Montagnac. Le club ouvre le 23 novembre 2026 : soyez prévenu des premières dates.
 
 Fil d'Ariane : Accueil > Tournois et ligues de padel dans l'Hérault
 
@@ -431,7 +427,7 @@ Fil d'Ariane : Accueil > Tournois et ligues de padel dans l'Hérault
 
 Vous aimez la compétition ? Ou simplement jouer contre de nouvelles têtes ? Pad'el Bosque organisera des tournois, des ligues internes et des soirées padel à Montagnac.
 
-Le club ouvre fin novembre 2026. Le calendrier se construit maintenant. Laissez votre contact sur WhatsApp pour être prévenu des premières dates.
+Le club ouvre le 23 novembre 2026. Le calendrier se construit maintenant. Laissez votre contact sur WhatsApp pour être prévenu des premières dates.
 
 **H2 :** Quels tournois seront organisés ensuite ?
 
@@ -483,9 +479,7 @@ La carte de 10 parties à 70 €. 100 cartes, pas une de plus.
 
 **Bouton :** Je prends ma carte
 
-Conditions de la carte
-
-[À compléter : Quel est le lien Stripe Payment Link de la carte de 10 parties (limité à 100 paiements) ?]
+Achat dans l'application Pad'elbosque, sur iPhone et Android.
 
 **Bouton :** Être prévenu des tournois sur WhatsApp
 
@@ -523,7 +517,7 @@ Fil d'Ariane : Accueil > Padel près de Mèze, Pézenas et Sète : venez jouer �
 
 **H1 :** Padel près de Mèze, Pézenas et Sète : venez jouer à Montagnac
 
-Vous habitez Mèze, Pézenas, Sète, Agde ou Béziers et vous cherchez où jouer au padel ? Pad'el Bosque ouvre fin novembre 2026 à Montagnac, dans l'Hérault.
+Vous habitez Mèze, Pézenas, Sète, Agde ou Béziers et vous cherchez où jouer au padel ? Pad'el Bosque ouvre le 23 novembre 2026 à Montagnac, dans l'Hérault.
 
 Le club compte 4 terrains extérieurs, panoramiques et éclairés. Un seul prix : 8 € par joueur, soit 32 € le terrain pour 90 minutes, à toute heure.
 
@@ -565,11 +559,9 @@ Les touristes sont les bienvenus l'été. Inutile de charger une raquette dans l
 
 **H2 :** Comment réserver ?
 
-Le logiciel de réservation arrive avec l'ouverture du club.
+La réservation se fait dans l'application Pad'elbosque, disponible sur iPhone et sur Android. Télécharger l'application.
 
-Logiciel de réservation : [À compléter : Quel logiciel de réservation utiliserez-vous et quand sera-t-il en ligne ?]
-
-En attendant, écrivez-nous sur WhatsApp ou appelez le 06 14 97 97 49.
+Pour une question, écrivez-nous sur WhatsApp ou appelez le 06 14 97 97 49.
 
 **H2 :** Les autres activités du club
 
@@ -604,9 +596,7 @@ La carte de 10 parties à 70 €. 100 cartes, pas une de plus.
 
 **Bouton :** Je prends ma carte
 
-Conditions de la carte
-
-[À compléter : Quel est le lien Stripe Payment Link de la carte de 10 parties (limité à 100 paiements) ?]
+Achat dans l'application Pad'elbosque, sur iPhone et Android.
 
 **Bouton :** Nous écrire sur WhatsApp
 
@@ -634,87 +624,20 @@ Réponse : Par l'entrée nord de la base départementale, à Montagnac.
 - Stages de padel enfants
 - Tournois et ligues de padel
 
-## /bienvenue-carte (non indexée)
+## /app (non indexée)
 
-**Title :** Votre carte de 10 parties, Pad'el Bosque
+**Title :** Application Pad'elbosque : réserver un terrain de padel
 
-**Meta description :** Merci d'avoir pris votre carte de 10 parties chez Pad'el Bosque. Voici la suite.
+**Meta description :** Téléchargez l'application Pad'elbosque sur iPhone ou Android pour réserver un terrain et prendre la carte de 10 parties de Pad'el Bosque.
 
-**H1 :** Merci, votre carte est à vous
+**H1 :** L'application du club
 
-Vous avez une des 100 cartes de 10 parties de Pad'el Bosque.
+Avec l'application Pad'elbosque, vous réservez votre terrain et vous prenez votre carte de 10 parties. Elle est disponible sur iPhone et sur Android.
 
-**H2 :** La suite
-
-- Vos parties. 10 créneaux de 90 minutes, à 7 € la partie au lieu de 8 €.
-- L'ouverture. Le club ouvre fin novembre 2026. Vos parties commencent à ce moment-là.
-
-Validité de la carte : [À compléter : Jusqu'à quelle date les parties de la carte sont-elles valables ?]
-
-Date de l'inauguration : [À compléter : Quelle est la date de l'inauguration, maintenant que l'ouverture est fin novembre ?]
-
-**H2 :** Restons en contact
-
-Pour suivre les dernières nouvelles et poser vos questions, rejoignez-nous sur WhatsApp.
+- iPhone : App Store
+- Android : Google Play
 
 **Bouton :** Nous écrire sur WhatsApp
-
-[À compléter : Quel est le lien d'invitation du groupe WhatsApp du club ?]
-
-Retour à l'accueil
-
-## /conditions-carte (non indexée)
-
-**Title :** Conditions de la carte de 10 parties, Pad'el Bosque
-
-**Meta description :** Conditions de vente de la carte de 10 parties de Pad'el Bosque : rétractation, remboursement, validité, identité du vendeur.
-
-**H1 :** Conditions de la carte de 10 parties
-
-La carte de 10 parties coûte 70 €. 100 cartes sont en vente, jusqu'à épuisement. Le paiement se fait sur une page de paiement sécurisée Stripe.
-
-**H2 :** Ce que comprend la carte
-
-La carte comprend 10 parties. Une partie correspond à un créneau de 90 minutes, pour un joueur.
-
-**H2 :** Titulaire de la carte
-
-Une seule carte par personne, nominative.
-
-**H2 :** Droit de rétractation
-
-[À compléter : À valider avec William. Proposition : « Vous disposez d'un droit de rétractation de 14 jours à compter de l'achat. Pour l'exercer, écrivez à padelbosque34@gmail.com : vous êtes remboursé intégralement. »]
-
-**H2 :** Si le club n'ouvre pas
-
-Le club prévoit d'ouvrir fin novembre 2026.
-
-[À compléter : À valider avec William. Proposition : « Si le club n'ouvre pas avant le 31 janvier 2027, vous pouvez demander le remboursement intégral de la carte. »]
-
-**H2 :** Validité
-
-[À compléter : Jusqu'à quelle date les parties de la carte sont-elles valables ?]
-
-[À compléter : À valider avec William. Proposition : « Les parties non jouées à la fin de validité de la carte sont perdues. Elles ne sont pas remboursables. »]
-
-**H2 :** Contact
-
-Pour toute question sur la carte, écrivez à padelbosque34@gmail.com ou appelez le 06 14 97 97 49.
-
-**H2 :** Vendeur
-
-- Nom commercial : Pad'el Bosque
-- Raison sociale : PAD'EL BOSQUE
-- Forme juridique et capital : SARL au capital de 6 000 €
-- RCS : 999 918 162 R.C.S. Béziers
-- SIRET : 99991816200028
-- TVA intracommunautaire : FR10999918162
-- Siège social : Base départementale de Bessilles, 34530 Montagnac
-- Adresse du club : Base départementale de Bessilles, 34530 Montagnac
-- Téléphone : 06 14 97 97 49
-- Email : padelbosque34@gmail.com
-
-Voir aussi les mentions légales.
 
 ## /mentions-legales
 
@@ -757,11 +680,7 @@ Ce site ne dépose pas de cookie et n'utilise pas d'outil de mesure d'audience.
 
 Le site ne collecte aucune donnée personnelle. Il n'a pas de formulaire et pas de compte utilisateur.
 
-Le paiement de la carte de 10 parties se fait sur une page externe Stripe. Stripe recueille votre nom, votre email et votre téléphone pour traiter le paiement. Vos données bancaires restent chez Stripe : le club n'y a jamais accès.
-
-Le club reçoit votre nom, votre email et votre téléphone. Ils servent uniquement à gérer votre carte et vos parties. Ils ne sont ni vendus ni cédés.
-
-Ces données sont conservées jusqu'à la fin de validité de votre carte, puis supprimées. Les factures sont conservées 10 ans, comme la loi l'impose.
+Le site ne vend rien et n'encaisse aucun paiement. L'achat de la carte de 10 parties et la réservation des terrains se font dans l'application Pad'elbosque, éditée par LIVEXPERIENCE. Les données que vous y saisissez sont traitées selon les conditions et la politique de confidentialité de l'application.
 
 Les liens WhatsApp ouvrent une conversation dans l'application WhatsApp. Les messages que vous envoyez sont soumis aux conditions de WhatsApp. Le club les utilise seulement pour vous répondre.
 

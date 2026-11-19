@@ -16,11 +16,7 @@ Ce site ne dépose pas de cookie et n'utilise pas d'outil de mesure d'audience.
 
 Le site ne collecte aucune donnée personnelle. Il n'a pas de formulaire et pas de compte utilisateur.
 
-Le paiement de la carte de {{carteParties}} parties se fait sur une page externe Stripe. Stripe recueille votre nom, votre email et votre téléphone pour traiter le paiement. Vos données bancaires restent chez Stripe : le club n'y a jamais accès.
-
-Le club reçoit votre nom, votre email et votre téléphone. Ils servent uniquement à gérer votre carte et vos parties. Ils ne sont ni vendus ni cédés.
-
-Ces données sont conservées jusqu'à la fin de validité de votre carte, puis supprimées. Les factures sont conservées 10 ans, comme la loi l'impose.
+Le site ne vend rien et n'encaisse aucun paiement. L'achat de la carte de {{carteParties}} parties et la réservation des terrains se font dans l'application {{appNom}}, éditée par {{appEditeur}}. Les données que vous y saisissez sont traitées selon les conditions et la politique de confidentialité de l'application.
 
 Les liens WhatsApp ouvrent une conversation dans l'application WhatsApp. Les messages que vous envoyez sont soumis aux conditions de WhatsApp. Le club les utilise seulement pour vous répondre.
 

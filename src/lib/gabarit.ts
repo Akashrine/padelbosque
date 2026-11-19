@@ -2,9 +2,9 @@ import {
   acces,
   adresseTexte,
   anniversaires,
+  application,
   carte,
   club,
-  conditionsCarte,
   economieCarte,
   entreprise,
   estTodo,
@@ -53,6 +53,8 @@ export const variables: Record<string, string> = {
   carteEconomie: euros(economieCarte()),
   carteVenteJusqua: carte.venteJusqua,
   carteLimite: carte.limite,
+  appNom: application.nom,
+  appEditeur: application.editeur,
   repere: acces.repere,
   proximite: acces.proximite,
   tempsProche: acces.tempsProche,
@@ -66,7 +68,6 @@ export const variables: Record<string, string> = {
     : `Horaires d'été à partir du ${regleTexte(club.bascule.debutEte)}, horaires d'hiver à partir du ${regleTexte(club.bascule.debutHiver)}.`,
   cours: club.cours,
   formules: club.formules,
-  reservationLogiciel: club.reservation.logiciel,
   itineraire: acces.itineraire,
   entrepriseFormats: entreprise.formats,
   entrepriseCapacite: entreprise.capacite,
@@ -86,10 +87,6 @@ export const variables: Record<string, string> = {
   soirees: tournois.soirees,
   tournoisNiveaux: tournois.niveaux,
   anniversaires,
-  conditionsNominative: conditionsCarte.nominative,
-  conditionsRetractation: conditionsCarte.retractation,
-  conditionsNonOuverture: conditionsCarte.nonOuverture,
-  conditionsPartiesPerdues: conditionsCarte.partiesPerdues,
 };
 
 export const motif = /\{\{\s*([a-zA-Z]+)\s*\}\}/g;

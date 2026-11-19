@@ -103,20 +103,21 @@ export const club = {
     url: 'TODO: Quel est l\'identifiant Instagram exact du club ?' as string | Todo,
   },
 
-  ficheGoogle: 'TODO: Quel est le lien de la fiche Google du club, une fois créée ?' as
-    | string
-    | Todo,
+  ficheGoogle: 'https://g.page/r/CX5KUyD5Wy5oEBI' as string | Todo,
+
+  /** Lien direct pour laisser un avis Google (QR code, WhatsApp, e-mails). */
+  avisGoogle: 'https://g.page/r/CX5KUyD5Wy5oEBI/review',
 
   ouverture: {
-    texte: 'fin novembre 2026',
+    texte: 'le 23 novembre 2026',
     /** Mois d'ouverture confirmé (AAAA-MM) : sert à choisir la première saison d'horaires. */
     mois: '2026-11',
     /** Format AAAA-MM-JJ. Premier jour de la première plage horaire du JSON-LD. */
-    date: 'TODO: Quelle est la date exacte d\'ouverture du club ?' as string | Todo,
+    date: '2026-11-23' as string | Todo,
   },
 
   inauguration: {
-    date: 'TODO: Quelle est la date de l\'inauguration, maintenant que l\'ouverture est fin novembre ?' as string | Todo,
+    date: 'TODO: Quelle est la date de l\'inauguration, maintenant que l\'ouverture est le 23 novembre ?' as string | Todo,
   },
 
   horaires: {
@@ -193,16 +194,25 @@ export const club = {
     'TODO: Proposerez-vous d\'autres abonnements ou carnets que la carte de 10 parties ? Si oui, lesquels et à quel prix ?' as
       | string
       | Todo,
-
-  reservation: {
-    logiciel: 'TODO: Quel logiciel de réservation utiliserez-vous et quand sera-t-il en ligne ?' as
-      | string
-      | Todo,
-    enAttendant: 'WhatsApp',
-  },
 };
 
-/** La carte de parties, seule offre en vente avant l'ouverture. Une partie : un créneau, pour un joueur. */
+/**
+ * Application du club : réservation des terrains et achat de la carte.
+ * Les deux adresses des stores sont aussi dans vercel.json (redirection de /app selon l'appareil).
+ * npm run verifier contrôle qu'elles sont identiques.
+ */
+export const application = {
+  nom: "Pad'elbosque",
+  editeur: 'LIVEXPERIENCE',
+  /** Identifiant App Store : sert au bandeau Safari « Ouvrir dans l'App Store ». */
+  idAppStore: '6827471140',
+  appStore: 'https://apps.apple.com/fr/app/padelbosque/id6827471140',
+  googlePlay: 'https://play.google.com/store/apps/details?id=com.livexperience.padelbosque',
+  /** Lien unique à diffuser : iPhone vers l'App Store, Android vers Google Play, ordinateur vers la page /app. */
+  lien: '/app',
+};
+
+/** La carte de parties, vendue dans l'application du club. Une partie : un créneau, pour un joueur. */
 export const carte = {
   parties: 10,
   prix: 70,
@@ -224,13 +234,8 @@ export const valeurCarte = () => carte.parties * club.tarif.prixParJoueur;
 export const economieCarte = () => valeurCarte() - carte.prix;
 
 export const liens = {
-  stripe: 'TODO: Quel est le lien Stripe Payment Link de la carte de 10 parties (limité à 100 paiements) ?' as
-    | string
-    | Todo,
   /** Numéro au format wa.me, sans + ni espaces. */
   whatsappNumero: '33614979749',
-  groupeWhatsapp:
-    'TODO: Quel est le lien d\'invitation du groupe WhatsApp du club ?' as string | Todo,
   googleMaps:
     'https://www.google.com/maps/search/?api=1&query=' +
     encodeURIComponent('Base départementale de Bessilles, 34530 Montagnac'),
@@ -294,34 +299,6 @@ export const tournois = {
   soirees: 'TODO: Quel format pour les soirées (fréquence, jour, principe) ?' as string | Todo,
   niveaux: 'TODO: Les tournois et les ligues seront-ils ouverts à tous les niveaux ?' as string | Todo,
 };
-
-/**
- * Conditions de la carte (/conditions-carte).
- * Chaque point est une proposition de Julien, à valider avec William puis à faire relire
- * par un comptable ou un juriste. Une fois validé, remplacer le TODO par la phrase entre guillemets.
- */
-export const conditionsCarte = {
-  nominative: carte.limite as string | Todo,
-  retractation:
-    `TODO: À valider avec William. Proposition : « Vous disposez d'un droit de rétractation de 14 jours à compter de l'achat. Pour l'exercer, écrivez à ${club.email} : vous êtes remboursé intégralement. »` as
-      | string
-      | Todo,
-  nonOuverture:
-    'TODO: À valider avec William. Proposition : « Si le club n\'ouvre pas avant le 31 janvier 2027, vous pouvez demander le remboursement intégral de la carte. »' as
-      | string
-      | Todo,
-  partiesPerdues:
-    'TODO: À valider avec William. Proposition : « Les parties non jouées à la fin de validité de la carte sont perdues. Elles ne sont pas remboursables. »' as
-      | string
-      | Todo,
-};
-
-/**
- * Le bouton de la carte n'ouvre Stripe que si le lien existe, que la validité est connue et que les conditions sont toutes validées.
- * Sinon, il ouvre WhatsApp. Contrôlé par npm run verifier.
- */
-export const stripeActif = () =>
-  !estTodo(liens.stripe) && !estTodo(carte.validite) && Object.values(conditionsCarte).every((c) => !estTodo(c));
 
 export const anniversaires =
   'TODO: Quelle formule et quel prix pour un anniversaire ou une privatisation ?' as string | Todo;

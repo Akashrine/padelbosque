@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import { club, estTodo, legal } from '../config';
+import { application, club, estTodo, legal } from '../config';
 import Info from './Info.astro';
 import Embleme from './Embleme.astro';
 
@@ -32,7 +32,7 @@ const annee = new Date().getFullYear();
     <ul>
       <li><a href="/">Accueil</a></li>
       {pagesSeo.map((p) => <li><a href={`/${p.data.slug}`}>{p.data.libelleLien ?? p.data.h1}</a></li>)}
-      <li><a href="/conditions-carte">Conditions de la carte</a></li>
+      <li><a href={application.lien}>Application {application.nom}</a></li>
       <li><a href="/mentions-legales">Mentions légales</a></li>
     </ul>
   </nav>

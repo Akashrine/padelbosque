@@ -1,0 +1,52 @@
+---
+/**
+ * Page vue sur ordinateur seulement : sur iPhone et Android, vercel.json redirige /app vers le bon store.
+ * Le QR code renvoie vers /app, donc vers le store du téléphone qui le scanne.
+ */
+import QRCode from 'qrcode';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CtaWhatsApp from '../components/CtaWhatsApp.astro';
+import Stores from '../components/Stores.astro';
+import { application, site } from '../config';
+import { pageSysteme } from '../lib/pages';
+
+const page = await pageSysteme('app');
+const qr = await QRCode.toString(`${site.url}${application.lien}`, {
+  type: 'svg',
+  margin: 2,
+  color: { dark: '#1a2116', light: '#eef1e8' },
+});
+---
+
+<BaseLayout title={page.title} description={page.description} noindex>
+  <article class="bloc">
+    <h1>{page.h1}</h1>
+    <page.Contenu />
+    <Stores />
+    <figure class="qr">
+      <Fragment set:html={qr} />
+      <figcaption>Sur ordinateur, scannez ce code avec votre téléphone.</figcaption>
+    </figure>
+    <CtaWhatsApp contexte="general" />
+  </article>
+</BaseLayout>
+
+<style>
+  .qr {
+    margin: 2rem 0;
+    max-width: 14rem;
+  }
+
+  .qr :global(svg) {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--rayon);
+  }
+
+  .qr figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--mousse);
+  }
+</style>

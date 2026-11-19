@@ -2,7 +2,7 @@
 // Usage : npm run build && npm run verifier
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { parseHTML } from 'linkedom';
-import { liens, stripeActif } from '../src/config.ts';
+import { application } from '../src/config.ts';
 
 const dist = 'dist';
 const fichiers = readdirSync(dist).filter((f) => f.endsWith('.html')).sort();
@@ -22,6 +22,15 @@ for (const fichier of [...sources('src/content'), ...sources('src/components'), 
     const m = ligne.match(RENVOIS);
     if (m) erreurs.push(`${fichier}:${i + 1} : renvoi « ${m[0]} » vers un bloc qui peut être masqué`);
   });
+}
+
+// /app : vercel.json redirige vers les m\u00eames adresses de stores que config.ts.
+const versStores = JSON.parse(readFileSync('vercel.json', 'utf8'))
+  .redirects.filter((r) => r.source === application.lien)
+  .map((r) => r.destination)
+  .sort();
+if (versStores.join() !== [application.appStore, application.googlePlay].sort().join()) {
+  erreurs.push(`vercel.json : les redirections de ${application.lien} ne correspondent pas aux stores de src/config.ts`);
 }
 
 const propre = (t) => (t ?? '').replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim();
@@ -65,14 +74,12 @@ for (const f of fichiers) {
     exiger(!/TODO/.test(title + description), `${f} : TODO dans le title ou la description`);
   }
 
-  // Bouton de la carte : Stripe seulement si le lien existe et que la validité et les conditions de la carte sont validées.
+  // Carte et réservation : tout passe par l'application du club. Plus de Stripe ni de pages de conditions.
   exiger(!/fondateur/i.test(html), `${f} : l'ancienne offre fondateur est encore mentionnée`);
+  exiger(!/stripe|conditions-carte|bienvenue-carte/i.test(html), `${f} : Stripe ou une ancienne page de la carte est encore mentionné`);
   for (const a of document.querySelectorAll('.cta-carte a')) {
     const href = a.getAttribute('href') ?? '';
-    exiger(
-      stripeActif() ? href === liens.stripe : href.startsWith('https://wa.me/'),
-      `${f} : bouton de la carte vers ${href}, attendu ${stripeActif() ? 'le lien Stripe' : 'WhatsApp (lien Stripe ou conditions de la carte non validés)'}`,
-    );
+    exiger(href === application.lien, `${f} : bouton de la carte vers ${href}, attendu ${application.lien}`);
   }
 
   // Titres sans contenu après masquage.

@@ -8,7 +8,7 @@ Domaine visé : padelbosque.fr
 
 1. Présenter le club avant son ouverture (début novembre 2026).
 2. Vendre 100 cartes de 10 parties.
-3. Récolter des contacts WhatsApp en attendant le logiciel de réservation.
+3. Envoyer les joueurs vers l'application du club (réservation, achat de la carte).
 4. Se positionner sur Google pour "padel" autour de Montagnac, Pézenas, Mèze et Sète.
 
 Budget serré (500 € pour landing, fiche Google et 3 à 4 pages SEO). Pas de sur-ingénierie.
@@ -18,7 +18,8 @@ Budget serré (500 € pour landing, fiche Google et 3 à 4 pages SEO). Pas de s
 - Astro, sortie 100 % statique. Aucun backend, aucune base de données.
 - CSS maison, pas de framework UI lourd.
 - Hébergement Vercel, domaine padelbosque.fr chez Gandi.
-- Paiement : un Stripe Payment Link externe (URL en variable dans `src/config.ts`). Pas d'intégration Stripe côté code.
+- Réservation et achat de la carte : dans l'application Pad'elbosque (éditeur LIVEXPERIENCE, iPhone et Android), sortie le 19 novembre 2026. Le site ne vend rien : plus de Stripe, plus de pages `/conditions-carte` ni `/bienvenue-carte`.
+- Lien unique `/app` : `vercel.json` redirige les iPhone vers l'App Store et les Android vers Google Play, les ordinateurs voient la page `src/pages/app.astro` (deux liens et QR code). Les adresses des stores sont dans `application` (`src/config.ts`) et dans `vercel.json` ; le verifier contrôle qu'elles sont identiques.
 - Contact : lien WhatsApp `https://wa.me/33614979749` avec message prérempli.
 - Toutes les infos du club dans un seul fichier `src/config.ts` (nom, adresse, téléphone, horaires, prix, liens). Les pages lisent ce fichier, rien n'est dupliqué en dur.
 
@@ -68,7 +69,7 @@ Remplace l'ancienne carte Membre fondateur, abandonnée : plus de crédit, de ta
 - Une seule carte par personne, nominative.
 - Validité : à venir.
 
-Paiement par Stripe Payment Link limité à 100 paiements. Le checkout Stripe collecte nom, email, téléphone. Pas de compteur dynamique de cartes restantes : afficher "100 cartes, pas une de plus".
+Achat dans l'application, qui bloque la vente à 100 cartes (confirmé par Julien le 19 novembre 2026). Pas de compteur dynamique de cartes restantes : afficher "100 cartes, pas une de plus".
 
 ## Pages
 
@@ -76,7 +77,7 @@ Paiement par Stripe Payment Link limité à 100 paiements. Le checkout Stripe co
 
 Sections dans cet ordre :
 1. Hero : nom, promesse liée au cadre ("Le padel en pleine nature"), date d'ouverture, bouton principal "Je prends ma carte", bouton secondaire WhatsApp.
-2. La carte de 10 parties : contenu complet, prix, bouton Stripe.
+2. La carte de 10 parties : contenu complet, prix, bouton vers `/app`.
 3. Le club : 4 terrains panoramiques éclairés, cadre, équipements, parking gratuit.
 4. Tarifs et horaires : 8 € par joueur, créneau de 90 min, horaires hiver et été.
 5. Activités : stages enfants, tournois et ligues, soirées, entreprises, anniversaires.
@@ -127,7 +128,6 @@ Gabarit avec champs à compléter (raison sociale, SIRET, hébergeur).
 
 - [ ] Adresse postale exacte ou coordonnées GPS de l'entrée nord
 - [ ] Validité de la carte de 10 parties et confirmation du calcul par William
-- [ ] Lien Stripe Payment Link
 - [ ] Logo en vectoriel et couleurs de marque
 - [ ] Coach, cours, abonnements ou carnets : formules et prix
 - [ ] Date exacte d'inauguration
